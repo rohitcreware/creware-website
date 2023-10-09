@@ -101,7 +101,7 @@ const ServerSecurity = () => {
           </div>
 
           <LatestInsights />
-          <QueryForm />
+          <QueryForm mainContainerWidth="95%" />
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { Drawer } from "../Drawer/Drawer";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Logo } from "../Svgs/serverSecurity";
 
 const Navbar = () => {
   const router = useRouter();
@@ -57,14 +58,8 @@ const Navbar = () => {
       >
         <div className="container" style={{ zIndex: "10" }}>
           {!open && (
-            <a className="navbar-brand me-2" href="/">
-              <img
-                src="https://i.postimg.cc/D03wsZpV/Shape-Light-Gray-1.png"
-                height={45}
-                alt="MDB Logo"
-                loading="lazy"
-                style={{ marginTop: "-1px" }}
-              />
+            <a className={`${styles["header_logo"]} navbar-brand me-2`} href="/">
+              <Logo />
             </a>
           )}
 

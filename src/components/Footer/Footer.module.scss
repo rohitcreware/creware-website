@@ -14,9 +14,13 @@
 #footer-content {
   margin-top: 70px;
 
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     margin-top: 20px;
-    
+  }
+
+  svg {
+    height: 2.813rem;
+    width: 9.313rem;
   }
 }
 
@@ -102,12 +106,11 @@
   flex-direction: column;
   align-items: center;
 
-  .top{
+  .top {
     margin-right: 18px;
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       margin-right: unset;
-      
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { Logo } from "../Svgs/serverSecurity";
 
 const Footer = () => {
   return (
@@ -21,12 +22,7 @@ const Footer = () => {
                 id={styles["footer-content"]}
               >
                 <a className="me-2" href="/">
-                  <img
-                    className={styles["footer-logo"]}
-                    src="https://i.postimg.cc/PrwqksCy/Creware-Logo-Trans-6.png"
-                    alt="MDB Logo"
-                    loading="lazy"
-                  />
+                 <Logo />
                   {/* <span>Creware</span> */}
                 </a>
                 <p className={styles["footer-sub"]}>Warehouse of Creativity</p>

@@ -160,66 +160,66 @@ const QueryForm = () => {
                       HI! I am
                     </label>
                     <span> </span>
-                    {/* <input
+                    <input
                       type="text"
                       placeholder="eg : Musk"
                       className={`${styles["input-box"]}`}
-                    ></input> */}
-                    <TextField
+                    ></input>
+                    {/* <TextField
                       id="standard-basic"
                       label="eg : Musk"
                       variant="standard"
                       className={`${styles["custom-textfield"]}`}
-                    />
+                    /> */}
                   </div>
                   <div>
                     <label className={`${styles["form-lable"]}`}>
                       Reach me at
                     </label>
                     <span> </span>
-                    {/* <input
+                    <input
                       type="email"
                       placeholder="eg : musk@first.com"
                       className={`${styles["input-box"]}`}
-                    ></input> */}
-                    <TextField
+                    ></input>
+                    {/* <TextField
                       id="standard-basic"
                       label="eg : musk@first.com"
                       variant="standard"
                       className={`${styles["custom-textfield"]}`}
-                    />
+                    /> */}
                   </div>
                   <div>
                     <label className={`${styles["form-lable"]}`}>Country</label>
                     <span> </span>
-                    {/* <input
+                    <input
                       type="text"
                       placeholder="eg : India"
                       className={`${styles["input-box"]}`}
-                    ></input> */}
-                    <TextField
+                    ></input>
+                    {/* <TextField
                       id="standard-basic"
                       label="eg : India"
                       variant="standard"
                       className={`${styles["custom-textfield"]}`}
-                    />
+                    /> */}
                   </div>
                   <div>
                     <label className={`${styles["form-lable"]}`}>
                       Mobile no.
                     </label>
                     <span> </span>
-                    {/* <input
+                    <input
                       type="tel"
                       placeholder="eg : 9876543210"
                       className={`${styles["input-box"]}`}
-                    ></input> */}
-                    <TextField
+                    ></input>
+                    {/* <TextField
                       id="standard-basic"
                       label="eg : 9876543210"
                       variant="standard"
                       className={`${styles["custom-textfield"]}`}
-                    />
+                    /> */}
                   </div>
                   <div>
                     {" "}
@@ -227,34 +227,34 @@ const QueryForm = () => {
                       Company Name
                     </label>
                     <span> </span>
-                    {/* <input
+                    <input
                       type="text"
                       placeholder="eg : Creware technologies"
                       className={`${styles["input-box-1"]}`}
-                    ></input> */}
-                    <TextField
+                    ></input>
+                    {/* <TextField
                       id="standard-basic"
                       label="eg : Creware technologies"
                       variant="standard"
                       className={`${styles["custom-textfield1"]}`}
-                    />
+                    /> */}
                   </div>
                   <div className={`${styles["message-div"]}`}>
                     <label className={`${styles["form-lable"]}`}>
                       Message{" "}
                     </label>
                     <span> </span>
-                    {/* <textarea
+                    <textarea
                       type="text-area"
                       placeholder="eg : ......."
                       className={`${styles["text-area"]}`}
-                    ></textarea> */}
-                    <TextField
+                    ></textarea>
+                    {/* <TextField
                       id="standard-basic"
                       label="eg : ......."
                       variant="standard"
                       className={`${styles["custom-textfield"]}`}
-                    />
+                    /> */}
                   </div>
 
                   <div className="form-check d-flex align-items-center justify-content-center">

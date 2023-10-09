@@ -6,7 +6,7 @@ import RightArrowTowardsButton from "@/components/Animations/RightArrowTowardsBu
 import { TextField } from "@mui/material";
 import axios from "axios";
 
-const QueryForm = () => {
+const QueryForm = ({ mainContainerWidth }) => {
   const [buttonHover, setButtonHover] = useState(false);
   const [formData, setFormData] = useState({});
 
@@ -20,7 +20,6 @@ const QueryForm = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     const jsonFormData = JSON.stringify(formData);
-    console.log("jsonFormData", jsonFormData);
 
     axios.post("/api/sendmail", jsonFormData);
   };
@@ -28,7 +27,10 @@ const QueryForm = () => {
   return (
     <>
       <div className={`${styles["form-div"]} container`}>
-        <div className={`${styles["main-div"]}`}>
+        <div
+          className={`${styles["main-div"]}`}
+          style={{ width: mainContainerWidth ? mainContainerWidth : "" }}
+        >
           <div className="row">
             <div
               className={`${styles["form-first-div"]} col-12 col-md-12 col-lg-6`}
@@ -65,109 +67,121 @@ const QueryForm = () => {
                       <label className={`${styles["form-lable"]}`}>
                         HI! I am
                       </label>
-                      {/* <input
-                      type="text"
-                      placeholder="eg : Musk"
-                      className={`${styles["input-box"]}`}
-                    ></input> */}
-                      <TextField
+                      <input
+                        type="text"
+                        placeholder="eg : Musk"
+                        className={`${styles["input-box"]}`}
+                        onChange={onInputChangeHandler}
+                        name="name"
+                      ></input>
+                      {/* <TextField
                         id="standard-basic"
                         label="eg : Musk"
                         variant="standard"
                         className={`${styles["custom-textfield"]}`}
                         onChange={onInputChangeHandler}
                         name="name"
-                      />
+                      /> */}
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
                         Reach me at
                       </label>
-                      {/* <input
-                      type="email"
-                      placeholder="eg : musk@first.com"
-                      className={`${styles["input-box"]}`}
-                    ></input> */}
-                      <TextField
+                      <input
+                        type="email"
+                        placeholder="eg : musk@first.com"
+                        className={`${styles["input-box"]}`}
+                        name="reachMeAt"
+                        onChange={onInputChangeHandler}
+                      ></input>
+                      {/* <TextField
                         id="standard-basic"
                         label="eg : musk@first.com"
                         variant="standard"
                         className={`${styles["custom-textfield"]}`}
                         name="reachMeAt"
                         onChange={onInputChangeHandler}
-                      />
+                      /> */}
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
                         Country
                       </label>
-                      {/* <input
-                      type="text"
-                      placeholder="eg : India"
-                      className={`${styles["input-box"]}`}
-                    ></input> */}
-                      <TextField
+                      <input
+                        type="text"
+                        placeholder="eg : India"
+                        className={`${styles["input-box"]}`}
+                        name="country"
+                        onChange={onInputChangeHandler}
+                      ></input>
+                      {/* <TextField
                         id="standard-basic"
                         label="eg : India"
                         variant="standard"
                         className={`${styles["custom-textfield"]}`}
                         name="country"
                         onChange={onInputChangeHandler}
-                      />
+                      /> */}
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
                         Mobile no.
                       </label>
-                      {/* <input
-                      type="tel"
-                      placeholder="eg : 9876543210"
-                      className={`${styles["input-box"]}`}
-                    ></input> */}
-                      <TextField
+                      <input
+                        type="tel"
+                        placeholder="eg : 9876543210"
+                        className={`${styles["input-box"]}`}
+                        name="mobile_number"
+                        onChange={onInputChangeHandler}
+                      ></input>
+                      {/* <TextField
                         id="standard-basic"
                         label="eg : 9876543210"
                         variant="standard"
                         className={`${styles["custom-textfield"]}`}
                         name="mobile_number"
                         onChange={onInputChangeHandler}
-                      />
+                      /> */}
                     </div>
                     <div>
                       {" "}
                       <label className={`${styles["form-lable"]}`}>
                         Company Name
                       </label>
-                      {/* <input
-                      type="text"
-                      placeholder="eg : Creware technologies"
-                      className={`${styles["input-box-1"]}`}
-                    ></input> */}
-                      <TextField
+                      <input
+                        type="text"
+                        placeholder="eg : Creware technologies"
+                        className={`${styles["input-box-1"]}`}
+                        name="company_name"
+                        onChange={onInputChangeHandler}
+                      ></input>
+                      {/* <TextField
                         id="standard-basic"
                         label="eg : Creware technologies"
                         variant="standard"
                         className={`${styles["custom-textfield1"]}`}
                         name="company_name"
                         onChange={onInputChangeHandler}
-                      />
+                      /> */}
                     </div>
                     <div className={`${styles["message-div"]}`}>
                       <label className={`${styles["form-lable"]}`}>
                         Message{" "}
                       </label>
-                      {/* <textarea
-                      type="text-area"
-                      placeholder="eg : ......."
-                      className={`${styles["text-area"]}`}
-                    ></textarea> */}
-                      <TextField
+                      <textarea
+                        type="text-area"
+                        placeholder="eg : ......."
+                        className={`${styles["text-area"]}`}
+                        name="message"
+                        onChange={onInputChangeHandler}
+                      ></textarea>
+                      {/* <TextField
                         id="standard-basic"
                         label="eg : ......."
                         variant="standard"
                         className={`${styles["custom-textfield"]}`}
                         name="message"
-                      />
+                      /> */}
                     </div>
 
                     <div className="form-check d-flex align-items-center justify-content-center">
@@ -208,6 +222,7 @@ const QueryForm = () => {
                           className={`${styles["ball"]}`}
                           onMouseEnter={() => setButtonHover(true)}
                           onMouseLeave={() => setButtonHover(false)}
+                          onClick={onSubmitHandler}
                         >
                           Send
                           <div className={`${styles["span-wrapper"]}`}>

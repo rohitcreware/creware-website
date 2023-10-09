@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import styles from "./WebApp.module.scss";
-import FirstCard from "../MobileAppDev/FirstCard";
+import FirstCard from "./FirstCard";
 import { motion, useInView } from "framer-motion";
 import sectionback from "../MobileAppDev/json/homebackanimation.json";
 import SecondCard from "../MobileAppDev/SecondCard";

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LatestInsights.module.scss";
 import { Insights } from "../../../../Json/LatestInsight";
@@ -12,9 +11,6 @@ import {
   SmallArrowb,
 } from "@/components/Svgs/contactus";
 import { HoverArrow, ViewArrow } from "@/components/Svgs/portfoliobar";
-
-import Arrow from "../Home/Arrow";
-
 const LatestInsights = () => {
   const cardRef = useRef(null);
   const [scrollbarThumbPosition, setScrollbarThumbPosition] = useState(0);
