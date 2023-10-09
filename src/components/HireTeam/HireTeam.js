@@ -403,7 +403,7 @@ const HireTeam = () => {
                 {Roles.map((data, index) => {
                   return (
                     <div
-                      className="col-6 col-xs-2 col-md-3 col-lg-2 col-xl-2 my-2 ps-0"
+                      className="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-2 ps-0"
                       key={index}
                     >
                       <button

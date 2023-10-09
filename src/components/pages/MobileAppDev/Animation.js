@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Animation.module.scss";
-import gif from "../../../../public/images/mobileapp/mobile-app-backnew.gif";
+import gif from "../../../../public/images/mobileapp/mobile-app-back.gif";
 import Image from "next/image";
 const Animation = () => {
   return (
     <div>
-      <div className="container" >
+      <div className="container">
         <div className={`${styles["main-row"]} row`}>
           <div className="col-xl-8">
             <Image

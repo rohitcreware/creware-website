@@ -22,11 +22,13 @@ import ContactusBtnSec from "../EnterpriseSfDev/ContactusBtnSec/ContactusBtnSec"
 
 const Digital = () => {
   const cardRef = useRef(null);
+  const cardRef3 = useRef(null);
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
   const cardIsInView = useInView(cardRef, { once: true });
   const cardIsInView1 = useInView(cardRef1, { once: true });
   const cardIsInView2 = useInView(cardRef2, { once: true });
+  const cardIsInView3 = useInView(cardRef3, { once: true });
   const [screenWidth, setScreenWidth] = useState(0);
 
   const variant = {
@@ -67,6 +69,21 @@ const Digital = () => {
     onscreen2: {
       opacity: 1,
       x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1.2,
+      },
+    },
+  };
+  const variant3 = {
+    offscreen3: {
+      opacity: 0,
+      y: 200,
+    },
+    onscreen3: {
+      opacity: 1,
+      y: 0,
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -145,10 +162,10 @@ const Digital = () => {
             <div className={`${styles["top"]}`}>
               <div className={`${styles["top_left"]}`}>
                 <motion.h1
-                  variants={cardIsInView ? "" : variant}
-                  initial="offscreen"
-                  whileInView="onscreen"
-                  ref={cardRef}
+                  variants={cardIsInView3 ? "" : variant3}
+                  initial="offscreen3"
+                  whileInView="onscreen3"
+                  ref={cardRef3}
                   className={styles["slideUp"]}
                 >
                   Choose <span>Creware</span> As Your{" "}

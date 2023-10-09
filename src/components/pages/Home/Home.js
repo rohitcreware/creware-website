@@ -30,7 +30,7 @@ const Home = () => {
                   <Lottie animationData={topAnimation} loop={false} />
                 </div>
               </div>
-              <div className={`${styles["home-sec-1-div-1"]} col-lg-5`}>
+              <div className={`${styles["home-sec-1-div-1"]} col-lg-3`}>
                 <h2
                   className={`${styles["home-sec-1-h2"]} ${styles["slideUp"]}`}
                 >

@@ -273,7 +273,7 @@
     rgba(255, 116, 116, 0.3) 45%
   );
   -webkit-clippath: polygon(100% 0, 100% 39%, 52% 83%, 0 44%, 0 0);
-  clippath: polygon(100% 0, 100% 50%, 52% 63%, 0 50%, 0 0);
+  clip-path: polygon(100% 0, 100% 50%, 52% 63%, 0 50%, 0 0);
   border-radius: 10px;
 }
 
@@ -949,7 +949,7 @@
 
 .line-container .icon path {
   fill: transparent;
-  strokewidth: 10;
+  stroke-width: 10;
   stroke: #31e8ff;
 }
 
@@ -1691,3 +1691,9 @@
     padding-left: 7rem !important;
   }
 }
+@media (max-width: 576px) {
+  .responsiveFont{
+    font-size: 14vw !important;
+  }
+}
+

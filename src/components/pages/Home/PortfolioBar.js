@@ -188,10 +188,6 @@ const PortfolioBar = () => {
                   className={`${styles["thumb"]} `}
                   style={{
                     width: `${scrollbarThumbWidth}%`,
-                    // left:
-                    //   scrollbarThumbPosition <= 88
-                    //     ? `${scrollbarThumbPosition}%`
-                    //     : `${88}%`,
                     left: isDragging
                       ? initialThumbPosition +
                         (scrollbarThumbPosition - dragStartX) +

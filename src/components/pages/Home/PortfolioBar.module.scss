@@ -283,12 +283,15 @@ margin-top: -50px;
   transition: transform 0.2s;
   margin: 1.25rem 0 1.25rem 0;
 
-  @media (max-width:769px) {
-    font:900 2rem Arial; 
+  @media (max-width:1106px) {
+    font-size: 2.2rem;
   }  
-  @media (max-width:701px) {
-    font:900 1.2rem Arial; 
-    margin: 2rem 0 1.25rem 0;
+  @media (max-width:992px) {
+    font-size: 1.7rem;
+  }  
+  @media (max-width:780px) {
+    font-size: 1.4rem;
+    
   }
 }
 
@@ -299,10 +302,14 @@ margin-top: -50px;
   animation: zoom-out 2s ease-out infinite;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.07rem; 
-  @media (max-width:769px) {
-    font:900 2rem Arial; 
-  }
-  @media (max-width:701px) {
-    font:900 1.2rem Arial; 
+  @media (max-width:1106px) {
+    font-size: 2.2rem;
+  }  
+  @media (max-width:992px) {
+    font-size: 1.7rem;
+  }  
+  @media (max-width:780px) {
+    font-size: 1.4rem;
+    
   }
 }

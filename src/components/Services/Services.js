@@ -151,14 +151,14 @@ const Services = () => {
             <div className="col-12 pe-4 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column mb-3">
               <div className={`${styles["slide-effect"]} d-flex flex-column`}>
                 <div
-                  className={`${styles["slideUp"]} fs-6-5rem fw-bold text-white`}
+                  className={`${styles["slideUp"]} fs-6-5rem fw-bold text-white ${styles.responsiveFont}`}
                 >
                   OUR
                 </div>
               </div>
               <div className={`${styles["slide-effect"]} d-flex flex-column`}>
                 <div
-                  className={`${styles["slideUp"]} fs-6-5rem fw-bold ${styles.crewareRed}`}
+                  className={`${styles["slideUp"]} fs-6-5rem fw-bold ${styles.crewareRed} ${styles.responsiveFont}`}
                 >
                   SERVICES
                 </div>

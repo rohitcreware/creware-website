@@ -72,22 +72,14 @@
   display: flex;
   gap: 35px;
   overflow-x: scroll; 
-  // margin-bottom: 3rem;
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 9px;
-  }
+ 
+  scrollbar-width: thin;
+  scrollbar-color: red transparent;
 
-  &::-webkit-scrollbar-thumb {
-   background: red;
-   border-radius: 1rem;
-  }
-  
-  &::-webkit-scrollbar-track {
-    width: 10px;
-   background: linear-gradient(180deg, transparent 48%, rgba(113,113,113,1) 50%, transparent 52%);
-   color: black;
-   border-radius: 1rem;
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none; 
   }
 }
 
@@ -182,4 +174,74 @@
   //  @media (max-width: 800px) {
   //   display: none;
   // }
+}
+
+.scroll-row {
+  margin-right: 0;
+}
+
+.track {
+  border: 1px solid grey;
+  position: relative;
+  height: 0;
+}
+.thumb {
+  border-radius: 1rem;
+  background-color: #d0021b;
+  bottom: -5px;
+  position: absolute;
+  z-index: 10;
+}
+
+.arrow-row {
+  margin-top: -50px;
+}
+
+.arrow-div {
+  display: flex;
+  justify-content: center;
+  background-color: #060b27;
+  font-size: 1.5rem;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 426px) {
+    font-size: 0.5rem !important;
+    // width: 20%;
+  }
+}
+
+.custom-button {
+  background-color: #060b27;
+  color: #d0021b;
+  text-align: left;
+  font-size: 2.59rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+  margin: 1.25rem 0 1.25rem 0;
+
+  @media (max-width: 769px) {
+    font: 900 2rem Arial;
+  }
+  @media (max-width: 701px) {
+    font: 900 1.2rem Arial;
+    margin: 2rem 0 1.25rem 0;
+  }
+}
+
+.custom-button:hover {
+  font-size: 2.59rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+  animation: zoom-out 2s ease-out infinite;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.07rem;
+  @media (max-width: 769px) {
+    font: 900 2rem Arial;
+  }
+  @media (max-width: 701px) {
+    font: 900 1.2rem Arial;
+  }
 }

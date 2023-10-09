@@ -7,7 +7,7 @@ const FounderSection = () => {
       <div className={`${styles["main"]} container-fluid`}>
         <div className="row">
           {/* left */}
-          <div className="col-12 col-lg-4">
+          <div className={`${styles["img-div"]} col-12 col-lg-4`}>
             <img
               src="https://i.postimg.cc/1X8cs35N/Mask-group.png"
               alt="img"
