@@ -1,0 +1,64 @@
+@import "../../../../app/variables.scss";
+
+.main {
+  .heading {
+    margin: 30px 0;
+
+    @media (max-width: 576px) {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      color: #fff;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      font-family: $primaryFont;
+
+      @media (max-width: 576px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .vacancy_dropdown {
+    :global {
+      .css-13cymwt-control {
+        background: #060b27;
+      }
+      .css-1jqq78o-placeholder {
+        color: #fff;
+        font-size: 14.583px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @media (max-width: 576px) {
+          font-size: 12.583px;
+        }
+      }
+
+      .css-qbdosj-Input {
+        color: #060b27;
+      }
+
+      .css-t3ipsp-control {
+        background: #060b27;
+        color: #fff;
+        box-shadow: none;
+        border-radius: 7.292px;
+        border: 1.458px solid rgba(255, 255, 255, 0.7);
+      }
+
+      .css-1dimb5e-singleValue {
+        color: #fff;
+      }
+      .css-13cymwt-control {
+        border-radius: 7.292px;
+        border: 1.458px solid rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}

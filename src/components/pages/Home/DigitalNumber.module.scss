@@ -1,0 +1,141 @@
+.main {
+  background-image: url("../../../../public/images/contact/baground.png");
+  background-position: center;
+}
+
+.digital-container {
+  margin: 4.375rem; /* 70px / 16px = 4.375rem */
+  align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 576px) {
+    margin: unset;
+    margin-bottom: 2rem;
+  }
+}
+
+.digitalnumber-h2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 4.1rem;
+
+  @media (max-width: 1200px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.digital-row {
+  // width: 5.4375rem; /* 87px / 16px = 5.4375rem */
+  width: 92%;
+  margin: auto;
+  justify-content: space-between;
+
+  @media (max-width: 1400px) {
+    width: 85%;
+  }
+  @media (max-width: 867px) {
+    padding: unset;
+  }
+}
+
+.digital-div {
+  text-align: center;
+  background-image: url("../../../../public/images/Home/digitalNumber.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 4.664890766143799rem;
+  height: 9.45548202085492rem; 
+  top: 2.445556640625rem; 
+  left: 1.5605478286743164rem; 
+  border-radius: 0.8827486041259766rem; 
+  overflow: hidden;
+
+  @media (max-width: 1401px) {
+    width: 3.6648907661rem;
+    height: 7.4554820209rem;
+  }
+
+  @media (max-width: 576px) {
+    width: 50px;
+    height: 100px;
+  }
+}
+
+.digital-h3 {
+  margin-top: 28px;
+  font: 400 80px Arial;
+  color: white;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 0.1875rem; /* 3px / 16px = 0.1875rem */
+  overflow: hidden;
+
+  @media (max-width: 1280px) {
+    font: 400 3.3rem Arial;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 576px) {
+    font: 400 40px Arial;
+    margin-top: 25px;
+  }
+}
+
+.digital_animation {
+  animation: scroll 2.2s ease-out;
+}
+
+.digits_heading {
+  color: #fff;
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.65rem 0;
+
+  @media (max-width: 576px) {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  80%{
+    transform: translateY(-1200%);
+  }
+
+  100% {
+    transform: translateY(-1130%);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%); /* Start off the screen to the left */
+  }
+
+  100% {
+    transform: translateY(0); /* Move to its normal position */
+  }
+}

@@ -1,0 +1,63 @@
+.custom-button {
+    background-color: #060b27;
+    color: red;
+    text-align: left;
+    font:900 2.375rem Arial; 
+    transition: transform 0.2s;
+    margin: 1.25rem 0 1.25rem 0;
+
+    @media (max-width:769px) {
+      font:900 2rem Arial; 
+    }  
+    @media (max-width:701px) {
+      font:900 1.2rem Arial; 
+      margin: 2rem 0 1.25rem 0;
+    }
+  }
+  
+  .custom-button:hover {
+    text-align: center;
+    font:900 2.375rem Arial; /* 40px / 16px = 2rem */
+    transition: transform 0.2s;
+    animation: zoom-out 2s ease-out infinite;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.09375rem; 
+    @media (max-width:769px) {
+      font:900 2rem Arial; 
+    }
+    @media (max-width:701px) {
+      font:900 1.2rem Arial; 
+    }
+  }
+
+  .below-row{
+    width: 99%;
+    position: absolute;
+    bottom: -2.9rem;
+    justify-content: end;
+   
+    @media (max-width:701px) {
+      bottom: -4.5rem;
+  }
+    @media (max-width:580px) {
+      width: 97% !important;
+  }
+    @media (max-width:425px) {
+      width: 95% !important;
+  }
+  }
+
+  .arrow-div{
+    display: flex;
+    background-color: #060b27;
+    font-size: 1.5rem;
+    overflow: hidden;
+
+    @media (max-width:1024px) {
+        font-size: 1.2rem;
+    }
+    @media (max-width:426px) {
+        font-size: 0.5rem !important;
+        // width: 20%;
+    }
+  }

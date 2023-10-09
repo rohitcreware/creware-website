@@ -1,0 +1,225 @@
+.main {
+  .top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .lightning_bg {
+      margin-top: -107px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        opacity: 1.2;
+
+        @media (max-width: 420px) {
+          height: 15rem;
+        }
+      }
+    }
+
+    &_left {
+      position: absolute;
+      width: 81%;
+      top: 24%;
+      z-index: 10;
+
+      @media (max-width: 1400px) {
+        width: 80%;
+      }
+      @media (max-width: 1200px) {
+        width: 86%;
+      }
+      @media (max-width: 576px) {
+        top: 30%;
+        width: 95%;
+      }
+      @media (max-width: 450px) {
+        top: 35%;
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 3.75rem;
+        font-style: normal;
+        line-height: initial;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.4rem;
+
+        @media (max-width: 1400px) {
+          font-size: 3rem;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 2.8rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 450px) {
+          margin-bottom: 0.5rem;
+          width: 98%;
+        }
+
+        span {
+          opacity: 0.9;
+          color: #d0021b;
+        }
+      }
+
+      p {
+        color: #b0b0b0;
+        font-size: 1.313rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        width: 48%;
+
+        @media (max-width: 1400px) {
+          width: 55%;
+        }
+        @media (max-width: 1200px) {
+          width: 59%;
+        }
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+          line-height: 1.25rem;
+        }
+        @media (max-width: 576px) {
+          width: 98%;
+          line-height: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .security_lock {
+      img {
+        height: 45%;
+        width: 35%;
+        position: absolute;
+        top: 20%;
+        right: 2%;
+        z-index: 11;
+
+        @media (max-width: 768px) {
+          top: 27%;
+          width: 30%;
+        }
+
+        @media (max-width: 576px) {
+          top: 40%;
+          width: 40%;
+        }
+        @media (max-width: 420px) {
+          top: 35%;
+        }
+      }
+    }
+  }
+
+  .enterprise_software {
+    margin-top: 6.75rem;
+
+    @media (max-width: 576px) {
+      margin-top: 2rem;
+    }
+
+    .main {
+      width: 89%;
+      margin: auto;
+
+      .heading {
+        margin-bottom: 3.75rem;
+
+        @media (max-width: 576px) {
+          margin-bottom: 2rem;
+        }
+
+        h1 {
+          margin: auto;
+          margin-bottom: 1.875rem;
+          color: #fff;
+          font-size: 3rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          span {
+            color: #d0021b;
+          }
+
+          @media (max-width: 1400px) {
+            font-size: 2rem;
+          }
+          @media (max-width: 1200px) {
+            font-size: 2.188rem;
+          }
+          @media (max-width: 768px) {
+            font-size: 1.8rem;
+            width: 100%;
+          }
+          @media (max-width: 576px) {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+          }
+        }
+        p {
+          color: #b0b0b0;
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          text-transform: capitalize;
+          width: 80%;
+
+          @media (max-width: 1400px) {
+            width: 62%;
+            font-size: 1rem;
+          }
+
+          @media (max-width: 1200px) {
+            width: 75%;
+          }
+
+          @media (max-width: 768px) {
+            width: 91%;
+          }
+          @media (max-width: 576px) {
+            width: 100%;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .slideUp {
+    position: relative;
+    opacity: 0;
+  }
+
+  .slideUp {
+    top: 40px;
+    // left: 10px;
+    animation: slideUp ease 0.5s forwards 1.2s;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../../../app/variables.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+
+  @media (max-width: 576px) {
+  }
+
+  p {
+    color: #fff;
+    font-size: 0.9rem !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-family: $secondaryFont !important;
+    margin-bottom: unset !important;
+    line-height: 1.8rem !important;
+
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 576px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .bullets {
+    background-color: #fff;
+    color: #060b27;
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    margin: 0 15px;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+  .transparent_bullets {
+    background-color: transparent;
+    color: #060b27;
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    margin: 0 15px;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .bullets {
+    font-size: 50px;
+  }
+}

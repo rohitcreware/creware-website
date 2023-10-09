@@ -1,0 +1,178 @@
+@import "../../../../app/variables.scss";
+
+.main {
+  margin: 3.75rem auto;
+  width: 83%;
+
+  .left_quote {
+    @media (max-width: 576px) {
+      height: 35px;
+      width: 70px;
+    }
+  }
+
+  .project_goals_p {
+    font-weight: 400 !important;
+    font-size: 1.4rem;
+    line-height: normal;
+    color: #fff;
+    margin: 2.5rem 0px;
+
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 768px) {
+      margin: 1.5rem 0px;
+    }
+    @media (max-width: 576px) {
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: unset;
+    }
+  }
+
+  .invited_bottom {
+    img {
+      @media (max-width: 576px) {
+        height: 35px;
+        width: 70px;
+      }
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 0.8125rem;
+      font-style: normal;
+      font-weight: 600;
+      display: flex;
+      justify-content: left;
+      font-family: $secondaryFont;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal; /* 157.895% */
+      font-family: $secondaryFont;
+
+      @media (max-width: 576px) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .tab_section {
+    margin: 3.75rem 0 2.5rem 0;
+    padding: 3.375rem 5rem;
+    background: #022b49;
+
+    @media (max-width: 1200px) {
+      padding: 3.375rem 3rem;
+    }
+    @media (max-width: 768px) {
+      padding: 3.375rem 2rem;
+    }
+    @media (max-width: 576px) {
+      padding: 15px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      margin-top: 10px;
+
+      @media (max-width: 1200px) {
+        font-size: 1rem;
+      }
+      @media (max-width: 768px) {
+        margin-top: 2rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 14px;
+        margin-bottom: 1rem;
+        line-height: unset;
+        text-align: center;
+      }
+    }
+
+    .right {
+      color: #fff;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 600;
+
+      @media (max-width: 576px) {
+        font-size: 0.9rem;
+      }
+
+      .button {
+        color: #fff;
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 600;
+
+        @media (max-width: 576px) {
+          text-align: center;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .bottom_btns {
+    width: 90%;
+    margin: auto;
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+
+    .left {
+      color: #fff;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      display: flex;
+      justify-content: left;
+      font-family: $secondaryFont;
+
+      @media (max-width: 576px) {
+        font-size: 10px;
+        padding-left: unset !important;
+      }
+
+      div {
+        width: fit-content;
+        cursor: pointer;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    .right {
+      color: #fff;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      display: flex;
+      justify-content: flex-end;
+      font-family: $secondaryFont;
+
+      @media (max-width: 576px) {
+        font-size: 10px;
+        padding-right: unset !important;
+      }
+
+      div {
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+  }
+}

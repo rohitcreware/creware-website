@@ -1,0 +1,51 @@
+.cards {
+  margin-bottom: 150px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 20px;
+  }
+
+  &_title {
+    color: #fff;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      text-align: left;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+    }
+    @media (max-width: 576px) {
+      font-size: 15px;
+    }
+  }
+
+  &_details {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    @media (max-width: 1200px) {
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,424 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+  @media (max-width: 576px) {
+    height: 400px;
+    width: 296px;
+    margin: auto;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .img1 {
+    width: 100%;
+    height: auto;
+
+    img {
+      top: 0;
+      left: 5%;
+      width: 100px;
+    }
+  }
+  .img2 {
+    img {
+      top: 2%;
+      right: 36%;
+      width: 133px;
+    }
+  }
+  .img3 {
+    img {
+      width: 133px;
+      right: 13%;
+    }
+  }
+  .img4 {
+    img {
+      top: 20%;
+      left: 13%;
+      width: 212px;
+    }
+  }
+  .img5 {
+    img {
+      top: 35%;
+      right: 14%;
+      width: 246px;
+    }
+  }
+  .img6 {
+    img {
+      bottom: -2%;
+      left: 7%;
+      width: 133px;
+    }
+  }
+  .img7 {
+    img {
+      bottom: -4%;
+      left: 29%;
+      width: 133px;
+    }
+  }
+  .img8 {
+    img {
+      bottom: -37%;
+      left: 26%;
+      width: 133px;
+    }
+  }
+  .img9 {
+    img {
+      bottom: -26%;
+      left: 47%;
+      width: 133px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .img1 {
+      width: 100%;
+      height: auto;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 100px;
+      }
+    }
+    .img2 {
+      img {
+        top: 2%;
+        right: 28%;
+        width: 133px;
+      }
+    }
+    .img3 {
+      img {
+        width: 133px;
+        right: 0;
+      }
+    }
+    .img4 {
+      img {
+        top: 15%;
+        left: 11%;
+        width: 212px;
+      }
+    }
+    .img5 {
+      img {
+        top: 30%;
+        right: 4%;
+        width: 246px;
+      }
+    }
+    .img6 {
+      img {
+        bottom: 10%;
+        left: 4%;
+        width: 133px;
+      }
+    }
+    .img7 {
+      img {
+        bottom: 2.815rem;
+        left: 29%;
+        width: 133px;
+      }
+    }
+    .img8 {
+      img {
+        bottom: -5.6875rem;
+        left: 29%;
+        width: 133px;
+      }
+    }
+    .img9 {
+      img {
+        bottom: -13%;
+        left: 53%;
+        width: 133px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .img1 {
+      width: 100%;
+      height: auto;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 85px;
+      }
+    }
+    .img2 {
+      img {
+        top: 2%;
+        right: 35%;
+        width: 110px;
+      }
+    }
+    .img3 {
+      img {
+        width: 110px;
+        right: 10%;
+      }
+    }
+    .img4 {
+      img {
+        top: 16%;
+        left: 11%;
+        width: 150px;
+      }
+    }
+    .img5 {
+      img {
+        top: 30%;
+        right: 14%;
+        width: 165px;
+      }
+    }
+    .img6 {
+      img {
+        bottom: 10%;
+        left: 4%;
+        width: 100px;
+      }
+    }
+    .img7 {
+      img {
+        bottom: 14%;
+        left: 30%;
+        width: 100px;
+      }
+    }
+    .img8 {
+      img {
+        bottom: -17%;
+        left: 23%;
+        width: 110px;
+      }
+    }
+    .img9 {
+      img {
+        bottom: -8%;
+        left: 47%;
+        width: 110px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .img1 {
+      width: 100%;
+      height: auto;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 75px;
+      }
+    }
+    .img2 {
+      img {
+        top: 2%;
+        right: 35%;
+        width: 85px;
+      }
+    }
+    .img3 {
+      img {
+        width: 85px;
+        right: 9%;
+      }
+    }
+    .img4 {
+      img {
+        top: 14%;
+        left: 11%;
+        width: 120px;
+      }
+    }
+    .img5 {
+      img {
+        top: 19%;
+        right: 10%;
+        width: 140px;
+      }
+    }
+    .img6 {
+      img {
+        bottom: 40%;
+        left: 5%;
+        width: 85px;
+      }
+    }
+    .img7 {
+      img {
+        bottom: 38%;
+        left: 31%;
+        width: 85px;
+      }
+    }
+    .img8 {
+      img {
+        bottom: 18%;
+        left: 33%;
+        width: 85px;
+      }
+    }
+    .img9 {
+      img {
+        bottom: 29%;
+        left: 55%;
+        width: 85px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .img1 {
+      width: 100%;
+      height: auto;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 85px;
+      }
+    }
+    .img2 {
+      img {
+        top: 2%;
+        right: 35%;
+        width: 110px;
+      }
+    }
+    .img3 {
+      img {
+        width: 110px;
+        right: 10%;
+      }
+    }
+    .img4 {
+      img {
+        top: 13%;
+        left: 14%;
+        width: 150px;
+      }
+    }
+    .img5 {
+      img {
+        top: 27%;
+        right: 14%;
+        width: 165px;
+      }
+    }
+    .img6 {
+      img {
+        bottom: 25%;
+        left: 10%;
+        width: 100px;
+      }
+    }
+    .img7 {
+      img {
+        bottom: 27%;
+        left: 34%;
+        width: 100px;
+      }
+    }
+    .img8 {
+      img {
+        bottom: 0%;
+        left: 25%;
+        width: 110px;
+      }
+    }
+    .img9 {
+      img {
+        bottom: 4%;
+        left: 47%;
+        width: 110px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .img1 {
+      width: 100%;
+      height: auto;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 85px;
+      }
+    }
+    .img2 {
+      img {
+        top: 2%;
+        right: 35%;
+        width: 100px;
+      }
+    }
+    .img3 {
+      img {
+        width: 100px;
+        right: 0%;
+      }
+    }
+    .img4 {
+      img {
+        top: 22%;
+        left: 7%;
+        width: 110px;
+      }
+    }
+    .img5 {
+      img {
+        top: 25%;
+        right: 3%;
+        width: 130px;
+      }
+    }
+    .img6 {
+      img {
+        bottom: 25%;
+        left: 0;
+        width: 100px;
+      }
+    }
+    .img7 {
+      img {
+        bottom: 22%;
+        left: 35%;
+        width: 100px;
+      }
+    }
+    .img8 {
+      img {
+        bottom: -3%;
+        left: 42%;
+        width: 100px;
+      }
+    }
+    .img9 {
+      img {
+        bottom: 16%;
+        left: 68%;
+        width: 100px;
+      }
+    }
+  }
+}

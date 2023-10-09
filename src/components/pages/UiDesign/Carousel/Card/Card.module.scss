@@ -1,0 +1,42 @@
+.main {
+  border-radius: 34.5px;
+  background: #111428;
+  padding: 2.313rem;
+  width: 90%;
+  margin: auto;
+
+  @media (max-width: 1400px) {
+    width: 95%;
+    padding: 1.3rem;
+  }
+
+  p {
+    color: #fff;
+    font-size: 0.944rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: 1rem 0;
+
+    @media (max-width: 1400px) {
+      font-size: 0.88rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.875rem;
+    }
+  }
+  h4 {
+    color: #d0021b;
+    font-size: 0.844rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 159.5%; /* 21.533px */
+  }
+
+  h6 {
+    color: #fff;
+    font-size: 0.844rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 159.5%;
+  }
+}

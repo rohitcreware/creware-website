@@ -1,0 +1,82 @@
+.main {
+  .lottie {
+    position: absolute;
+    // height: 100%;
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  .text-main-5 {
+    padding: 7rem 0 2rem 0;
+    width: 86%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 3rem 0 2rem 0;
+    }
+  }
+
+  .p-5 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: normal;
+
+    p {
+      width: 86%;
+
+      @media (max-width: 1400px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 1.2rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .text-5 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: normal;
+
+    @media (max-width: 1281px) {
+      line-height: unset;
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 2rem;
+      line-height: 45px;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 1.8rem;
+      line-height: normal;
+    }
+    @media (max-width: 576px) {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  .button-5 {
+    margin-top: 0.5rem;
+    background-color: #d0021b;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.7rem;
+    border: none;
+    border-radius: 7.504px;
+
+    @media (max-width: 600px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

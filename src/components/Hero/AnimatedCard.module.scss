@@ -1,0 +1,39 @@
+.card-body-animation {
+  position: relative;
+}
+
+.card-title-animation {
+  text-align: center;
+  font: 900 300px Arial;
+  transition: transform 0.2s;
+  animation: zoom-out 2s ease-out infinite;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px;
+
+  &:hover {
+    text-align: center;
+    //   height: 500px;
+      font: 600 30px Arial;
+    transform: scale(0.5, 0.5);
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 3px;
+  }
+}
+
+.card-desc-animation {
+  color: #0075ff;
+  font-size: 50px;
+  position: absolute;
+  bottom: 170px;
+  left: 40px;
+}
+
+// @keyframes zoom-out {
+//   0% {
+//     transform: scale(1, 1);
+//   }
+
+//   100% {
+//     transform: scale(0.1, 0.1);
+//   }
+// }

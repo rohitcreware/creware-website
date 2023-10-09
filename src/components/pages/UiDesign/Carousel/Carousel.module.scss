@@ -1,0 +1,135 @@
+.feedBack_boxes {
+  width: 80%;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  /* the parent */
+
+  .box_content {
+    //   display: flex;
+    align-items: center;
+    gap: 15px;
+    .reviewer_img {
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .box_head {
+      .client_name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #292b40;
+      }
+      .client_desigination {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #44465a;
+      }
+    }
+  }
+  .client_para {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    padding-top: 20px;
+    text-transform: capitalize;
+    color: #292b40;
+  }
+  .feedback_time_star {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 15px 10px 16px 1px;
+    .feedback_time {
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: capitalize;
+      color: #787985;
+    }
+  }
+
+  :global {
+    .slick-arrow:before {
+      content: "" !important;
+    }
+
+    .slick-list {
+      margin: 0 10% !important;
+
+      @media (max-width: 768px) {
+        margin: 0 8% !important;
+      }
+    }
+
+    .slick-slide {
+      transform: scale(1) !important;
+      margin: unset !important;
+      padding-top: unset !important ;
+    }
+    .slick-dots li button:before {
+      font-size: 12px !important;
+    }
+
+    .slick-arrow:before {
+      content: "" !important;
+      width: 30px !important;
+      height: 46px !important;
+      position: absolute;
+      top: 0px;
+      left: 0;
+
+      @media (max-width: 576px) {
+        width: 23px !important;
+        height: 33px !important;
+      }
+    }
+
+    .slick-next:before {
+      // background: url("../../../../../assets/images/slick_carouselBtn-right.svg") !important;
+      background: url("../../../../assets/svgs/right_arrow.svg") !important;
+      background-size: contain !important;
+      background-repeat: no-repeat;
+    }
+
+    .slick-prev:before {
+      background: url("../../../../assets/svgs/left_arrow.svg") !important;
+      background-size: contain !important;
+      background-repeat: no-repeat;
+    }
+
+    .slick-arrow {
+      z-index: 2 !important;
+      width: 30px !important;
+      height: 46px !important;
+      overflow: hidden;
+    }
+
+    .slick-next {
+      @media (max-width: 576px) {
+        @media (max-width: 576px) {
+          right: 0 !important;
+        }
+
+      }
+    }
+
+    .slick-prev {
+      @media (max-width: 576px) {
+        left: 0 !important;
+      }
+    }
+
+    .slick-arrow:before {
+      opacity: 1 !important;
+      //   transform: scale(2.5);
+    }
+  }
+}

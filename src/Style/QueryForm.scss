@@ -1,0 +1,132 @@
+.form-mobile-div {
+    display: flex;
+    gap: 6px;
+    margin: 15px 0 0px 0;
+  }
+  
+  .form-email {
+    text-align: left;
+    font-size: 17px;
+  }
+  
+  .form-lable {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .input-box {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #0266ad;
+    /* width: 300px; */
+    /* line-height: 60px; */
+  }
+  
+  .text-area {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #0266ad;
+    width: 300px;
+  }
+  
+  .checkbox {
+    border-bottom: 2px solid red;
+    opacity: 0.1;
+    /* width: 40px; */
+    height: 40px;
+    /* margin-top: 20px; */
+  }
+
+#form-button {
+    color: #d0021b;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    /* font-family: Outfit; */
+    font-weight: 650;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 190px;
+    text-align: center;
+    padding: 0;
+    /* background-color: red; */
+  }
+  
+  #form-button:hover {
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    /* font-family: Outfit; */
+    font-weight: 650;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 190px;
+    text-align: center;
+    padding: 0;
+  }
+
+  // .term-div {
+    /* display: flex; */
+    /* gap: 15px; */
+  // }
+
+  // .button-div {
+    /* text-align: right; */
+    /* margin: 30px 140px 20px 0; */
+  // }
+
+  .term-label {
+    color: #ffffff;
+    /* margin-top:  20px; */
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .form-div {
+    display: flex;
+    padding: 0 0 0 80px;
+  }
+  
+  .form-first-div {
+    width: 45%;
+    /* padding: 0 60px 0 80px; */
+    justify-content: left;
+    margin-left: 30px;
+  }
+  
+  .form-second-div {
+    text-align: left;
+  }
+  
+  .second-div-h2 {
+    /* font-family: Outfit; */
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 81px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .first-div-h2 {
+    /* font-family: Outfit; */
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  
+  .first-div-p {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }

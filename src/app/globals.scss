@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import "../app/page.module.scss";
+body {
+  background-color: #060b27 !important;
+}
+
+// .accordion-button:not(.collapsed)::after {
+//   font-size: 1rem !important;
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 648 712'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z' fill='white'/%3E%3C/svg%3E") !important;
+// }
+
+.accordion-button::after {
+  display: none !important;
+  // position: absolute;
+  // left: 1rem;
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 648 712'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z' fill='white'/%3E%3C/svg%3E") !important;
+}
+
+.accordion-button:focus {
+  border: none;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.accordion-button {
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #fff;
+}
+.accordion-item {
+  color: #fff;
+  background: transparent !important;
+  border: none !important;
+}
+
+.accordion-body {
+  color: #fff;
+}
+
+.accordion-header {
+  border: none !important;
+  outline: 0 !important;
+}
+
+.slick-slider .slick-slide.slick-current,
+.slick-slider .slick-slide.slick-center {
+  transform: scale(1.2);
+  margin: 35px 0;
+  // margin-top: 10px;
+  /* padding-top: 10px; */
+  // border-top: 12px solid #060B27;
+  // margin-right:3%;
+  // margin-left:3%;
+}
+
+.slick-slider .slick-list {
+  padding: 0 !important;
+
+  .slick-track .slick-slide {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+.react-tabs__tab-list {
+  border: none !important;
+}
+
+.react-tabs__tab:focus:after {
+  background: transparent !important;
+}
+
+.react-tabs__tab--selected {
+  background: transparent !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  border-bottom: 2px solid $creware-red !important;
+}
+
+.react-tabs__tab {
+  color: #fff !important;
+}
+
+.fadeIn {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fs0-5rem {
+  font-size: 0.5rem;
+}
+
+.pad-x-10 {
+  padding: 0 10rem !important;
+}
+
+.h-2rem {
+  height: 2rem !important;
+}
+.fs-3rem {
+  font-size: 3rem !important;
+}
+
+// Loader CSS
+
+.loader_background {
+  background-color: #000(255, 255, 255, 0.8);
+  opacity: 0.8;
+  height: 100vh;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  z-index: 9999;
+
+  img {
+    @media (max-width: 576px) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.pleft-7 {
+  padding-left: 7rem !important;
+}
+
+.tab--selected {
+  background-color: $creware-red !important;
+}
+
+.fs-13 {
+  font-size: 0.8rem !important;
+}
+.fs-14 {
+  font-size: 0.875rem !important;
+}
+.fs-18 {
+  font-size: 1.125rem !important;
+}
+.fs-36 {
+  font-size: 2.25rem !important;
+}
+.fs-33 {
+  font-size: 2.291vw !important;
+}
+.fs-11{
+  font-size: 0.7rem !important;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.color-red {
+  color: $creware-red !important;
+}
+
+.color-card-bg {
+  background-color: $creware-cardBlue !important;
+}
+.ripple-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ripple-card:hover {
+  background-color: #f0f0f0;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.ripple {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 123, 255, 0.3);
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.form-check {
+  gap: 1rem !important;
+}
+
+.form-check-input:checked {
+  background-color: $creware-red !important;
+  border-color: #ffffff !important;
+}
+
+.form-check-input {
+  --bs-form-check-bg: $creware-cardBlue !important;
+  min-width: 2rem !important;
+  max-width: 3rem !important;
+  width: 3rem !important;
+  height: 2rem !important;
+  border-radius: 0 !important;
+}
+
+.form-check-input:hover {
+  border-color: $creware-red !important;
+  outline: 1px solid $creware-red !important;
+  box-shadow: none !important;
+}
+
+.fs-6-5rem{
+  font-size: 8vw !important;
+}

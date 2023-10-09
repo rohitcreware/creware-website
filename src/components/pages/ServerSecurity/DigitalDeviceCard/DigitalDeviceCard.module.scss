@@ -1,0 +1,67 @@
+.single_card {
+  margin-bottom: 3.875rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2.25rem;
+  }
+  @media (max-width: 576px) {
+    padding: 0 0 0 1.5rem;
+  }
+
+  .head {
+    padding: unset !important;
+    display: flex;
+    justify-content: end;
+    margin-top: -6px;
+  }
+
+  h6 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0.9rem;
+
+    @media (max-width: 1400px) {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.313rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 90%;
+
+    @media (max-width: 1400px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.8rem;
+    }
+  }
+}

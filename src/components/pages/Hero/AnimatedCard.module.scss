@@ -1,0 +1,359 @@
+.card5 {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  background-color: transparent;
+  color: white;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @media (max-width: 48rem) {
+    height: 23.75rem;
+  }
+
+  @media (max-width: 26.625rem) {
+    width: 80%;
+    margin: auto;
+    height: 17.5rem;
+  }
+}
+
+.number5-parent {
+  position: relative;
+}
+
+.desc5-parent {
+  text-align: left;
+  margin-left: 8.3125rem;
+  margin-top: 1.4375rem;
+
+  @media (max-width: 64rem) {
+    margin-top: 4.0625rem;
+    margin-left: 5.9375rem;
+  }
+  @media (max-width: 48rem) {
+    margin-top: 4.0625rem;
+    margin-left: 5.9375rem;
+  }
+  @media (max-width: 26.625rem) {
+    margin-top: 2.8125rem;
+    margin-left: 7.1875rem;
+  }
+  @media (max-width: 20.0625rem) {
+    margin-top: 2.8125rem;
+    margin-left: 5.9375rem;
+  }
+}
+
+.desc5 {
+  margin: 0 0 1.875rem 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  @media (max-width: 48rem) {
+    font-size: 0.625rem;
+  }
+}
+
+.number5-1,
+.number5-2,
+.number5-3 {
+  font-size: 21.875rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  margin-bottom: 0.9375rem;
+  transition: all 0.9s ease;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.1875rem;
+
+  @media (max-width: 48rem) {
+    font-size: 16.25rem;
+    margin-bottom: 0.9375rem;
+  }
+  @media (max-width: 26.625rem) {
+    font-size: 11.875rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+
+.text5-1 {
+  font: 800 2.5rem Arial;
+  position: absolute;
+  bottom: 12.5rem;
+  left: 6.875rem;
+  letter-spacing: 0.1875rem;
+  color: #dd3a3a;
+  transition: all 0.9s ease;
+  
+  @media (max-width: 64rem) {
+    left: 5rem;
+  }
+  @media (max-width: 48rem) {
+    font: 800 1.875rem Arial;
+    bottom: 10rem;
+    left: 3.125rem;
+  }
+  @media (max-width: 26.625rem) {
+    font: 800 1.625rem Arial;
+    bottom: 7.5rem;
+    left: 6.875rem;
+  }
+  @media (max-width: 23.625rem) {
+    bottom: 7.5rem;
+    left: 5.625rem;
+  }
+  @media (max-width: 20.0625rem) {
+    bottom: 7.5rem;
+    left: 4.375rem;
+  }
+  @media (max-width: 18rem) {
+    bottom: 7.5rem;
+    left: 3.125rem;
+  }
+}
+
+
+.text5-2 {
+  font: 800 2.5rem Arial;
+  position: absolute;
+  bottom: 12.5rem;
+  left: 3.125rem;
+  letter-spacing: 0.1875rem;
+  color: #0075ff;
+  transition: all 0.9s ease; /* Add transition for the text size change */
+  
+  @media (max-width: 64rem) {
+    left: 0.9375rem;
+  }
+  @media (max-width: 48rem) {
+    font: 800 1.875rem Arial;
+    bottom: 10rem;
+    left: 0rem;
+  }
+  @media (max-width: 26.625rem) {
+    font: 800 1.625rem Arial;
+    bottom: 7.5rem;
+    left: 4.375rem;
+  }
+  @media (max-width: 23.625rem) {
+    bottom: 7.5rem;
+    left: 3.125rem;
+  }
+  @media (max-width: 20.0625rem) {
+    bottom: 7.5rem;
+    left: 2.1875rem;
+  }
+  @media (max-width: 18rem) {
+    bottom: 7.5rem;
+    left: 1.25rem;
+  }
+}
+
+.text5-3 {
+  font: 800 2.5rem Arial;
+  position: absolute;
+  bottom: 12.5rem;
+  left: 4.375rem;
+  letter-spacing: 0.1875rem;
+  color: #9c34f0;
+  transition: all 0.9s ease; /* Add transition for the text size change */
+
+  @media (max-width: 64rem) {
+    left: 2.8125rem;
+  }
+
+  @media (max-width: 48rem) {
+    font: 800 1.875rem Arial;
+    bottom: 10rem;
+    left: 2.1875rem;
+  }
+
+  @media (max-width: 26.625rem) {
+    font: 800 1.625rem Arial;
+    bottom: 7.8125rem;
+    left: 5.625rem;
+  }
+
+  @media (max-width: 23.5rem) {
+    bottom: 7.8125rem;
+    left: 3.125rem;
+  }
+
+  @media (max-width: 20.0625rem) {
+    bottom: 7.8125rem;
+    left: 2.1875rem;
+  }
+
+  @media (max-width: 18rem) {
+    bottom: 7.8125rem;
+    left: 1.5625rem;
+  }
+}
+
+
+.text5-1 img,
+.text5-2 img,
+.text5-3 img {
+  height: 0.0625rem;
+}
+
+.card5:hover .text5-1 img{
+  height: 3.75rem;
+  margin-right: 2.5rem;
+  text-align: left;
+
+  @media (max-width: 48rem) {
+    height: 2.5rem;
+    margin-right: 1.5625rem;
+  }
+  @media (max-width: 64rem) {
+    height: 3.125rem;
+    margin-right: 1.5625rem;
+  }
+}
+.card5:hover .text5-2 img{
+height: 3.75rem;
+  margin-right: 1.4rem;
+  text-align: left;
+
+  @media (max-width: 48rem) {
+    height: 2.5rem;
+    margin-right: 1.5625rem;
+  }
+  @media (max-width: 64rem) {
+    height: 3.125rem;
+    margin-right: 0.5625rem;
+  }
+}
+.card5:hover .text5-3 img {
+  height: 3.75rem;
+  margin-right: 2.5rem;
+  text-align: left;
+
+  @media (max-width: 48rem) {
+    height: 2.5rem;
+    margin-right: 1.5625rem;
+  }
+  @media (max-width: 64rem) {
+    height: 3.125rem;
+    margin-right: 1.5625rem;
+  }
+}
+
+.card5:hover {
+  border: 0.125rem solid #d0021b;
+  background: linear-gradient(
+    180deg,
+    rgba(208, 2, 27, 0.15) 0%,
+    rgba(208, 2, 27, 0) 100%
+  );
+}
+
+.card5:hover .number5-1,
+.card5:hover .number5-2,
+.card5:hover .number5-3 {
+  margin: 3.125rem;
+  font-size: 4.0625rem;
+  color: white;
+  background-color: transparent;
+  -webkit-text-fill-color: white;
+
+  @media (max-width: 48rem) {
+    margin: 1.875rem;
+    font-size: 2.8125rem;
+  }
+}
+
+
+.card5:hover .text5-1 {
+  font: 700 1.875rem Arial;
+  line-height: 1.25rem;
+  letter-spacing: 0.1875rem;
+  position: absolute;
+  left: 1.875rem;
+  bottom: 18.75rem;
+  color: white;
+  margin-top: 1.25rem;
+
+  @media (max-width: 48rem) {
+    font: 700 1.25rem Arial;
+    bottom: 15rem;
+    left: 1.25rem;
+  }
+
+  @media (max-width: 26.625rem) {
+    bottom: 9.375rem;
+    left: 2.8125rem;
+  }
+
+  @media (max-width: 20.0625rem) {
+    bottom: 9.375rem;
+    left: 1.5625rem;
+  }
+}
+
+.card5:hover .text5-2 {
+  font: 700 1.875rem Arial;
+  width: 105%;
+  line-height: 1.25rem;
+  letter-spacing: 0.1875rem;
+  position: absolute;
+  // left: 1.875rem;
+  bottom: 18.75rem;
+  color: white;
+  margin-top: 1.25rem;
+
+  @media (max-width: 48rem) {
+    font: 700 1.25rem Arial;
+    bottom: 15rem;
+    left: 0.4375rem;
+    width: 122%;
+  }
+
+  @media (max-width: 26.625rem) {
+    bottom: 9.375rem;
+    left: 2.8125rem;
+  }
+
+  @media (max-width: 20.0625rem) {
+    bottom: 9.375rem;
+    left: 1.5625rem;
+  }
+}
+
+.card5:hover .text5-3 {
+  font: 700 1.875rem Arial;
+  line-height: 1.25rem;
+  letter-spacing: 0.1875rem;
+  position: absolute;
+  left: 1.5625rem;
+  bottom: 18.75rem;
+  color: white;
+  margin-top: 1.25rem;
+
+  @media (max-width: 64rem) {
+    left: 1.3125rem;
+  }
+
+  @media (max-width: 48rem) {
+    font: 700 1.25rem Arial;
+    bottom: 15rem;
+    left: 1.25rem;
+  }
+
+  @media (max-width: 26.625rem) {
+    bottom: 9.375rem;
+    left: 2.8125rem;
+  }
+
+  @media (max-width: 20.0625rem) {
+    bottom: 9.375rem;
+    left: 1.25rem;
+  }
+}
+

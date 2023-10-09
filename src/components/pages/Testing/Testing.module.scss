@@ -1,0 +1,335 @@
+@import "/src/app/page.module.scss";
+
+.threadContainer {
+  height: 32rem;
+  @media (max-width: 992px) {
+      height: 40rem !important;
+    }
+    @media (max-width: 770px) {
+        height: 35rem !important;
+    }
+  @media (max-width: 769px) {
+    height: unset !important;
+  }
+}
+
+.backani {
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+}
+
+
+.overdiv{
+  @media (max-width:992px) {
+    margin-top: 7rem;
+  }
+}
+
+.main {
+  background: #060b27;
+  position: relative;
+  // background-image: url('../../../../public/images/testing/background.gif');
+
+  .back_animation {
+    position: relative;
+  }
+
+  .crewareRed {
+    color: $creware-red;
+  }
+
+  .backround {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+  }
+
+  .top {
+    padding-top: 5rem;
+    position: absolute;
+    top: 5rem;
+
+
+
+    @media (max-width: 991px) {
+     position: unset;
+     top: 0rem;
+    }
+    @media (max-width: 768px) {
+      padding-top: 2rem;
+      padding-bottom: unset;
+    }
+    @media (max-width: 576px) {
+      padding-top: unset;
+      padding-bottom: unset;
+    }
+
+    &_left {
+      width: 92%;
+      margin: auto;
+      h1 {
+        color: #fff;
+        font-size: 3.75rem;
+        font-style: normal;
+        line-height: initial;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.4rem;
+
+        @media (max-width: 1400px) {
+          font-size: 3.2rem;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 2.7rem;
+        }
+        @media (max-width: 992px) {
+          font-size: 2rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 1.1rem;
+          width: 100%;
+        }
+        @media (max-width: 403px) {
+          font-size: 0.99rem;
+          width: 100%;
+        }
+        @media (max-width: 350px) {
+          font-size: 0.8rem;
+          width: 100%;
+        }
+
+        span {
+          opacity: 0.9;
+          color: #d0021b;
+        }
+      }
+
+      p {
+        color: #b0b0b0;
+        font-size: 1.313rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 55%;
+
+        @media (max-width: 1200px) {
+          font-size: 1.2rem;
+        }
+        @media (max-width: 992px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 0.7rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 0.6rem;
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .top_right {
+      @media (max-width: 768px) {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.maincard {
+  background-color: #111428;
+  border-radius: 2rem;
+  margin: 3rem 0;
+
+  .innerrow{
+   width: 89%;
+   margin: auto;
+   padding: 4rem 0 2rem 0;
+  }
+  .innerrow2{
+   width: 89%;
+   margin: auto;
+   padding-bottom:5rem ;
+  }
+
+
+.single1{
+  background-color: #060b27;
+  border-right: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+  padding: 3rem 2.4rem;
+  @media (max-width:767px) {
+    border: unset;
+    border-bottom: 1.5px solid white;
+  }
+ 
+}
+.single2{
+  background-color: #060b27;
+  border-bottom: 1.5px solid white;
+  padding: 3rem 2.4rem;
+  @media (max-width:767px) {
+    border: unset;
+    border-bottom: 1.5px solid white;
+  }
+}
+.single3{
+  background-color: #060b27;
+  border-left: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+  padding: 3rem 2.4rem;
+  @media (max-width:992px) {
+    border-right: 1.5px solid white;
+    border-left: unset;
+  }
+  @media (max-width:767px) {
+    border: unset;
+    border-bottom: 1.5px solid white;
+  }
+}
+.single4{
+  background-color: #060b27;
+  border-right: 1.5px solid white;
+  padding: 3rem 2.4rem;
+  @media (max-width:992px) {
+    border-bottom: 1.5px solid white;
+    border-right: unset;
+  }
+  @media (max-width:767px) {
+    border: unset;
+    border-bottom: 1.5px solid white;
+  }
+}
+.single5{
+  background-color: #060b27;
+  padding: 3rem 2.4rem;
+  @media (max-width:767px) {
+    border: unset;
+    border-bottom: 1.5px solid white;
+  }
+}
+.single6{
+  background-color: #060b27;
+  border-left: 1.5px solid white;
+  padding: 3rem 2.4rem;
+  @media (max-width:767px) {
+    border: unset;
+    border-bottom: 1.5px solid white;
+  }
+}
+
+  p {
+    color: #fff;
+  }
+  span{
+    color: #d0021b;
+  }
+
+  .head {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width:1400px) {
+      font-size: 2.8rem;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 2.3rem;
+    }
+    @media (max-width: 992px) {
+      font-size: 2.3rem;
+      text-align: center !important;
+    }
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 1.7rem;
+      width: 100%;
+    }
+    @media (max-width: 440px) {
+      font-size: 1.4rem;
+      width: 100%;
+    }
+    @media (max-width: 376px) {
+      font-size: 1.1rem;
+      width: 100%;
+    }
+  }
+
+  .desc {
+    padding-top: 2rem;
+    font-size: 1.169rem;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+
+    @media (max-width:1400px) {
+      font-size: 1.02rem;
+    }
+    @media (max-width: 1200px) {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 992px) {
+      padding-top: unset;
+      font-size: 0.9rem;
+      text-align: center !important;
+    }
+    @media (max-width: 769px) {
+      font-size: 0.7rem;
+    }
+    @media (max-width: 440px) {
+      font-size: 0.5rem;
+    }
+    @media (max-width: 376px) {
+      font-size: 0.3rem;
+    }
+  }
+
+  .cardimage{
+    margin-bottom:3rem ;
+    width: 5rem;
+    height: 5rem;
+  }
+  .cardimage2{
+    margin-bottom:2rem ;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .cardtitle{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width:1400px) {
+      font-size: 1.2rem;
+    }
+    @media (max-width:1200px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .carddesc{
+    font-size: 1rem;
+    font-weight: 400;
+
+    @media (max-width:1400px) {
+      font-size: 0.88rem;
+    }
+    @media (max-width:1200px) {
+      font-size: 0.7rem;
+    }
+  }
+}

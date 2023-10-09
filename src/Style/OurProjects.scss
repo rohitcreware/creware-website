@@ -1,0 +1,54 @@
+#ourprojectsmain {
+  background-color: #060b27;
+ 
+}
+
+.first-left {
+    text-align: left;
+}
+
+.first-h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 67px;
+  letter-spacing: 0em;
+ 
+}
+
+.first-p {
+  // font-family: Outfit;
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0em;
+}
+
+.first-btn {
+  background-color: #d0021b;
+  color: white;
+  
+}
+
+.uppersec-img {
+  width: 65%;
+  height: 24rem;
+  background-color: aliceblue;
+  border-radius: 49%;
+}
+
+.first-right{
+text-align: left;
+padding: 0;
+}
+
+.uppersec-img-div{
+position:relative;
+
+}
+
+.uppersec-card{
+    position: absolute;
+    bottom: 5px;
+    // left:54.3rem;
+}

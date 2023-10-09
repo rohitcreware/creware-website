@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30rem;
+  border-radius: 1rem;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.3;
+  margin: 10px;
+  position: relative;
+  transition: flex 1.1s ease-in;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  margin: 0;
+  opacity: 1;
+}
+
+.panel.active {
+  flex: 1;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: transform 1.1s ease-in;
+
+}
+
+.horizontal {
+  transition: transform 1.1s ease-in;
+  transform-origin: 0 0;
+  animation: horiz 1.1s linear forwards;
+}
+
+.vertical {
+  transition: transform 1.1s ease-in;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  animation: vert 1.1s linear forwards;
+}
+
+@keyframes vert {
+  0%{
+    bottom: 10px;
+  }
+
+  100%{
+    bottom: -3rem;
+  }
+}
+@keyframes horiz {
+  0%{
+    bottom: -3rem;
+  }
+
+  100%{
+    bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+ .panel{
+  height: 20rem;
+
+  h3{
+    font-size: 0.75rem !important;
+  }
+ }
+}
+@media (max-width: 576px) {
+ .container{
+  height: 30rem !important;
+ }
+}
+@media(max-width:1000px) 
+{
+    .vertical {
+      animation: vert768 1.1s linear forwards;
+    }
+}
+
+@keyframes vert768 {
+  0%{
+    bottom: 10px;
+  }
+
+  100%{
+    bottom: -2rem;
+  }
+}

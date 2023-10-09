@@ -1,0 +1,438 @@
+@import "/src/app/page.module.scss";
+
+.main {
+  background: #060b27;
+
+  .back_animation {
+    position: relative;
+  }
+
+  .crewareRed {
+    color: $creware-red;
+  }
+
+  .backround {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+  }
+
+  .top {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media (max-width: 768px) {
+      padding-top: 2rem;
+      padding-bottom: unset;
+    }
+    @media (max-width: 576px) {
+      padding-top: unset;
+      padding-bottom: unset;
+    }
+
+    &_left {
+      width: 92%;
+      margin: auto;
+      h1 {
+        color: #fff;
+        font-size: 3.75rem;
+        font-style: normal;
+        line-height: initial;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.4rem;
+
+        @media (max-width: 1400px) {
+          font-size: 3.4rem;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 2.8rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 2.1rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 1.2rem;
+          width: 100%;
+        }
+
+        span {
+          opacity: 0.9;
+          color: #d0021b;
+        }
+      }
+
+      p {
+        color: #fff;
+        font-size: 1.313rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        width: 55%;
+
+        @media (max-width: 1200px) {
+        }
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+        }
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .top_right {
+      @media (max-width: 768px) {
+        margin: auto;
+      }
+    }
+  }
+
+  .ui_design {
+    margin-top: 3.75rem;
+
+    @media (max-width: 768px) {
+      margin-top: 3rem;
+    }
+    @media (max-width: 576px) {
+      margin-top: 2.5rem;
+      width: 100%;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
+      text-align: center;
+
+      span {
+        color: #d0021b;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 2.2rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 2.1rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 1.2rem;
+        width: 100%;
+      }
+    }
+
+    .design_cards {
+      margin-top: 3rem;
+
+      @media (max-width: 768px) {
+        margin-top: 2rem;
+      }
+      @media (max-width: 576px) {
+        margin-top: 1.5rem;
+      }
+
+      .single_card {
+        margin-bottom: 4.25rem;
+
+        @media (max-width: 768px) {
+          margin-bottom: 2.25rem;
+        }
+
+        .head {
+          padding: unset !important;
+          display: flex;
+          justify-content: end;
+          margin-top: -6px;
+        }
+
+        h6 {
+          color: #fff;
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          margin-bottom: 0.9rem;
+
+          @media (max-width: 1400px) {
+            font-size: 1.3rem;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 1.1rem;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 1rem;
+          }
+        }
+
+        p {
+          color: #fff;
+          font-size: 1.313rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+
+          @media (max-width: 1400px) {
+            font-size: 1.2rem;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 1.1rem;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .slideUp {
+    position: relative;
+    opacity: 0;
+  }
+
+  .slideUp {
+    top: 40px;
+    // left: 10px;
+    animation: slideUp ease 0.5s forwards 1.2s;
+  }
+
+  .third-sec {
+    background-color: #111428;
+  }
+  .text-main {
+    background-color: #111428;
+    width: 76%;
+    margin: auto;
+    padding: 4rem 0;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      padding: 2rem 0;
+    }
+    @media (max-width: 576px) {
+      padding: 2rem 0;
+    }
+  }
+  .text {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: normal;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+  .button {
+    margin-top: 2.1rem;
+    background-color: #d0021b;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.7rem;
+    border: none;
+    border-radius: 7.504px;
+  }
+
+  .help_you {
+    h1 {
+      margin-top: 3.5rem;
+      margin-bottom: 2.8rem;
+      color: #fff;
+      text-align: center;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+
+      @media (max-width: 768px) {
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+      }
+      @media (max-width: 576px) {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+      }
+
+      span {
+        color: #d0021b;
+      }
+    }
+  }
+
+  .conmmunication {
+    h1 {
+      width: 85%;
+      margin: auto;
+      margin-bottom: 3rem;
+      color: #fff;
+      text-align: center;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      span {
+        color: #d0021b;
+      }
+
+      @media (max-width: 1400px) {
+        width: 65%;
+        font-size: 2.188rem;
+      }
+      @media (max-width: 1200px) {
+        width: 76%;
+        font-size: 2.188rem;
+      }
+      @media (max-width: 768px) {
+        width: 90%;
+        font-size: 1.9rem;
+      }
+      @media (max-width: 576px) {
+        width: 100%;
+        font-size: 0.999rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.services_provide {
+  margin-top: 3.625rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 576px) {
+    margin-top: 2.625rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin: auto;
+    margin-bottom: 1.875rem;
+    color: #d0021b;
+    text-align: center;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width: 1400px) {
+      font-size: 2.188rem;
+    }
+    @media (max-width: 1200px) {
+      font-size: 2.188rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.9rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.999rem;
+      margin-bottom: 1rem;
+    }
+  }
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 0.938rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 30%;
+    margin: auto;
+
+    @media (max-width: 1400px) {
+      width: 35%;
+    }
+
+    @media (max-width: 768px) {
+      width: 55%;
+    }
+    @media (max-width: 576px) {
+      width: 90%;
+    }
+  }
+}
+.hireCards {
+  transition: 0.5s;
+}
+.hireCards:hover {
+  transform: translate(0, -3rem);
+}
+.hoverCards_main {
+  width: 73%;
+  margin: auto;
+
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1200px) {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+.hover_Cards_para {
+  line-height: 30px;
+}
+
+.second_contact_main {
+  background: transparent;
+  margin: 3rem 0;
+  position: relative;
+  z-index: 10;
+
+  .contact_backround {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact_p {
+    width: 76%;
+    margin: unset;
+    background-color: transparent;
+
+    @media (max-width: 768px) {
+      margin: auto;
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,94 @@
+.main {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .main-card{
+    margin-bottom: 4rem;
+  }
+  
+  #title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: normal;
+  }
+  
+  #card-img {
+    background-color: #D0021B;
+    width: 10%;
+    height: 100%;
+    padding: 0.6rem;
+    border-radius: 49%;
+    margin-right: 0.6rem;
+  }
+  
+  #desc {
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 2.7rem;
+  }
+  
+  
+  
+  .design_cards {
+    margin-top: 3rem;
+  
+    .single_card {
+      margin-bottom: 4.25rem;
+  
+      .head {
+        padding: unset !important;
+        display: flex;
+        justify-content: end;
+      }
+  
+      h6 {
+        color: #fff;
+        font-size: 1.5rem;
+        
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 0.9rem;
+        @media (max-width: 1400px) {
+          font-size: 1.3rem;
+        }
+        @media (max-width: 1050px) {
+          font-size: 1.3rem;
+        }
+        @media (max-width: 850px) {
+          font-size: 1.1rem;
+        }
+        @media (max-width: 426px) {
+          font-size:0.9rem;
+        }
+      }
+  
+      p {
+        color: #fff;
+        font-size: 1.313rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+  
+        @media (max-width: 1400px) {
+          font-size: 1.15rem;
+        }
+        @media (max-width: 1050px) {
+          font-size: 1.1rem;
+        }
+        @media (max-width: 850px) {
+          font-size: 0.9rem;
+        }
+        @media (max-width: 426px) {
+          font-size:0.8rem;
+        }
+      }
+    }
+  }
+  

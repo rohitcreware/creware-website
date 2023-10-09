@@ -1,0 +1,61 @@
+.main {
+  margin-bottom: 8rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 2rem;
+  }
+
+  .single_card {
+    border-radius: 4.689px;
+    background: #0e1330;
+    padding: 1.625rem 1.625rem 1.625rem 1.625rem;
+
+    @media (max-width: 1400px) {
+      padding: 1.6rem 1rem;
+    }
+    @media (max-width: 1200px) {
+      padding: 1rem 0.8rem;
+    }
+
+    @media (max-width: 576px) {
+    }
+  }
+
+  .content {
+    h6 {
+      color: #f6f6f7;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      margin-bottom: 1.125rem;
+
+      @media (max-width: 1400px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: 0.74rem;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 21.12px; /* 156.303% */
+
+      @media (max-width: 1400px) {
+        font-size: 0.8rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: 0.7rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 0.79rem;
+      }
+    }
+  }
+}

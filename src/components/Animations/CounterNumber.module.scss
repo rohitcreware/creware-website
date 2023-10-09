@@ -1,0 +1,24 @@
+.main {
+  width: 91%;
+  margin: auto;
+
+  #odometer {
+    display: block;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .single_digit {
+  }
+}
+.custom-odometer {
+  font-size: 50px; /* Change this to your desired font size */
+  // padding: 30px;
+  color: white;
+  background-image: url("../../../public/images/Home/digitalNumber.png");
+  height: 140px;
+width: 65px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

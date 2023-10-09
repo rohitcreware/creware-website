@@ -1,0 +1,318 @@
+.card{
+    margin: 0;
+}
+.container2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    // flex-direction: column;
+    // border: 1px solid #5a5b5f;
+    // width: 100%;
+    border-radius: 5px;
+    // padding: 0rem 14rem 0rem 0rem;
+    .flex-column {
+      align-items: center !important;
+      justify-content: center !important;
+      img {
+        height: 3rem !important;
+      }
+    }
+  }
+
+  .thread-card-title{
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+
+  .foun-img-div{
+    width: 89px;
+    height: 100%;
+  }
+
+  #thread-img {
+    border-radius: 12px;
+    // height: 80px;
+    width: 100%;
+    background: linear-gradient(180deg, #ffaaaa, #4325f9);
+  }
+  
+  .tech-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // flex-direction: column;
+    // border: 1px solid #5a5b5f;
+    border-radius: 5px;
+    // margin: 0rem 7rem 3rem 7rem;
+    height: 30rem;
+  }
+  
+  div.card.text-center{
+    background: transparent;
+    padding: 50px;
+  }
+  
+  .vertline1 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup1 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline2 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup2 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline3 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup3 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline4 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup4 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline5 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup5 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline6 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup6 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline7 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup7 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline8 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup8 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline9 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup9 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline10 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup10 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline11 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup11 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline12 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup12 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .vertline13 {
+    margin-top: 0;
+    width: 0.1px;
+    margin-left: 10%;
+    background-color: #fff;
+    border: 1px dashed;
+    top: 40%;
+    animation: lineup13 3s linear forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes lineup1 {
+    0% {
+      height: 30px;
+    }
+  
+    100% {
+      height: 60px;
+    }
+  }
+  @keyframes lineup2 {
+    0% {
+      height: 60px;
+    }
+  
+    100% {
+      height: 120px;
+    }
+  }
+  @keyframes lineup3 {
+    0% {
+      height: 90px;
+    }
+  
+    100% {
+      height: 180px;
+    }
+  }
+  @keyframes lineup4 {
+    0% {
+      height: 30px;
+    }
+  
+    100% {
+      height: 60px;
+    }
+  }
+  @keyframes lineup5 {
+    0% {
+      height: 80px;
+    }
+  
+    100% {
+      height: 160px;
+    }
+  }
+  @keyframes lineup6 {
+    0% {
+      height: 110px;
+    }
+  
+    100% {
+      height: 220px;
+    }
+  }
+  @keyframes lineup7 {
+    0% {
+      height: 130px;
+    }
+  
+    100% {
+      height: 260px;
+    }
+  }
+  @keyframes lineup8 {
+    0% {
+      height: 85px;
+    }
+  
+    100% {
+      height: 170px;
+    }
+  }
+  @keyframes lineup9 {
+    0% {
+      height: 110px;
+    }
+  
+    100% {
+      height: 220px;
+    }
+  }
+  @keyframes lineup10 {
+    0% {
+      height: 155px;
+    }
+  
+    100% {
+      height: 310px;
+    }
+  }
+  @keyframes lineup11 {
+    0% {
+      height: 40px;
+    }
+  
+    100% {
+      height: 80px;
+    }
+  }
+  @keyframes lineup12 {
+    0% {
+      height: 155px;
+    }
+  
+    100% {
+      height: 310px;
+    }
+  }
+  @keyframes lineup13 {
+    0% {
+      height: 55px;
+    }
+  
+    100% {
+      height: 110px;
+    }
+  }

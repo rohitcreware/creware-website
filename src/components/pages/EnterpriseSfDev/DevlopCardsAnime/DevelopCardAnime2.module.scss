@@ -1,0 +1,60 @@
+.h-11 {
+  height: 11rem;
+  color: aliceblue;
+}
+
+@media (max-width: 992px) {
+  .h-11 {
+    height: 15rem;
+  }
+}
+@media (max-width: 768px) {
+  .h-11 {
+    height: 12rem;
+  }
+}
+@media (max-width: 576px) {
+  .h-11 {
+    height: 8rem;
+  }
+}
+@media (max-width: 400px) {
+  .h-11 {
+    height: 10rem;
+  }
+}
+
+.border {
+  border: none !important;
+}
+
+.border:hover {
+  border: 1px solid #bc031c !important;
+}
+
+.box {
+  animation: reset-anim 0.2s;
+}
+.box:hover {
+  animation: diagonal-move-anim 0.2s forwards;
+}
+
+@keyframes reset-anim {
+  from {
+    transform: translate(-15px, 15px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes diagonal-move-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-15px, 15px);
+  }
+}
