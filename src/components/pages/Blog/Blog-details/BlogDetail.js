@@ -10,20 +10,18 @@ import { BlogList } from "../../../../../Json/BlogList";
 // import BlogCards from "@/components/BlogCards/BlogCards";
 const BlogDetail = () => {
   const [blogDetails, setBlogDetails] = React.useState({});
+  const [blogAdditionalDetails, setBlogAdditionalDetails] = React.useState([]);
   const router = useRouter();
-  const params = useSearchParams()
+  const params = useSearchParams();
 
   useEffect(() => {
-    console.log(params.get('blog'))
     BlogList.forEach((element) => {
-      if (element.id == params.get('blog')) {
-        console.log(element)
+      if (element.id == params.get("blog")) {
         if (element.data.length > 0) {
           element.data.forEach((item) => {
-            console.log(params.get('id'))
-            if (item.id == params.get('id')) {
-              console.log(item)
+            if (item.id == params.get("id")) {
               setBlogDetails(item);
+              setBlogAdditionalDetails(item.additionalInfo)
             }
           });
         }
@@ -39,7 +37,7 @@ const BlogDetail = () => {
 
   return (
     <section>
-      <div className="container">
+      {blogDetails && <div className="container">
         <div className="row">
           <div
             className={`${styles["slide-effect"]} d-flex flex-column ms-0 ms-lg-5`}
@@ -108,51 +106,9 @@ const BlogDetail = () => {
         <div className="row d-flex align-items-center justify-content-center mt-5">
           <div className="col-12 col-md-10 col-lg-9">
             <ul>
-              <li className="text-white fw-normal fs-5 mb-4">
-                Lorem ipsum dolor sit amet consectetur. Lorem et donec leo
-                lectus vel ullamcorper facilisis. Dictum eros enim enim luctus
-                sit semper euismod. Lorem ipsum dolor sit amet consectetur.
-                Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros
-                enim enim luctus sit semper euismod. Lorem ipsum dolor sit amet
-                consectetur. Lorem et donec leo lectus vel ullamcorper
-                facilisis. Dictum eros enim enim luctus sit semper euismod.
-              </li>
-              <li className="text-white fw-normal fs-5 mb-4">
-                Lorem ipsum dolor sit amet consectetur. Lorem et donec leo
-                lectus vel ullamcorper facilisis. Dictum eros enim enim luctus
-                sit semper euismod. Lorem ipsum dolor sit amet consectetur.
-                Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros
-                enim enim luctus sit semper euismod. Lorem ipsum dolor sit amet
-                consectetur. Lorem et donec leo lectus vel ullamcorper
-                facilisis. Dictum eros enim enim luctus sit semper euismod.
-              </li>
-              <li className="text-white fw-normal fs-5 mb-4">
-                Lorem ipsum dolor sit amet consectetur. Lorem et donec leo
-                lectus vel ullamcorper facilisis. Dictum eros enim enim luctus
-                sit semper euismod. Lorem ipsum dolor sit amet consectetur.
-                Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros
-                enim enim luctus sit semper euismod. Lorem ipsum dolor sit amet
-                consectetur. Lorem et donec leo lectus vel ullamcorper
-                facilisis. Dictum eros enim enim luctus sit semper euismod.
-              </li>
-              <li className="text-white fw-normal fs-5 mb-4">
-                Lorem ipsum dolor sit amet consectetur. Lorem et donec leo
-                lectus vel ullamcorper facilisis. Dictum eros enim enim luctus
-                sit semper euismod. Lorem ipsum dolor sit amet consectetur.
-                Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros
-                enim enim luctus sit semper euismod. Lorem ipsum dolor sit amet
-                consectetur. Lorem et donec leo lectus vel ullamcorper
-                facilisis. Dictum eros enim enim luctus sit semper euismod.
-              </li>
-              <li className="text-white fw-normal fs-5 mb-4">
-                Lorem ipsum dolor sit amet consectetur. Lorem et donec leo
-                lectus vel ullamcorper facilisis. Dictum eros enim enim luctus
-                sit semper euismod. Lorem ipsum dolor sit amet consectetur.
-                Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros
-                enim enim luctus sit semper euismod. Lorem ipsum dolor sit amet
-                consectetur. Lorem et donec leo lectus vel ullamcorper
-                facilisis. Dictum eros enim enim luctus sit semper euismod.
-              </li>
+              {blogAdditionalDetails.map((item, index) => {
+                return <li className="text-white fw-normal fs-5 mb-4" key={index}>{item}</li>;
+              })}
             </ul>
           </div>
         </div>
@@ -218,7 +174,7 @@ const BlogDetail = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div>}
     </section>
   );
 };

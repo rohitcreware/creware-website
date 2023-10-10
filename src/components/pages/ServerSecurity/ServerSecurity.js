@@ -100,7 +100,7 @@ const ServerSecurity = () => {
             <ServerSecurityCardAnimation />
           </div>
 
-          <LatestInsights />
+          <LatestInsights  viewMoreClass={styles["view_more"]}/>
           <QueryForm mainContainerWidth="95%" />
         </div>
       </div>

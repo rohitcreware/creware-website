@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { test } from "../../../../Json/Testimonials";
 import styles from "./Testimonials.module.scss";
-import Arrow from "./Arrow";
+
 import {
   Arrowa,
   Arrowb,
@@ -9,8 +9,10 @@ import {
   Hover2,
   SmallArrowa,
   SmallArrowb,
+  VerySmallArrowa,
+  VerySmallArrowb
 } from "@/components/Svgs/contactus";
-import { HoverArrow, ViewArrow } from "@/components/Svgs/portfoliobar";
+import { HoverArrow, ViewArrow,HoverArrowSmall,ViewArrowSmall,ViewArrowVerySmall,HoverArrowVerySmall } from "@/components/Svgs/portfoliobar";
 
 const Testimonial = () => {
   const cardRef = useRef(null);
@@ -26,10 +28,22 @@ const Testimonial = () => {
   const [initialThumbPosition, setInitialThumbPosition] = useState(0);
 
   let big;
-  if (screenWidth > 701) {
+  let small;
+  let displace
+  if (screenWidth > 992) {
     big = true;
   } else {
     big = false;
+  }
+  if (screenWidth > 550) {
+    small = true;
+  } else {
+    small = false;
+  }
+  if (screenWidth > 800) {
+    displace = true;
+  } else {
+    displace = false;
   }
 
   const handleThumbDragStart = (e) => {
@@ -38,106 +52,108 @@ const Testimonial = () => {
     setDragStartX(e.clientX);
     setInitialThumbPosition(scrollbarThumbPosition);
   };
-  
+
   const handleThumbDrag = (e) => {
     if (!isDragging) return;
     const deltaX = e.clientX - dragStartX;
-    const newPosition = initialThumbPosition + (deltaX / cardRef.current.clientWidth) * 100;
+    const newPosition =
+      initialThumbPosition + (deltaX / cardRef.current.clientWidth) * 100;
     if (newPosition >= 0 && newPosition <= 100) {
       setScrollbarThumbPosition(newPosition);
       updateCardScrollPosition(newPosition);
     }
   };
-  
+
   const handleThumbDragEnd = () => {
     setIsDragging(false);
   };
-  
+
   const updateCardScrollPosition = (newPosition) => {
     const container = cardRef.current;
-    const containerScrollLeft = (newPosition / 100) * (container.scrollWidth - container.clientWidth);
+    const containerScrollLeft =
+      (newPosition / 100) * (container.scrollWidth - container.clientWidth);
     container.scrollLeft = containerScrollLeft;
   };
-  
-  
-    useEffect(() => {
-      if (window !== undefined) {
-        setScreenWidth(window.screen.width);
+
+  useEffect(() => {
+    if (window !== undefined) {
+      setScreenWidth(window.screen.width);
+    }
+  });
+
+  useEffect(() => {
+    const container = cardRef.current;
+    const handleScroll = () => {
+      if (container) {
+        // Calculate the scrollbar thumb width
+        const scrollbarThumbWidth =
+          (container.clientWidth / container.scrollWidth) * 65;
+        setScrollbarThumbWidth(scrollbarThumbWidth);
+
+        setLeftMotion(scrollbarThumbWidth + 9);
+        const scrollThumbPosition =
+          (container.scrollLeft /
+            (container.scrollWidth - container.clientWidth)) *
+          100;
+        setScrollbarThumbPosition(scrollThumbPosition);
       }
-    });
-  
-    useEffect(() => {
-      const container = cardRef.current;
-      const handleScroll = () => {
-        if (container) {
-          // Calculate the scrollbar thumb width
-          const scrollbarThumbWidth =
-            (container.clientWidth / container.scrollWidth) * 65;
-          setScrollbarThumbWidth(scrollbarThumbWidth);
-  
-          setLeftMotion(scrollbarThumbWidth + 9);
-          const scrollThumbPosition =
-            (container.scrollLeft /
-              (container.scrollWidth - container.clientWidth)) *
-            100;
-          setScrollbarThumbPosition(scrollThumbPosition);
-        }
-      };
-  
-      // Set an initial scroll position to make the thumb visible
-      container.scrollLeft = 1;
-  
-      // Attach the scroll event listener
-      container.addEventListener("scroll", handleScroll);
-  
-      // Clean up the event listener when the component unmounts
-      return () => {
-        container.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-  
-    const scrollLeft = () => {
-      console.log("clicked");
-      console.log(scrollbarThumbPosition, "<=====");
-      if (scrollbarThumbPosition > 30) {
-        const newScrollPosition = scrollbarThumbPosition - 30;
-        setScrollbarThumbPosition(scrollbarThumbPosition - 30); // Adjust scrolling distance as needed
-        // cardRef.current.scrollLeft = scrollbarThumbPosition - 30;
-        const container = cardRef.current;
-        const containerScrollLeft =
-          (newScrollPosition / 100) *
-          (container.scrollWidth - container.clientWidth);
-        container.scrollLeft = containerScrollLeft;
-      } else {
-        const container = cardRef.current;
-        setScrollbarThumbPosition(0);
-        container.scrollLeft = 0;
-      }
-     
     };
+
+    // Set an initial scroll position to make the thumb visible
+    container.scrollLeft = 1;
+
+    // Attach the scroll event listener
+    container.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollLeft = () => {
+    if (scrollbarThumbPosition > 30) {
+      const newScrollPosition = scrollbarThumbPosition - 20;
+      setScrollbarThumbPosition(scrollbarThumbPosition - 20); // Adjust scrolling distance as needed
+      // cardRef.current.scrollLeft = scrollbarThumbPosition - 30;
+      const container = cardRef.current;
+      const containerScrollLeft =
+        (newScrollPosition / 100) *
+        (container.scrollWidth - container.clientWidth);
+      container.scrollLeft = containerScrollLeft;
+    } else {
+      const container = cardRef.current;
+      setScrollbarThumbPosition(0);
+      container.scrollLeft = 0;
+    }
+  };
+
+  const scrollRight = () => {
   
-    const scrollRight = () => {
-      console.log("clicked");
-      console.log("=====>", scrollbarThumbPosition);
-     if(scrollbarThumbPosition<90){
-      const newScrollPosition = scrollbarThumbPosition + 30;
-      setScrollbarThumbPosition(scrollbarThumbPosition + 30); // Adjust scrolling distance as needed
+    if (scrollbarThumbPosition < 89) {
+      const newScrollPosition = scrollbarThumbPosition + 20;
+      setScrollbarThumbPosition(scrollbarThumbPosition + 20); // Adjust scrolling distance as needed
       // cardRef.current.scrollLeft = scrollbarThumbPosition + 30;
       const container = cardRef.current;
       const containerScrollLeft =
         (newScrollPosition / 100) *
         (container.scrollWidth - container.clientWidth);
       container.scrollLeft = containerScrollLeft;
-     }    
-    };
-  
-    const handleClick = (direction) => {
-      if (direction === "left") {
-        scrollLeft();
-      } else {
-        scrollRight();
-      }
-    };
+     
+    } else {
+      const container = cardRef.current;
+      // setScrollbarThumbPosition(89);
+      // container.scrollLeft = 89;
+    }
+  };
+
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      scrollLeft();
+    } else {
+      scrollRight();
+    }
+  };
   return (
     <>
       <div className={`${styles["base-div-tryal"]}`}>
@@ -173,18 +189,8 @@ const Testimonial = () => {
                   className={`${styles["thumb"]} `}
                   style={{
                     width: `${scrollbarThumbWidth}%`,
-                    // left:
-                    //   scrollbarThumbPosition <= 88
-                    //     ? `${scrollbarThumbPosition}%`
-                    //     : `${88}%`,
-                    left: isDragging
-                      ? initialThumbPosition +
-                        (scrollbarThumbPosition - dragStartX) +
-                        "%"
-                      : scrollbarThumbPosition <= 88
-                      ? `${scrollbarThumbPosition}%`
-                      : `${88}%`,
-                    height: "0.7rem",
+                    left: displace?isDragging? initialThumbPosition +(scrollbarThumbPosition - dragStartX) +"%": scrollbarThumbPosition <= 88? `${scrollbarThumbPosition}%`: `${88}%`:scrollbarThumbPosition <= 96? `${scrollbarThumbPosition}%`: `${96}%`
+                    ,height: "0.7rem",
                     cursor: "pointer",
                   }}
                   onMouseDown={(e) => handleThumbDragStart(e)}
@@ -206,9 +212,9 @@ const Testimonial = () => {
                     onMouseEnter={() => setHover1(true)}
                     onMouseLeave={() => setHover1(false)}
                   >
-                    {/* <Arrowb /> */}
+                  
 
-                    {big ? hover1 ? <Hover2 /> : <Arrowb /> : <SmallArrowb />}
+                    {small?big ? hover1 ? <Hover2 /> : <Arrowb /> : <SmallArrowb />:<VerySmallArrowb/>}
                   </div>
                   <div
                     onClick={() => handleClick("right")}
@@ -217,9 +223,9 @@ const Testimonial = () => {
                     onMouseEnter={() => setHover2(true)}
                     onMouseLeave={() => setHover2(false)}
                   >
-                    {/* <Arrowa /> */}
+                  
 
-                    {big ? hover2 ? <Hover1 /> : <Arrowa /> : <SmallArrowa />}
+                  {small?big ? hover2 ? <Hover1 /> : <Arrowa /> : <SmallArrowa />:<VerySmallArrowa/>}
                   </div>
                 </div>
                 <div
@@ -227,7 +233,9 @@ const Testimonial = () => {
                   onMouseEnter={() => setHover3(true)}
                   onMouseLeave={() => setHover3(false)}
                 >
-                  View more {hover3 ? <HoverArrow /> : <ViewArrow />}
+                 View more 
+                  {small?big ? hover3 ? <HoverArrow />: <ViewArrow />: hover3 ? <HoverArrowSmall />: <ViewArrowSmall/>:hover3 ? <HoverArrowVerySmall />: <ViewArrowVerySmall/>}
+                  
                 </div>
               </div>
             </div>

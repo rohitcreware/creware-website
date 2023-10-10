@@ -202,6 +202,15 @@
   }
 }
 
+.input-box:focus::placeholder {
+  color: transparent;
+  opacity: 0; /* You can also set the opacity to 0 */
+}
+.input-box-1:focus::placeholder {
+  color: transparent;
+  opacity: 0; /* You can also set the opacity to 0 */
+}
+
 .input-box-1 {
   width: 18.5rem;
   height: 2.3rem;
@@ -248,12 +257,28 @@
   }
 }
 
+.text-area:focus::placeholder {
+  color: transparent;
+  opacity: 0; /* You can also set the opacity to 0 */
+}
+
+.text-area:focus {
+  outline: none;
+  height: 2.5rem;
+}
+
+.text-area:not(:focus) {
+  outline: none;
+  height: 2.5rem;
+}
+
 .message-div {
   margin-bottom: 0.625rem;
 }
 
 .text-area {
   width: 75%;
+
   // height: 7.7rem;
   background-color: transparent;
   border: none;
@@ -385,11 +410,16 @@
 }
 
 .second-div-h2 {
+  padding-top: 1rem;
   color: #fff;
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0em;
   text-align: left;
+
+  @media (max-width: 1400px) {
+    font-size: 2.8rem;
+  }
 
   @media (max-width: 992px) {
     letter-spacing: 2px;

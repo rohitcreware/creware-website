@@ -141,13 +141,13 @@ const Services = () => {
       {/* Services */}
       <section className="overflow-hidden">
         <div
-          className={`d-flex align-items-center justify-content-center ${styles["bg-gif"]}`}
+          className={`d-flex align-items-center justify-content-center`}
         >
           <div className="row poisition-relative d-flex flex-column flex-lg-row mx-5 py-5 p-0 ps-0">
-            {/* <Lottie
+            <Lottie
           animationData={background}
           className={`${styles["backround"]}`}
-        /> */}
+        />
             <div className="col-12 pe-4 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column mb-3">
               <div className={`${styles["slide-effect"]} d-flex flex-column`}>
                 <div

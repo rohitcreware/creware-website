@@ -9,6 +9,15 @@
   position: absolute;
   top: 0;
   opacity: 0.5;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .backround{
+    top: 9rem;
+  }
 }
 
 .crewareRed {

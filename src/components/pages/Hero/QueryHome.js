@@ -164,7 +164,9 @@ const QueryForm = ({ mainContainerWidth }) => {
                         onChange={onInputChangeHandler}
                       /> */}
                     </div>
-                    <div className={`${styles["message-div"]}`}>
+                    <div
+                      className={`${styles["message-div"]} d-flex align-items-center`}
+                    >
                       <label className={`${styles["form-lable"]}`}>
                         Message{" "}
                       </label>
@@ -184,7 +186,7 @@ const QueryForm = ({ mainContainerWidth }) => {
                       /> */}
                     </div>
 
-                    <div className="form-check d-flex align-items-center justify-content-center">
+                    <div className="form-check d-flex justify-content-center">
                       <input
                         className="form-check-input"
                         type="checkbox"
