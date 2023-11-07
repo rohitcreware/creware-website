@@ -1,11 +1,16 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-
 import styles from "./OurProjects.module.scss";
 import Card from "../OurProjects/Card";
 import profile from "../../../../public/images/contact/profile.png";
+import { useRouter } from "next/navigation";
 
 const OurProject = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/contact-us"); // Redirect to the "/contactus" route
+  };
   return (
     <div id={`${styles["ourprojectsmain"]}`}>
       <div className="container">
@@ -20,7 +25,9 @@ const OurProject = () => {
               molestie pulvinar tempus sed tempus.
             </p>
             <div className={`${styles["first-btn"]}`}>
-              <button type="button">Contact Us</button>
+              <button type="button" onClick={handleButtonClick}>
+                Contact Us
+              </button>
             </div>
           </div>
           <div className={`${styles["first-right"]} col-12 col-lg-6`}>

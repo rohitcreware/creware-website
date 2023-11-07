@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import styles from "../Hero/QueryForm.module.scss";
 import RightArrowTowardsButton from "@/components/Animations/RightArrowTowardsButton";
-import { TextField } from "@mui/material";
 
 const QueryForm = () => {
   const [buttonHover, setButtonHover] = useState(false);
@@ -13,6 +12,7 @@ const QueryForm = () => {
   const [svgColor4, setSvgColor4] = useState("white");
   const [svgColor5, setSvgColor5] = useState("white");
   const [svgColor6, setSvgColor6] = useState("white");
+
   return (
     <>
       <div className={`${styles["form-div"]} container`}>
@@ -21,7 +21,9 @@ const QueryForm = () => {
             <div className={`${styles["form-first-div"]} col-12 col-lg-6 `}>
               <div className={`${styles["row-left"]} row`}>
                 <div className={`${styles["slide-effect"]} `}>
-                  <div className={`${styles["first-div-h2"]} ${styles["slideUp"]} `}>
+                  <div
+                    className={`${styles["first-div-h2"]} ${styles["slideUp"]} `}
+                  >
                     We’d love to hear your story
                   </div>
                 </div>
@@ -152,7 +154,7 @@ const QueryForm = () => {
               </div>
             </div>
             <div className={`${styles["form-second-div"]} col-12 col-lg-6 `}>
-            <div className="row ">
+              <div className="row ">
                 <h2 className={`${styles["second-div-h2"]}`}>Get in touch</h2>
                 <div className={`${styles["form-row"]}`}>
                   <div>
@@ -161,16 +163,11 @@ const QueryForm = () => {
                     </label>
                     <span> </span>
                     <input
+                      autoComplete="off"
                       type="text"
                       placeholder="eg : Musk"
                       className={`${styles["input-box"]}`}
                     ></input>
-                    {/* <TextField
-                      id="standard-basic"
-                      label="eg : Musk"
-                      variant="standard"
-                      className={`${styles["custom-textfield"]}`}
-                    /> */}
                   </div>
                   <div>
                     <label className={`${styles["form-lable"]}`}>
@@ -178,31 +175,21 @@ const QueryForm = () => {
                     </label>
                     <span> </span>
                     <input
+                      autoComplete="off"
                       type="email"
                       placeholder="eg : musk@first.com"
                       className={`${styles["input-box"]}`}
                     ></input>
-                    {/* <TextField
-                      id="standard-basic"
-                      label="eg : musk@first.com"
-                      variant="standard"
-                      className={`${styles["custom-textfield"]}`}
-                    /> */}
                   </div>
                   <div>
                     <label className={`${styles["form-lable"]}`}>Country</label>
                     <span> </span>
                     <input
+                      autoComplete="off"
                       type="text"
                       placeholder="eg : India"
                       className={`${styles["input-box"]}`}
                     ></input>
-                    {/* <TextField
-                      id="standard-basic"
-                      label="eg : India"
-                      variant="standard"
-                      className={`${styles["custom-textfield"]}`}
-                    /> */}
                   </div>
                   <div>
                     <label className={`${styles["form-lable"]}`}>
@@ -210,16 +197,11 @@ const QueryForm = () => {
                     </label>
                     <span> </span>
                     <input
+                      autoComplete="off"
                       type="tel"
                       placeholder="eg : 9876543210"
                       className={`${styles["input-box"]}`}
                     ></input>
-                    {/* <TextField
-                      id="standard-basic"
-                      label="eg : 9876543210"
-                      variant="standard"
-                      className={`${styles["custom-textfield"]}`}
-                    /> */}
                   </div>
                   <div>
                     {" "}
@@ -228,33 +210,23 @@ const QueryForm = () => {
                     </label>
                     <span> </span>
                     <input
+                      autoComplete="off"
                       type="text"
                       placeholder="eg : Creware technologies"
                       className={`${styles["input-box-1"]}`}
                     ></input>
-                    {/* <TextField
-                      id="standard-basic"
-                      label="eg : Creware technologies"
-                      variant="standard"
-                      className={`${styles["custom-textfield1"]}`}
-                    /> */}
                   </div>
                   <div className={`${styles["message-div"]}`}>
                     <label className={`${styles["form-lable"]}`}>
                       Message{" "}
                     </label>
                     <span> </span>
-                    <textarea
-                      type="text-area"
+                    <input
+                      autoComplete="off"
+                      type="text"
                       placeholder="eg : ......."
-                      className={`${styles["text-area"]}`}
-                    ></textarea>
-                    {/* <TextField
-                      id="standard-basic"
-                      label="eg : ......."
-                      variant="standard"
-                      className={`${styles["custom-textfield"]}`}
-                    /> */}
+                      className={`${styles["input-box"]}`}
+                    ></input>
                   </div>
 
                   <div className="form-check d-flex align-items-center justify-content-center">

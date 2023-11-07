@@ -11,10 +11,17 @@ import Animation from "./Animation";
 import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
 import Carousel from "../UiDesign/Carousel/Carousel";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 
 const MobileApp = () => {
   const paraRef = useRef(null);
+  const cardRef1 = useRef(null);
+  const cardRef2 = useRef(null);
+  const cardRef3 = useRef(null);
   const paraInView = useInView(paraRef, { once: true });
+  const cardIsInView1 = useInView(cardRef1, { once: true });
+  const cardIsInView2 = useInView(cardRef2, { once: true });
+  const cardIsInView3 = useInView(cardRef3, { once: true });
   const paragraphVariant = {
     offscreen: {
       opacity: 0,
@@ -22,9 +29,55 @@ const MobileApp = () => {
     onscreen: {
       opacity: 1,
       transition: {
-        type: "dump",
+        // type: "dump",
         dumping: 0.4,
         duration: 2,
+      },
+    },
+  };
+
+  const variant1 = {
+    offscreen1: {
+      opacity: 0,
+      y: 30,
+    },
+    onscreen1: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: "spring",
+        bounce: 0.4,
+        duration: 0.5,
+      },
+    },
+  };
+  const variant2 = {
+    offscreen2: {
+      opacity: 0,
+      y: 50,
+    },
+    onscreen2: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: "spring",
+        bounce: 0.4,
+        duration: 0.5,
+      },
+    },
+  };
+  const variant3 = {
+    offscreen3: {
+      opacity: 0,
+      y: 70,
+    },
+    onscreen3: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: "spring",
+        bounce: 0.4,
+        duration: 0.5,
       },
     },
   };
@@ -38,7 +91,7 @@ const MobileApp = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "dump",
+        // type: "dump",
         duration: 2,
       },
     },
@@ -53,13 +106,34 @@ const MobileApp = () => {
         />
         <div className={`${styles["background-img"]}`}> </div>
         <div className={`${styles["main"]} container`}>
-          <p className={`${styles["upper-head"]}`}>
+          <motion.p
+            className={`${styles["upper-head"]}`}
+            variants={cardIsInView3 ? "" : variant3}
+            initial="offscreen3"
+            whileInView="onscreen3"
+            ref={cardRef3}
+            style={{ overflow: "hidden" }}
+          >
             We specialize in creating custom
-          </p>
-          <p className={`${styles["upper-head"]}`}>
+          </motion.p>
+          <motion.p
+            className={`${styles["upper-head"]}`}
+            variants={cardIsInView2 ? "" : variant2}
+            initial="offscreen2"
+            whileInView="onscreen2"
+            ref={cardRef2}
+          >
             <span>mobile apps</span> for businesses of all
-          </p>
-          <p className={`${styles["upper-head"]} mb-4`}>types and sizes</p>
+          </motion.p>
+          <motion.p
+            className={`${styles["upper-head"]} mb-4`}
+            variants={cardIsInView1 ? "" : variant1}
+            initial="offscreen1"
+            whileInView="onscreen1"
+            ref={cardRef1}
+          >
+            types and sizes
+          </motion.p>
           <p className={`${styles["upper-text"]}`}>
             Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar
             tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi
@@ -131,8 +205,8 @@ const MobileApp = () => {
             <span>Communication and Trust</span>
           </p>
           <div className="mb-5">
-            <Carousel/>
-            </div>
+            <Carousel />
+          </div>
         </div>
       </section>
 
@@ -165,7 +239,7 @@ const MobileApp = () => {
 
       {/* latest insight */}
       <section>
-        <LatestInsights />
+       <NewLastestInsighr/>
       </section>
 
       <section>

@@ -5,10 +5,10 @@ const ExpandingCards = ({ cardList }) => {
   const [activeId, setActiveId] = React.useState(1);
   const [scrollX, setScrollX] = React.useState(0);
   let timer;
+
   const onClick = (id) => {
     setActiveId(id);
-    clearInterval(timer)
-    // startTimer()
+    clearInterval(timer);
   };
 
   React.useEffect(() => {
@@ -18,9 +18,12 @@ const ExpandingCards = ({ cardList }) => {
       } else {
         setActiveId(activeId + 1);
       }
-      clearInterval(timer)
     }, 3000);
-    // startTimer();
+
+    return () => {
+      // Clear the interval to prevent memory leaks
+      clearInterval(timer);
+    };
   }, [activeId]);
 
   return (
@@ -43,8 +46,12 @@ const ExpandingCards = ({ cardList }) => {
                     : `${styles.vertical}`
                 }`}
               >
-                <p className="mb-0 ms-1 fw-bold fs-33 noWrap">{data.title[0]}</p> 
-                <p className="mb-0 ms-1 fw-bold fs-33 noWrap">{data.title[1]}</p>
+                <p className="mb-0 ms-1 fw-bold fs-33 noWrap">
+                  {data.title[0]}
+                </p>
+                <p className="mb-0 ms-1 fw-bold fs-33 noWrap">
+                  {data.title[1]}
+                </p>
               </h3>
             </div>
           </div>

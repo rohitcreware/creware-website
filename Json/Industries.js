@@ -7,7 +7,7 @@ export const Industries  = [
     { name :"wedding"},
     { name :"music"},
     { name :"technologies"},
-    { name :"it securities"},
+    { name :"IT securities"},
     { name :"parenting"},
     { name :"physiotherphy"},
     { name :"industry tools"},

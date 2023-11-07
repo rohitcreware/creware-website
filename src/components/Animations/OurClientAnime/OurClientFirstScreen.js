@@ -2,6 +2,25 @@
 
 import React, { useEffect, useState } from "react";
 import {
+  Albany,
+  BrightListed,
+  CuraStream,
+  DelhiSchool,
+  Flourish,
+  Fortress,
+  Fundraiser,
+  Furlong,
+  Guitar,
+  HomeLoans,
+  Isleworth,
+  Mass,
+  MissUniverse,
+  Nnnex,
+  Oceania,
+  Result,
+  Skilled,
+  Sphere,
+  Sport,
   Crai,
   Doramae,
   EyeFace,
@@ -154,90 +173,86 @@ const OurClientAnime = ({ noMargin, setOurClientSecondScreen }) => {
 
   return (
     <div className={styles["main"]}>
-      <div className={!secondScreen && !noMargin && styles["first_section"]}>
+      <div>
         {!secondScreen && (
           <motion.div
             initial="initial"
             animate="animate"
             exit="exit"
             variants={firstScreenVariants}
-            className={`row gy-3 gy-lg-4`}
+            className={`${styles["first_screen_row"]} row`}
           >
-            <div
-              className="col-3 col-md-2 d-flex align-items-center"
-              style={{ height: "70px" }}
-            >
+            <div className={`${styles["innosol"]} col-4 col-md-2  `}>
               <Innosol />
             </div>
-            <div className="col-3 col-md-2 d-flex align-items-center justify-content-center">
+
+            <div className={`${styles["Niit"]} col-4 col-md-2   `}>
               <Niit />
             </div>
-            <div className="col-3 col-md-2 d-flex align-items-center">
+            <div className={`${styles["hess"]} col-4 col-md-2  `}>
               <Hess />
             </div>
-            <div className="col-3 col-md-2">
+            <div className={`${styles["lime"]} col-4 col-md-3`}>
               <Lime />
             </div>
-            <div className="col-3 col-md-2 d-flex justify-content-center">
+            <div className={`${styles["hfk"]} col-4 col-md-1  `}>
               <Hfk />
             </div>
-            <div className="col-3 col-md-2 d-flex">
+            <div className={`${styles["doramae"]} col-4 col-md-2`}>
               <Doramae />
             </div>
 
             {/* 2nd row */}
 
-            <div className="col-3 col-md-2 d-flex align-items-center">
+            <div className={`${styles["ion"]} col-4 col-md-2`}>
               <Ion />
             </div>
-            <div className="col-3 col-md-2 d-flex justify-content-center align-items-center">
-              <Hundo />{" "}
+            <div className={`${styles["hundo"]} col-4 col-md-2`}>
+              <Hundo />
             </div>
-            <div className="col-3 col-md-3 d-flex">
-              <EyeFace />{" "}
+            <div className={`${styles["eyeface"]} col-4 col-md-3`}>
+              <EyeFace />
             </div>
-            <div className="col-3 col-md-2 d-flex align-items-center">
+            <div className={`${styles["voluntulo"]} col-4 col-md-3`}>
               <Voluntulo />
             </div>
-            <div className="col-3 col-md-2 d-flex justify-content-lg-end  align-items-center">
+            <div className={`${styles["optra"]} col-4 col-md-2 pe-4`}>
               <Optra />
             </div>
 
             {/* third row */}
-            <div className="col-3 col-md-2 d-flex justify-content-center align-items-center">
-              <Crai />{" "}
+            <div className={`${styles["crai"]} col-4 col-md-2`}>
+              <Crai />
             </div>
-            <div className="col-3 col-md-2">
-              {" "}
+            <div className={`${styles["fourBlocks"]} col-4 col-md-1`}>
               <FourBlocks />
             </div>
-            <div className="col-3 col-md-2 d-flex">
+            <div className={`${styles["uproar"]} col-4 col-md-2`}>
               <Uproar />
             </div>
-            <div className="col-3 col-md-3 d-flex">
-              <TheYognis />{" "}
+            <div className={`${styles["theYognis"]} col-4 col-md-4`}>
+              <TheYognis />
             </div>
-            <div className="col-3 col-md-2 d-flex justify-content-end">
+            <div className={`${styles["jamPlay"]} col-4 col-md-3`}>
               <JamPlay />
             </div>
 
-            <div className="col-3 col-md-2 d-flex justify-content-start justify-content-sm-center justify-content-lg-start">
+            <div className={`${styles["town"]} col-4 col-md-3`}>
               <Town />
             </div>
-            <div className="col-3 col-md-2 d-flex">
+            <div className={`${styles["teamGiest"]} col-4 col-md-3`}>
               <TeamGiest />
             </div>
           </motion.div>
         )}
       </div>
-
       {secondScreen && !secondScreeAppearsForTheSecondTime && (
         <motion.div
           initial="initial"
           animate="animate"
           exit="exit"
           variants={secondScreenVariantsForFirstTime}
-          className="row"
+          className={`${styles["second_screen_row"]} row`}
         >
           <OurClientSecondScreen
             setSecondScreeAppearFirstTime={setSecondScreeAppearFirstTime}
@@ -254,7 +269,7 @@ const OurClientAnime = ({ noMargin, setOurClientSecondScreen }) => {
           animate="animate"
           exit="exit"
           variants={secondScreenVariantsForSecondTime}
-          className="row"
+          className={`${styles["second_screen_row"]} row`}
         >
           <OurClientSecondScreen
             setSecondScreeAppearFirstTime={setSecondScreeAppearFirstTime}

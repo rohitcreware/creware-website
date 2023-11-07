@@ -6,7 +6,6 @@ configDotenv();
 export async function sendMail(desc) {
   const emailData = desc;
 
-  console.log("emailData", emailData);
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -18,7 +17,7 @@ export async function sendMail(desc) {
 
   const mailOptions = {
     from: process.env.NODEMAILER_EMAIL,
-    to: "rohit.creware@gmail.com",
+    to: "rohit.sharma@creware.asia",
     subject: "Contacted from creware website",
     text: `Name: ${desc.name}
   Reach me at: ${desc.reachMeAt}

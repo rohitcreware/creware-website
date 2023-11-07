@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useRef } from "react";
 import styles from "./FirstCard.module.scss";
 import { UiUXDesign } from "../../../../Json/UiCardList";
@@ -32,7 +32,7 @@ const FirstCard = () => {
         ref={cardRef}
       >
         {firstCard.map((item) => (
-          <div className="col-12  col-md-6 col-lg-4">
+          <div key={item.head} className="col-12  col-md-6 col-lg-4">
             <div className={`${styles["single_card"]} row`}>
               <div className={`${styles["head"]} col-2`}>{item.img}</div>
               <div className="col-10">

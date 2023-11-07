@@ -163,7 +163,7 @@ body {
 .fs-33 {
   font-size: 2.291vw !important;
 }
-.fs-11{
+.fs-11 {
   font-size: 0.7rem !important;
 }
 
@@ -229,6 +229,37 @@ body {
   box-shadow: none !important;
 }
 
-.fs-6-5rem{
+.fs-6-5rem {
   font-size: 8vw !important;
+}
+
+.full_dimension {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slideHeadUp {
+  animation: slideHeadUp 0.5s forwards;
+}
+
+@keyframes slideHeadUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.slideHeadDown {
+  animation: slideHeadDown 0.5s forwards;
+}
+
+@keyframes slideHeadDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }

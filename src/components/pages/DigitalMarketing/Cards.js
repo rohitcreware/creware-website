@@ -15,7 +15,7 @@ const FirstCard = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
         duration: 0.8,
       },
@@ -31,7 +31,7 @@ const FirstCard = () => {
         ref={cardRef}
       >
         {card.map((item) => (
-          <div className="col-12  col-md-6 col-lg-4">
+          <div key={item.head} className="col-12  col-md-6 col-lg-4">
             <div className={`${styles["single_card"]} row`}>
               <div className={`${styles["head"]} col-2`}>{item.img}</div>
               <div className="col-10">

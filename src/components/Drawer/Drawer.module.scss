@@ -7,6 +7,13 @@
   padding: 0 1rem;
 }
 
+.logo {
+  svg {
+    height: 2rem !important;
+    width: 7.313rem !important;
+  }
+}
+
 .button_container {
   margin-top: 30px;
   display: flex;

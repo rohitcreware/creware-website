@@ -12,8 +12,8 @@ import { UiUXDesign, UiUxHoverCards } from "../../../../Json/UiCardList";
 import SecondCard from "../MobileAppDev/SecondCard";
 import Carousel from "./Carousel/Carousel";
 import Animation from "../MobileAppDev/Animation";
-import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 
 const UiDesign = () => {
   const cardRef = useRef(null);
@@ -209,16 +209,15 @@ const UiDesign = () => {
 
         {/* 2nd contact us */}
         <div className={`${styles["second_contact_main"]}`}>
-          <Lottie
-            height={50}
-            width={50}
+          {/* <Lottie
+            height={0}
+            width={0}
             animationData={securityBallAnimation}
             className={`${styles["contact_backround"]} d-none d-lg-block`}
             style={{
               position: "absolute",
-              zIndex: -1,
             }}
-          />
+          /> */}
           <div className="container">
             <div className={`${styles["text-main"]}  ${styles["contact_p"]}`}>
               <div className={`${styles["text"]}`}>
@@ -237,7 +236,7 @@ const UiDesign = () => {
           <Animation />
         </div>
 
-        <LatestInsights />
+        <NewLastestInsighr />
 
         <QueryForm />
       </div>

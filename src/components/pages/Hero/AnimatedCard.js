@@ -1,48 +1,56 @@
 import React from "react";
 import styles from "./AnimatedCard.module.scss";
-// import redcircle from "../../Assets/redcircle.gif";
-// import bluecircle from "../../Assets/bluecircle.gif";
-// import purplecircle from "../../Assets/purplecircle.gif";
 const AnimatedCard = () => {
   return (
     <>
       <div className={`${styles["container5"]} container`}>
         <div className={`${styles["row5"]} row`}>
-          <div className="col-12 col-md-4 col-lg-4">
+          <div className="col-12 col-md-4 col-lg-4 mb-3">
             <div className={`${styles["card5"]}`}>
               <div className={`${styles["number5-1"]}`}>1</div>
               <div className={`${styles["text5-1"]}`}>
-                <div>
+                <div >
                   <img src="/images/Home/redcircle.gif" loop />
                   Design
                 </div>
               </div>
               <div className={`${styles["desc5-parent"]}`}>
-                <div className={`${styles["desc5"]}`}>User Experience Design</div>
-                <div className={`${styles["desc5"]}`}>User Interface Design</div>
+                <div className={`${styles["desc5"]}`}>
+                  User Experience Design
+                </div>
+                <div className={`${styles["desc5"]}`}>
+                  User Interface Design
+                </div>
                 <div className={`${styles["desc5"]}`}>UX Consulation</div>
                 <div className={`${styles["desc5"]}`}>Software Design</div>
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-4 col-lg-4">
+          <div className="col-12 col-md-4 col-lg-4 mb-3">
             <div className={`${styles["card5"]}`}>
               <div className={`${styles["number5-2"]}`}>2</div>
               <div className={`${styles["text5-2"]}`}>
                 <div>
-                  <img className={`${styles["tech-img"]}`} src="/images/Home/bluecircle.gif" />
+                  <img
+                    className={`${styles["tech-img"]}`}
+                    src="/images/Home/bluecircle.gif"
+                  />
                   Technology
                 </div>
               </div>
               <div className={`${styles["desc5-parent"]}`}>
-                <div className={`${styles["desc5"]}`}>User Experience Design</div>
-                <div className={`${styles["desc5"]}`}>User Interface Design</div>
+                <div className={`${styles["desc5"]}`}>
+                  User Experience Design
+                </div>
+                <div className={`${styles["desc5"]}`}>
+                  User Interface Design
+                </div>
                 <div className={`${styles["desc5"]}`}>UX Consulation</div>
                 <div className={`${styles["desc5"]}`}>Software Design</div>
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-4 col-lg-4">
+          <div className="col-12 col-md-4 col-lg-4 mb-3">
             <div className={`${styles["card5"]}`}>
               <div className={`${styles["number5-3"]}`}>3</div>
               <div className={`${styles["text5-3"]}`}>
@@ -52,8 +60,12 @@ const AnimatedCard = () => {
                 </div>
               </div>
               <div className={`${styles["desc5-parent"]}`}>
-                <div className={`${styles["desc5"]}`}>User Experience Design</div>
-                <div className={`${styles["desc5"]}`}>User Interface Design</div>
+                <div className={`${styles["desc5"]}`}>
+                  User Experience Design
+                </div>
+                <div className={`${styles["desc5"]}`}>
+                  User Interface Design
+                </div>
                 <div className={`${styles["desc5"]}`}>UX Consulation</div>
                 <div className={`${styles["desc5"]}`}>Software Design</div>
               </div>

@@ -22,6 +22,7 @@ import {
   Sphere,
   Sport,
 } from "../../Svgs/OurClientAnimationSvgs";
+import styles from "./OurClientAnime.module.scss";
 
 const OurClientSecondScreen = ({
   setSecondScreeAppearFirstTime,
@@ -37,73 +38,67 @@ const OurClientSecondScreen = ({
 
   return (
     <>
-      <div className="col-3 col-md-2 d-flex align-items-center">
+      <div className={`${styles["isleworth"]} col-4 col-md-2`}>
         <Isleworth />
       </div>
-      <div className="col-3 col-md-2  d-flex align-items-center justify-content-center">
+      <div className={`${styles["brightListed"]} col-4 col-md-2`}>
         <BrightListed />
       </div>
-      <div className="col-3 col-md-2  d-flex align-items-center">
+      <div className={`${styles["oceania"]} col-4 col-md-2`}>
         <Oceania />
       </div>
-      <div className="col-3 col-md-2 d-flex justify-content-start">
+      <div className={`${styles["skilled"]} col-4 col-md-2`}>
         <Skilled />
       </div>
-      <div className="col-3 col-md-2   d-flex justify-content-center align-items-center">
+      <div className={`${styles["missUniverse"]} col-4 col-md-2`}>
         <MissUniverse />
       </div>
-      <div className="col-3 col-md-2   d-flex">
+      <div className={`${styles["fortress"]} col-4 col-md-2`}>
         <Fortress />
       </div>
-
       {/* 2nd row */}
-
-      <div className="col-3 col-md-3  d-flex align-items-center">
+      <div className={`${styles["guitar"]} col-4 col-md-2`}>
         <Guitar />
       </div>
-      <div className="col-3 col-md-2 d-flex  justify-content-center align-items-center  ms-0 ms-lg-3">
+      <div className={`${styles["furlong"]} col-4 col-md-2`}>
         <Furlong />
       </div>
-      <div className="col-3 col-md-2 d-flex align-items-center justify-content-center">
+      <div className={`${styles["homeLoans"]} col-4 col-md-2`}>
         <HomeLoans />{" "}
       </div>
-      <div className="col-3 col-md-2 d-flex align-items-start justify-content-center">
+      <div className={`${styles["curaStream"]} col-4 col-md-3`}>
         <CuraStream />
       </div>
-      <div className="col-3 col-md-2 d-flex d-lg-block  justify-content-end align-items-center  mt-xl-4">
+      <div className={`${styles["fundraiser"]} col-4 col-md-3`}>
         <Fundraiser />
       </div>
-
       {/* third row */}
-      <div className="col-3 col-md-2  d-flex align-items-center">
-        <Flourish />{" "}
+      <div className={`${styles["flourish"]} col-4 col-md-2`}>
+        <Flourish />
       </div>
-      <div className="col-3 col-md-2  d-flex align-items-center">
-        {" "}
+      <div className={`${styles["nnnex"]} col-4 col-md-2`}>
         <Nnnex />
       </div>
-      <div className="col-3 col-md-3  d-flex align-items-center justify-content-center">
+      <div className={`${styles["albany"]} col-4 col-md-3`}>
         <Albany />
       </div>
-      <div className="col-3 col-md-2  d-flex justify-content-center align-items-center">
-        <Result />{" "}
+      <div className={`${styles["result"]} col-4 col-md-2`}>
+        <Result />
       </div>
-      <div className="col-3 col-md-3 d-flex justify-content-start">
+      <div className={`${styles["sport"]} col-4 col-md-3`}>
         <Sport />
       </div>
-
       {/* fourthRow */}
-
-      <div className="col-3 col-md-2 d-flex align-items-center">
+      <div className={`${styles["mass"]} col-4 col-md-2`}>
         <Mass />
       </div>
-      <div className="col-3 col-md-2 d-flex  align-items-center">
+      <div className={`${styles["sphere"]} col-4 col-md-2`}>
         <Sphere />
       </div>
-      <div className="col-3 col-md-2  d-flex align-items-center">
+      <div className={`${styles["skilled"]} col-4 col-md-2`}>
         <Skilled />
       </div>
-      <div className="col-3 col-md-2 d-flex">
+      <div className={`${styles["delhiSchool"]} col-4 col-md-2`}>
         <DelhiSchool />
       </div>
     </>

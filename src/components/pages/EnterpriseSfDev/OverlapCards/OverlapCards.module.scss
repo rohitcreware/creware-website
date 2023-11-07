@@ -13,21 +13,25 @@
 
   .single_card {
     padding: 0.9rem 1.125rem 2rem 2rem;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     position: relative;
+    overflow: hidden;
+
+    &:hover {
+      .line_animation {
+        width: 100%;
+        height: 5px;
+        background-color: red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: moveitback 400ms ease forwards;
+      }
+    }
 
     @media (max-width: 576px) {
       padding: 0.5rem 0.5rem 1rem 1rem;
     }
-  }
-
-  .line_animation {
-    width: 100%;
-    height: 5px;
-    background-color: red;
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
 
   .head {
@@ -88,5 +92,16 @@
         font-size: 0.8rem;
       }
     }
+  }
+}
+
+@keyframes moveitback {
+  0% {
+  }
+  50% {
+    transform: translatex(40px);
+  }
+  100% {
+    transform: translatex(0);
   }
 }

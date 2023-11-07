@@ -11,7 +11,7 @@ const OverlapCards = () => {
 
   const hoverVariants = {
     hidden: {
-      x: "-100%",
+      x: "-10%",
       opacity: 0,
     },
     visible: {
@@ -42,8 +42,8 @@ const OverlapCards = () => {
           <div className="col-12  col-md-6 col-lg-4" key={index}>
             <div
               className={`${styles["single_card"]}`}
-              onMouseEnter={() => handleHover(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
+              // onMouseEnter={() => handleHover(index)}
+              // onMouseLeave={() => handleMouseLeave(index)}
             >
               <div className={`${styles["head"]}`}>0{item.id}</div>
               <div className={`${styles["content"]}`}>
@@ -52,9 +52,9 @@ const OverlapCards = () => {
               </div>
               <motion.div
                 className={styles["line_animation"]}
-                initial="hidden"
-                animate={controlsArray[index]}
-                variants={hoverVariants}
+                // initial="hidden"
+                // animate={controlsArray[index]}
+                // variants={hoverVariants}
               />
             </div>
           </div>

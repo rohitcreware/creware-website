@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "../Hero/QueryHome.module.scss";
-import RightArrowTowardsButton from "@/components/Animations/RightArrowTowardsButton";
-import { TextField } from "@mui/material";
+import RightArrowTowardsButton from "@/components/Animations/RightArrowTowardsButton"
 import axios from "axios";
 
 const QueryForm = ({ mainContainerWidth }) => {
@@ -74,14 +73,7 @@ const QueryForm = ({ mainContainerWidth }) => {
                         onChange={onInputChangeHandler}
                         name="name"
                       ></input>
-                      {/* <TextField
-                        id="standard-basic"
-                        label="eg : Musk"
-                        variant="standard"
-                        className={`${styles["custom-textfield"]}`}
-                        onChange={onInputChangeHandler}
-                        name="name"
-                      /> */}
+                      
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
@@ -94,14 +86,7 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="reachMeAt"
                         onChange={onInputChangeHandler}
                       ></input>
-                      {/* <TextField
-                        id="standard-basic"
-                        label="eg : musk@first.com"
-                        variant="standard"
-                        className={`${styles["custom-textfield"]}`}
-                        name="reachMeAt"
-                        onChange={onInputChangeHandler}
-                      /> */}
+                      
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
@@ -114,14 +99,7 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="country"
                         onChange={onInputChangeHandler}
                       ></input>
-                      {/* <TextField
-                        id="standard-basic"
-                        label="eg : India"
-                        variant="standard"
-                        className={`${styles["custom-textfield"]}`}
-                        name="country"
-                        onChange={onInputChangeHandler}
-                      /> */}
+                      
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
@@ -134,14 +112,7 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="mobile_number"
                         onChange={onInputChangeHandler}
                       ></input>
-                      {/* <TextField
-                        id="standard-basic"
-                        label="eg : 9876543210"
-                        variant="standard"
-                        className={`${styles["custom-textfield"]}`}
-                        name="mobile_number"
-                        onChange={onInputChangeHandler}
-                      /> */}
+                      
                     </div>
                     <div>
                       {" "}
@@ -155,17 +126,10 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="company_name"
                         onChange={onInputChangeHandler}
                       ></input>
-                      {/* <TextField
-                        id="standard-basic"
-                        label="eg : Creware technologies"
-                        variant="standard"
-                        className={`${styles["custom-textfield1"]}`}
-                        name="company_name"
-                        onChange={onInputChangeHandler}
-                      /> */}
+                      
                     </div>
                     <div
-                      className={`${styles["message-div"]} d-flex align-items-center`}
+                      className={`${styles["message-div"]} `}
                     >
                       <label className={`${styles["form-lable"]}`}>
                         Message{" "}
@@ -177,13 +141,7 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="message"
                         onChange={onInputChangeHandler}
                       ></textarea>
-                      {/* <TextField
-                        id="standard-basic"
-                        label="eg : ......."
-                        variant="standard"
-                        className={`${styles["custom-textfield"]}`}
-                        name="message"
-                      /> */}
+                      
                     </div>
 
                     <div className="form-check d-flex justify-content-center">

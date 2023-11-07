@@ -141,10 +141,17 @@
 }
 
 .our_clients {
-  margin-top: 120px;
+  margin-top: 7.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+  }
+  @media (max-width: 576px) {
+    margin-top: 3rem;
+  }
 
   h1 {
-    margin-bottom: 35px;
+    margin-bottom: 3rem;
     color: #fff;
     text-align: center;
     font-size: 45px;
@@ -157,12 +164,11 @@
     }
     @media (max-width: 768px) {
       font-size: 30px;
-      margin-bottom: 25px;
       text-align: center;
     }
     @media (max-width: 576px) {
       font-size: 18px;
-      margin-bottom: 15px;
+      margin-bottom: 2rem;
     }
 
     span {
@@ -187,17 +193,13 @@
       }
     }
   }
-
-  @media (max-width: 768px) {
-    margin-top: 30px;
-  }
 }
 
 .culture_values {
-  margin-top: 2.125rem;
+  margin-top: 5rem;
 
   @media (max-width: 576px) {
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
 
   .title {

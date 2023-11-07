@@ -9,11 +9,21 @@ import {
   SmallArrowa,
   SmallArrowb,
   VerySmallArrowa,
-  VerySmallArrowb
+  VerySmallArrowb,
 } from "@/components/Svgs/contactus";
-import { HoverArrow, ViewArrow,HoverArrowSmall,ViewArrowSmall,ViewArrowVerySmall,HoverArrowVerySmall } from "@/components/Svgs/portfoliobar";
+import {
+  HoverArrow,
+  ViewArrow,
+  HoverArrowSmall,
+  ViewArrowSmall,
+  ViewArrowVerySmall,
+  HoverArrowVerySmall,
+} from "@/components/Svgs/portfoliobar";
+import axios from "axios";
+import Link from "next/link";
 
 const PortfolioBar = () => {
+  const apiUrl = "https://strapi-home-k9zk.onrender.com/api/portfolios";
   const cardRef = useRef(null);
   const [scrollbarThumbPosition, setScrollbarThumbPosition] = useState(0);
   const [scrollbarThumbWidth, setScrollbarThumbWidth] = useState(0);
@@ -25,9 +35,24 @@ const PortfolioBar = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [initialThumbPosition, setInitialThumbPosition] = useState(0);
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiUrl);
+        const info = response.data.data;
+        setData(info);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   let big;
   let small;
-  let displace
+  let displace;
   if (screenWidth > 992) {
     big = true;
   } else {
@@ -39,15 +64,22 @@ const PortfolioBar = () => {
     small = false;
   }
   if (screenWidth > 800) {
-    displace = true;
+    displace = true
   } else {
     displace = false;
   }
 
-  const handleThumbDragStart = (e) => {
+  const handleThumbClick = (e) => {
     e.preventDefault();
+    // setIsThumbClicked(!isThumbClicked);
+  };
+
+  const handleThumbDragStart = (e) => {
+
+
+    e.preventDefault()
     setIsDragging(true);
-    setDragStartX(e.clientX);
+    setDragStartX(e.clientX)
     setInitialThumbPosition(scrollbarThumbPosition);
   };
 
@@ -110,9 +142,9 @@ const PortfolioBar = () => {
   }, []);
 
   const scrollLeft = () => {
-    if (scrollbarThumbPosition > 30) {
-      const newScrollPosition = scrollbarThumbPosition - 20;
-      setScrollbarThumbPosition(scrollbarThumbPosition - 20); // Adjust scrolling distance as needed
+    if (scrollbarThumbPosition > 5) {
+      const newScrollPosition = scrollbarThumbPosition - 5;
+      setScrollbarThumbPosition(scrollbarThumbPosition - 5); // Adjust scrolling distance as needed
       // cardRef.current.scrollLeft = scrollbarThumbPosition - 30;
       const container = cardRef.current;
       const containerScrollLeft =
@@ -127,17 +159,15 @@ const PortfolioBar = () => {
   };
 
   const scrollRight = () => {
-  
     if (scrollbarThumbPosition < 89) {
-      const newScrollPosition = scrollbarThumbPosition + 20;
-      setScrollbarThumbPosition(scrollbarThumbPosition + 20); // Adjust scrolling distance as needed
+      const newScrollPosition = scrollbarThumbPosition + 5;
+      setScrollbarThumbPosition(scrollbarThumbPosition + 5); // Adjust scrolling distance as needed
       // cardRef.current.scrollLeft = scrollbarThumbPosition + 30;
       const container = cardRef.current;
       const containerScrollLeft =
         (newScrollPosition / 100) *
         (container.scrollWidth - container.clientWidth);
       container.scrollLeft = containerScrollLeft;
-     
     } else {
       const container = cardRef.current;
       // setScrollbarThumbPosition(89);
@@ -152,13 +182,13 @@ const PortfolioBar = () => {
       scrollRight();
     }
   };
+
   return (
     <>
-      <div className="portfolio">
-        <div className={`${styles["portfolio-head"]}`}></div>
+      <div>
         <div className={`${styles["base-div"]}`}>
           <div className={`${styles["portfolio-card"]}`} ref={cardRef}>
-            {portfolio.map((item, index) => {
+            {data?.map((item, index) => {
               return (
                 <div className={`${styles["portfolio-card-div"]}`} key={index}>
                   <div
@@ -168,8 +198,8 @@ const PortfolioBar = () => {
                     <div className={`${styles["card-img-overlay"]}`}>
                       <img
                         className={`${styles["card-img-top"]}`}
-                        src={item.img}
-                        alt={item.alt}
+                        src={item.attributes.img}
+                        alt={item.attributes.alt}
                       />
 
                       <div className={`${styles["overlay"]} ${styles["red"]}`}>
@@ -195,19 +225,31 @@ const PortfolioBar = () => {
           </div>
           <div className={`${styles["scroll-row"]} row`}>
             <div className="col-7">
-              <div className={`${styles["track"]} `}>
+              <div
+                className={`${styles["track"]} `}
+                onMouseDown={(e) => handleThumbDragStart(e)}
+                onMouseMove={(e) => handleThumbDrag(e)}
+                onMouseUp={() => handleThumbDragEnd()}
+                onMouseLeave={() => handleThumbDragEnd()}
+              >
                 <div
                   className={`${styles["thumb"]} `}
                   style={{
                     width: `${scrollbarThumbWidth}%`,
-                    left: displace?isDragging? initialThumbPosition +(scrollbarThumbPosition - dragStartX) +"%": scrollbarThumbPosition <= 88? `${scrollbarThumbPosition}%`: `${88}%`:scrollbarThumbPosition <= 96? `${scrollbarThumbPosition}%`: `${96}%`
-                    ,height: "0.7rem",
+                    left: displace
+                      ? isDragging
+                        ? scrollbarThumbPosition <= 88
+                          ? scrollbarThumbPosition + "%"
+                          : `${88}%`
+                        : scrollbarThumbPosition <= 88
+                        ? `${scrollbarThumbPosition}%`
+                        : `${88}%`
+                      : scrollbarThumbPosition <= 96
+                      ? `${scrollbarThumbPosition}%`
+                      : `${96}%`,
+                    height: "0.7rem",
                     cursor: "pointer",
                   }}
-                  onMouseDown={(e) => handleThumbDragStart(e)}
-                  onMouseMove={(e) => handleThumbDrag(e)}
-                  onMouseUp={() => handleThumbDragEnd()}
-                  onMouseLeave={() => handleThumbDragEnd()}
                 >
                   .
                 </div>
@@ -219,32 +261,70 @@ const PortfolioBar = () => {
                   <div
                     style={{ cursor: "pointer", zIndex: "1" }}
                     onClick={() => handleClick("left")}
-                    className={`${styles["scroll-button"]}`}
+                    c
                     onMouseEnter={() => setHover1(true)}
                     onMouseLeave={() => setHover1(false)}
                   >
-                  {small?big ? hover1 ? <Hover2 /> : <Arrowb /> : <SmallArrowb />:<VerySmallArrowb/>}
-                    </div>
+                    {small ? (
+                      big ? (
+                        hover1 ? (
+                          <Hover2 />
+                        ) : (
+                          <Arrowb />
+                        )
+                      ) : (
+                        <SmallArrowb />
+                      )
+                    ) : (
+                      <VerySmallArrowb />
+                    )}
+                  </div>
                   <div
                     onClick={() => handleClick("right")}
                     style={{ cursor: "pointer", zIndex: "1" }}
-                    className={`${styles["scroll-button"]}`}
                     onMouseEnter={() => setHover2(true)}
                     onMouseLeave={() => setHover2(false)}
                   >
-                    {small?big ? hover2 ? <Hover1 /> : <Arrowa /> : <SmallArrowa />:<VerySmallArrowa/>}
+                    {small ? (
+                      big ? (
+                        hover2 ? (
+                          <Hover1 />
+                        ) : (
+                          <Arrowa />
+                        )
+                      ) : (
+                        <SmallArrowa />
+                      )
+                    ) : (
+                      <VerySmallArrowa />
+                    )}
                   </div>
                 </div>
-                <div
+                <Link
+                  href="/our-projects"
                   className={`${styles["custom-button"]} col-7`}
                   onMouseEnter={() => setHover3(true)}
                   onMouseLeave={() => setHover3(false)}
                 >
-            
-                  View more 
-                  {small?big ? hover3 ? <HoverArrow />: <ViewArrow />: hover3 ? <HoverArrowSmall />: <ViewArrowSmall/>:hover3 ? <HoverArrowVerySmall />: <ViewArrowVerySmall/>}
-                  
-                </div>
+                  View more
+                  {small ? (
+                    big ? (
+                      hover3 ? (
+                        <HoverArrow />
+                      ) : (
+                        <ViewArrow />
+                      )
+                    ) : hover3 ? (
+                      <HoverArrowSmall />
+                    ) : (
+                      <ViewArrowSmall />
+                    )
+                  ) : hover3 ? (
+                    <HoverArrowVerySmall />
+                  ) : (
+                    <ViewArrowVerySmall />
+                  )}
+                </Link>
               </div>
             </div>
           </div>

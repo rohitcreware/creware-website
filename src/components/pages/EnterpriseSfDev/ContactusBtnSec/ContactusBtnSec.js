@@ -20,7 +20,7 @@ const ContactusBtnSec = () => {
       opacity: 1,
       x: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
         duration: 1.2,
       },
@@ -36,7 +36,7 @@ const ContactusBtnSec = () => {
       opacity: 1,
       x: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
         duration: 1.2,
       },

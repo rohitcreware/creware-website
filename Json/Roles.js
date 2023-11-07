@@ -1,46 +1,61 @@
+import {
+  BackEnd,
+  Cloud,
+  DataEngineer,
+  DataScientist,
+  DevOps,
+  FrontEnd,
+  FullStack,
+  MachineLearning,
+  Mobile,
+  NotSure,
+  QA,
+} from "@/components/Svgs/hireteam";
+
 export const Roles = [
-      {
-        text: "Full-stack",
-        icon: "full-stack",
-      },
-      {
-        text: "Front-end",
-        icon: "front-end",
-      },
-      {
-        text: "Back-end",
-        icon: "back-end",
-      },
-      {
-        text: "Mobile",
-        icon: "mobile",
-      },
-      {
-        text: "DevOps",
-        icon: "devops",
-      },
-      {
-        text: "QA",
-        icon: "qa",
-      },
-      {
-        text: "Cloud",
-        icon: "cloud",
-      },
-      {
-        text: "Machine Learning",
-        icon: "machine-learning",
-      },
-      {
-        text: "Data Scientist",
-        icon: "data-scientist",
-      },
-      {
-        text: "Data Engineer",
-        icon: "data-engineer",
-      },
-      {
-        text: "Not Sure",
-        icon: "not-sure",
-      },
-]
+  {
+    text: "Full-stack",
+    icon: <FullStack />,
+  },
+  {
+    text: "Front-end",
+    icon: <FrontEnd />,
+  },
+  {
+    text: "Back-end",
+    icon: <BackEnd />,
+  },
+  {
+    text: "Mobile",
+    icon: <Mobile />,
+  },
+  {
+    text: "DevOps",
+    icon: <DevOps />,
+  },
+  {
+    text: "Data Engineer",
+    icon: <DataEngineer />,
+  },
+  {
+    text: "Data Scientist",
+    icon: <DataScientist />,
+  },
+  {
+    text: "Machine Learning",
+    icon: <MachineLearning />,
+  },
+  {
+    text: "QA",
+    icon: <QA />,
+  },
+  {
+    text: "Cloud",
+    icon: <Cloud />,
+  },
+
+  {
+    text: "Not Sure",
+    icon: <NotSure />,
+  },
+];

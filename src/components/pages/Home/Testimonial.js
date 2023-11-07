@@ -1,7 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
-import { test } from "../../../../Json/Testimonials";
-import styles from "./Testimonials.module.scss";
-
 import {
   Arrowa,
   Arrowb,
@@ -10,9 +6,12 @@ import {
   SmallArrowa,
   SmallArrowb,
   VerySmallArrowa,
-  VerySmallArrowb
+  VerySmallArrowb,
 } from "@/components/Svgs/contactus";
-import { HoverArrow, ViewArrow,HoverArrowSmall,ViewArrowSmall,ViewArrowVerySmall,HoverArrowVerySmall } from "@/components/Svgs/portfoliobar";
+import React, { useEffect, useRef, useState } from "react";
+import { test } from "../../../../Json/Testimonials";
+import styles from "./Testimonials.module.scss";
+import axios from "axios";
 
 const Testimonial = () => {
   const cardRef = useRef(null);
@@ -26,10 +25,28 @@ const Testimonial = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [initialThumbPosition, setInitialThumbPosition] = useState(0);
+  const cardScrollDuration = 200;
+  const apiUrl = "https://strapi-home-k9zk.onrender.com/api/testimonials";
+
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiUrl);
+        const info = response.data.data;
+
+        setData(info);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   let big;
   let small;
-  let displace
+  let displace;
   if (screenWidth > 992) {
     big = true;
   } else {
@@ -45,6 +62,11 @@ const Testimonial = () => {
   } else {
     displace = false;
   }
+
+  const handleThumbClick = (e) => {
+    e.preventDefault();
+    // setIsThumbClicked(!isThumbClicked);
+  };
 
   const handleThumbDragStart = (e) => {
     e.preventDefault();
@@ -66,13 +88,38 @@ const Testimonial = () => {
 
   const handleThumbDragEnd = () => {
     setIsDragging(false);
+    // updateCardScrollPosition(scrollbarThumbPosition);
   };
 
   const updateCardScrollPosition = (newPosition) => {
     const container = cardRef.current;
     const containerScrollLeft =
       (newPosition / 100) * (container.scrollWidth - container.clientWidth);
-    container.scrollLeft = containerScrollLeft;
+    smoothScrollTo(container, containerScrollLeft, cardScrollDuration);
+  };
+  const easeInOutQuad = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
+  const smoothScrollTo = (element, to, duration) => {
+    let start = element.scrollLeft;
+    let change = to - start;
+    let currentTime = 0;
+    const increment = 20;
+
+    const animateScroll = () => {
+      currentTime += increment;
+      const val = easeInOutQuad(currentTime, start, change, duration);
+      element.scrollLeft = val;
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    animateScroll();
   };
 
   useEffect(() => {
@@ -112,38 +159,33 @@ const Testimonial = () => {
   }, []);
 
   const scrollLeft = () => {
-    if (scrollbarThumbPosition > 30) {
-      const newScrollPosition = scrollbarThumbPosition - 20;
-      setScrollbarThumbPosition(scrollbarThumbPosition - 20); // Adjust scrolling distance as needed
-      // cardRef.current.scrollLeft = scrollbarThumbPosition - 30;
+    if (scrollbarThumbPosition > 5) {
+      const newScrollPosition = scrollbarThumbPosition - 5;
+      setScrollbarThumbPosition(scrollbarThumbPosition - 5);
       const container = cardRef.current;
       const containerScrollLeft =
         (newScrollPosition / 100) *
         (container.scrollWidth - container.clientWidth);
       container.scrollLeft = containerScrollLeft;
+      smoothScrollTo(container, containerScrollLeft, cardScrollDuration);
     } else {
       const container = cardRef.current;
       setScrollbarThumbPosition(0);
       container.scrollLeft = 0;
+      smoothScrollTo(container, 0, cardScrollDuration);
     }
   };
 
   const scrollRight = () => {
-  
     if (scrollbarThumbPosition < 89) {
-      const newScrollPosition = scrollbarThumbPosition + 20;
-      setScrollbarThumbPosition(scrollbarThumbPosition + 20); // Adjust scrolling distance as needed
-      // cardRef.current.scrollLeft = scrollbarThumbPosition + 30;
+      const newScrollPosition = scrollbarThumbPosition + 5;
+      setScrollbarThumbPosition(newScrollPosition);
       const container = cardRef.current;
       const containerScrollLeft =
         (newScrollPosition / 100) *
         (container.scrollWidth - container.clientWidth);
       container.scrollLeft = containerScrollLeft;
-     
-    } else {
-      const container = cardRef.current;
-      // setScrollbarThumbPosition(89);
-      // container.scrollLeft = 89;
+      smoothScrollTo(container, containerScrollLeft, cardScrollDuration);
     }
   };
 
@@ -154,12 +196,13 @@ const Testimonial = () => {
       scrollRight();
     }
   };
+
   return (
     <>
       <div className={`${styles["base-div-tryal"]}`}>
         <div className={`${styles["test"]} container-fluid`}>
           <div className={`${styles["main-row"]} `} ref={cardRef}>
-            {test.map((item, index) => (
+            {data?.map((item, index) => (
               <div
                 className={`${styles["card-main"]} col-12 col-md-6 col-lg-3`}
                 key={index}
@@ -168,13 +211,13 @@ const Testimonial = () => {
                   className={`${styles["main-test-div"]} d-flex align-items-center justify-content-center flex-coulmn`}
                 >
                   <img
-                    src={item.img}
+                    src={item.attributes.img}
                     className={`${styles["test-img"]} z-3 postion-relative ${styles.nTop}`}
-                    alt={`Testimonial ${item.desc}`}
+                    alt={`Testimonial ${item.attributes.description}`}
                   />
                   <div className={`${styles["box-test"]}`}>
                     <p className={`${styles["box-test-p"]} text-white`}>
-                      {item.desc}
+                      {item.attributes.description}
                     </p>
                   </div>
                 </div>
@@ -183,14 +226,25 @@ const Testimonial = () => {
           </div>
 
           <div className={`${styles["scroll-row"]} row`}>
-            <div className="col-7">
+            <div className="col-8">
               <div className={`${styles["track"]} `}>
                 <div
                   className={`${styles["thumb"]} `}
                   style={{
                     width: `${scrollbarThumbWidth}%`,
-                    left: displace?isDragging? initialThumbPosition +(scrollbarThumbPosition - dragStartX) +"%": scrollbarThumbPosition <= 88? `${scrollbarThumbPosition}%`: `${88}%`:scrollbarThumbPosition <= 96? `${scrollbarThumbPosition}%`: `${96}%`
-                    ,height: "0.7rem",
+                    // left: `${scrollbarThumbPosition}%`,
+                    left: displace
+                      ? isDragging
+                        ? scrollbarThumbPosition <= 88
+                          ? scrollbarThumbPosition + "%"
+                          : `${88}%`
+                        : scrollbarThumbPosition <= 88
+                        ? `${scrollbarThumbPosition}%`
+                        : `${88}%`
+                      : scrollbarThumbPosition <= 96
+                      ? `${scrollbarThumbPosition}%`
+                      : `${96}%`,
+                    height: "0.7rem",
                     cursor: "pointer",
                   }}
                   onMouseDown={(e) => handleThumbDragStart(e)}
@@ -202,33 +256,49 @@ const Testimonial = () => {
                 </div>
               </div>
             </div>
-            <div className="col-5">
+            <div className="col-4">
               <div className={`${styles["arrow-row"]} row`}>
                 <div className={`${styles["arrow-div"]} col-5 `}>
                   <div
                     style={{ cursor: "pointer", zIndex: "1" }}
                     onClick={() => handleClick("left")}
-                    className={`${styles["scroll-button"]}`}
-                    onMouseEnter={() => setHover1(true)}
-                    onMouseLeave={() => setHover1(false)}
+                    
                   >
-                  
-
-                    {small?big ? hover1 ? <Hover2 /> : <Arrowb /> : <SmallArrowb />:<VerySmallArrowb/>}
+                    {small ? (
+                      big ? (
+                        hover1 ? (
+                          <Hover2 />
+                        ) : (
+                          <Arrowb />
+                        )
+                      ) : (
+                        <SmallArrowb />
+                      )
+                    ) : (
+                      <VerySmallArrowb />
+                    )}
                   </div>
                   <div
                     onClick={() => handleClick("right")}
                     style={{ cursor: "pointer", zIndex: "1" }}
-                    className={`${styles["scroll-button"]}`}
-                    onMouseEnter={() => setHover2(true)}
-                    onMouseLeave={() => setHover2(false)}
+                    
                   >
-                  
-
-                  {small?big ? hover2 ? <Hover1 /> : <Arrowa /> : <SmallArrowa />:<VerySmallArrowa/>}
+                    {small ? (
+                      big ? (
+                        hover2 ? (
+                          <Hover1 />
+                        ) : (
+                          <Arrowa />
+                        )
+                      ) : (
+                        <SmallArrowa />
+                      )
+                    ) : (
+                      <VerySmallArrowa />
+                    )}
                   </div>
                 </div>
-                <div
+                {/* <div
                   className={`${styles["custom-button"]} col-7`}
                   onMouseEnter={() => setHover3(true)}
                   onMouseLeave={() => setHover3(false)}
@@ -236,12 +306,10 @@ const Testimonial = () => {
                  View more 
                   {small?big ? hover3 ? <HoverArrow />: <ViewArrow />: hover3 ? <HoverArrowSmall />: <ViewArrowSmall/>:hover3 ? <HoverArrowVerySmall />: <ViewArrowVerySmall/>}
                   
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
-
-          
         </div>
       </div>
     </>

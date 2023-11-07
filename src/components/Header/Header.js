@@ -18,7 +18,6 @@ const Navbar = () => {
     if (pathName.includes("project-details")) {
       headerContainerRef.current.style.backgroundColor = "#011423";
     } else if (pathName.includes("mobile-app-development")) {
-      console.log("object");
       headerContainerRef.current.classList.add(`${styles["mobile_app_bg"]}`);
       headerContainerRef.current.style.backgroundColor = "transparent";
     } else {
@@ -47,6 +46,8 @@ const Navbar = () => {
       router.push("/partners");
     } else if (routeName === "blog") {
       router.push("/blog");
+    } else if (routeName === "aboutUs") {
+      router.push("/about-us");
     }
   };
 
@@ -58,7 +59,10 @@ const Navbar = () => {
       >
         <div className="container" style={{ zIndex: "10" }}>
           {!open && (
-            <a className={`${styles["header_logo"]} navbar-brand me-2`} href="/">
+            <a
+              className={`${styles["header_logo"]} navbar-brand me-2`}
+              href="/"
+            >
               <Logo />
             </a>
           )}
@@ -143,7 +147,10 @@ const Navbar = () => {
 
               <button
                 type="button"
-                className={`${styles["btnn"]} ${styles["btn2"]} me-2 d-lg-bl`}
+                className={`${styles["btnn"]} ${styles["btn2"]}  ${
+                  pathName === "/about-us/" ? styles.isActive : ""
+                } me-2 d-lg-bl`}
+                onClick={() => navButtonClickHandler("aboutUs")}
               >
                 About Us
               </button>

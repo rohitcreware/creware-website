@@ -137,7 +137,8 @@ div.card.text-center {
   top: 2.5%; /* 40% / 16px = 2.5% */
   animation: lineup1 3s ease-in-out;
   position: relative;
-  animation-iteration-count: infinite;
+  height: 11.25rem;
+  // animation-iteration-count: infinite;
 
   @media (max-width: 800px) {
   }
@@ -152,7 +153,8 @@ div.card.text-center {
   top: 2.5%; /* 40% / 16px = 2.5% */
   animation: lineup2 3s ease-in-out;
   position: relative;
-  animation-iteration-count: infinite;
+  height: 7.5rem;
+  // animation-iteration-count: infinite;
 }
 
 .vertline3 {
@@ -164,7 +166,8 @@ div.card.text-center {
   top: 2.5%; /* 40% / 16px = 2.5% */
   animation: lineup3 3s ease-in-out;
   position: relative;
-  animation-iteration-count: infinite;
+  height: 11.25rem;
+  // animation-iteration-count: infinite;
 }
 
 .vertline4 {
@@ -176,7 +179,8 @@ div.card.text-center {
   top: 2.5%; /* 40% / 16px = 2.5% */
   animation: lineup4 3s ease-in-out;
   position: relative;
-  animation-iteration-count: infinite;
+  height: 3.75rem; 
+  // animation-iteration-count: infinite;
 }
 
 .vertline5 {
@@ -188,7 +192,8 @@ div.card.text-center {
   top: 2.5%; /* 40% / 16px = 2.5% */
   animation: lineup5 3s ease-in-out;
   position: relative;
-  animation-iteration-count: infinite;
+  height: 10rem; 
+  // animation-iteration-count: infinite;
 }
 
 .vertline6 {
@@ -200,7 +205,8 @@ div.card.text-center {
   top: 2.5%; /* 40% / 16px = 2.5% */
   animation: lineup6 3s ease-in-out;
   position: relative;
-  animation-iteration-count: infinite;
+  height: 10rem;
+  // animation-iteration-count: infinite;
 }
 
 @keyframes lineup1 {

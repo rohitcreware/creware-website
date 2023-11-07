@@ -32,6 +32,7 @@ const ClientSection = () => {
           <Image
             src="/images/project-details/bahamas.png"
             className="img-fluid"
+            alt="image"
           />
         </div>
       </div>

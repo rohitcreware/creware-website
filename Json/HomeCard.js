@@ -7,7 +7,7 @@ export const homeCard = [
     description:
       " Borem ipsum dolor sit amet consectetur. Turpis tristique nulla posuere et amet arcu dictum ultricies convallis.",
 
-    url: "/mobile-app-development",
+    url: "/services/mobile-app-development",
   },
 
   {
@@ -18,7 +18,7 @@ export const homeCard = [
     description:
       " Borem ipsum dolor sit amet consectetur. Turpis tristique nulla posuere et amet arcu dictum ultricies convallis.",
 
-    url: "/web-app-development",
+    url: "/services/web-app-development",
   },
 
   {
@@ -40,7 +40,7 @@ export const homeCard = [
     description:
       " Borem ipsum dolor sit amet consectetur. Turpis tristique nulla posuere et amet arcu dictum ultricies convallis.",
 
-    url: "/digital-marketing",
+    url: "/services/digital-marketing",
   },
 
   {
@@ -62,7 +62,7 @@ export const homeCard = [
     description:
       " Borem ipsum dolor sit amet consectetur. Turpis tristique nulla posuere et amet arcu dictum ultricies convallis.",
 
-    url: "/consultation",
+    url: "/services/consultation",
   },
 
   {
@@ -84,7 +84,7 @@ export const homeCard = [
     description:
       " Borem ipsum dolor sit amet consectetur. Turpis tristique nulla posuere et amet arcu dictum ultricies convallis.",
 
-    url: "/hire-team",
+    url: "/services/hire-team",
   },
 
   {
@@ -160,20 +160,20 @@ export const test = [
 
 export const portfolio = [
   { img: "https://i.postimg.cc/s2ybcPrJ/Project6.png" },
-  // {"img":"https://i.postimg.cc/x8W4bM5M/Project1.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
-  // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/x8W4bM5M/Project1.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
+  {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
   // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
   // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},
   // {"img":"https://i.postimg.cc/L6DySdKj/Project2.png"},

@@ -48,8 +48,9 @@
 .scroll-card {
   display: flex;
   gap: 35px;
-  overflow-x: scroll; 
- 
+  overflow-x: scroll;
+  // white-space: nowrap;
+  // scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: red transparent;
 
@@ -158,14 +159,16 @@
 }
 
 .track {
-  border: 1px solid grey;
+  // border: 1px solid grey;
+  margin-top: -2rem;
   position: relative;
-  height: 0;
+  height: 4rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 48%, rgba(179,179,179,1) 49%, rgba(0,0,0,0) 51%);
 }
 .thumb {
   border-radius: 1rem;
   background-color: #d0021b;
-  bottom: -5px;
+  bottom: 1.7rem;
   position: absolute;
   z-index: 10;
 }
@@ -201,6 +204,7 @@
 
 .custom-button {
   // background-color: #060b27;
+  text-decoration: none;
   color: #d0021b;
   text-align: left;
   font-size: 2.68rem;

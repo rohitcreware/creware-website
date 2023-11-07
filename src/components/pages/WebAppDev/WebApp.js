@@ -10,6 +10,7 @@ import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
 import Animation from "./Animation";
 import Lottie from "lottie-react";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 const WebApp = () => {
   const paraRef = useRef(null);
   const paraInView = useInView(paraRef, { once: true });
@@ -20,7 +21,7 @@ const WebApp = () => {
     onscreen: {
       opacity: 1,
       transition: {
-        type: "dump",
+        // type: "dump",
         dumping: 0.4,
         duration: 2,
       },
@@ -36,7 +37,7 @@ const WebApp = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "dump",
+        // type: "dump",
         duration: 2,
       },
     },
@@ -183,7 +184,7 @@ const WebApp = () => {
 
       {/* latest insight */}
       <section>
-        <LatestInsights />
+        <NewLastestInsighr/>
       </section>
 
       <section>

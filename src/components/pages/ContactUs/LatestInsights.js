@@ -10,10 +10,19 @@ import {
   SmallArrowa,
   SmallArrowb,
   VerySmallArrowa,
-  VerySmallArrowb
+  VerySmallArrowb,
 } from "@/components/Svgs/contactus";
-import { HoverArrow, ViewArrow,HoverArrowSmall,ViewArrowSmall,ViewArrowVerySmall,HoverArrowVerySmall } from "@/components/Svgs/portfoliobar";
-
+import {
+  HoverArrow,
+  ViewArrow,
+  HoverArrowSmall,
+  ViewArrowSmall,
+  ViewArrowVerySmall,
+  HoverArrowVerySmall,
+} from "@/components/Svgs/portfoliobar";
+import Link from "next/link";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import _ from "lodash";
 const LatestInsights = () => {
   const cardRef = useRef(null);
   const [scrollbarThumbPosition, setScrollbarThumbPosition] = useState(0);
@@ -26,10 +35,17 @@ const LatestInsights = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [initialThumbPosition, setInitialThumbPosition] = useState(0);
- 
+  const x = useMotionValue(0);
+  const [isThumbClicked, setIsThumbClicked] = useState(false);
+  const background = useTransform(
+    x,
+    [-100, 0, 100],
+    ["#ff008c", "#7700ff", "rgb(230, 255, 0)"]
+  );
+
   let big;
   let small;
-  let displace
+  let displace;
   if (screenWidth > 992) {
     big = true;
   } else {
@@ -46,13 +62,20 @@ const LatestInsights = () => {
     displace = false;
   }
 
+  const handleThumbClick = (e) => {
+    e.preventDefault();
+    // setIsThumbClicked(!isThumbClicked);
+  };
+
   const handleThumbDragStart = (e) => {
     e.preventDefault();
     setIsDragging(true);
     setDragStartX(e.clientX);
     setInitialThumbPosition(scrollbarThumbPosition);
   };
-
+  
+  
+  
   const handleThumbDrag = (e) => {
     if (!isDragging) return;
     const deltaX = e.clientX - dragStartX;
@@ -112,9 +135,9 @@ const LatestInsights = () => {
   }, []);
 
   const scrollLeft = () => {
-    if (scrollbarThumbPosition > 30) {
-      const newScrollPosition = scrollbarThumbPosition - 20;
-      setScrollbarThumbPosition(scrollbarThumbPosition - 20); // Adjust scrolling distance as needed
+    if (scrollbarThumbPosition > 5) {
+      const newScrollPosition = scrollbarThumbPosition - 5;
+      setScrollbarThumbPosition(scrollbarThumbPosition - 5);
       // cardRef.current.scrollLeft = scrollbarThumbPosition - 30;
       const container = cardRef.current;
       const containerScrollLeft =
@@ -129,17 +152,15 @@ const LatestInsights = () => {
   };
 
   const scrollRight = () => {
-  
     if (scrollbarThumbPosition < 89) {
-      const newScrollPosition = scrollbarThumbPosition + 20;
-      setScrollbarThumbPosition(scrollbarThumbPosition + 20); // Adjust scrolling distance as needed
+      const newScrollPosition = scrollbarThumbPosition + 5;
+      setScrollbarThumbPosition(scrollbarThumbPosition + 5);
       // cardRef.current.scrollLeft = scrollbarThumbPosition + 30;
       const container = cardRef.current;
       const containerScrollLeft =
         (newScrollPosition / 100) *
         (container.scrollWidth - container.clientWidth);
       container.scrollLeft = containerScrollLeft;
-     
     } else {
       const container = cardRef.current;
       // setScrollbarThumbPosition(89);
@@ -154,6 +175,7 @@ const LatestInsights = () => {
       scrollRight();
     }
   };
+
   return (
     <div>
       <h2 className={`${styles["insight-head"]}`}>Latest Insights :</h2>
@@ -186,22 +208,39 @@ const LatestInsights = () => {
 
         <div className={`${styles["scroll-row"]} row`}>
           <div className="col-7">
-            <div className={`${styles["track"]} `}>
-              <div
+            <div
+              className={`${styles["track"]} `}
+              onMouseDown={(e) => handleThumbDragStart(e)}
+              onMouseMove={(e) => handleThumbDrag(e)}
+              onMouseUp={() => handleThumbDragEnd()}
+              onMouseLeave={() => handleThumbDragEnd()}
+            >
+              <motion.div
                 className={`${styles["thumb"]} `}
+                onClick={(e) => handleThumbClick(e)}
                 style={{
-                    width: `${scrollbarThumbWidth}%`,
-                    left: displace?isDragging? initialThumbPosition +(scrollbarThumbPosition - dragStartX) +"%": scrollbarThumbPosition <= 88? `${scrollbarThumbPosition}%`: `${88}%`:scrollbarThumbPosition <= 96? `${scrollbarThumbPosition}%`: `${96}%`
-                    ,height: "0.7rem",
-                    cursor: "pointer",
-                  }}
-                onMouseDown={(e) => handleThumbDragStart(e)}
-                onMouseMove={(e) => handleThumbDrag(e)}
-                onMouseUp={() => handleThumbDragEnd()}
-                onMouseLeave={() => handleThumbDragEnd()}
+                  width: `${scrollbarThumbWidth}%`,
+                  left: displace
+                    ? isDragging
+                      ? scrollbarThumbPosition <= 88
+                        ? scrollbarThumbPosition + "%"
+                        : `${88}%`
+                      : scrollbarThumbPosition <= 88
+                      ? `${scrollbarThumbPosition}%`
+                      : `${88}%`
+                    : scrollbarThumbPosition <= 96
+                    ? `${scrollbarThumbPosition}%`
+                    : `${96}%`,
+                  height: "0.7rem",
+                  cursor: "pointer",
+                }}
+                // onMouseDown={(e) => handleThumbDragStart(e)}
+                // onMouseMove={(e) => handleThumbDrag(e)}
+                // onMouseUp={() => handleThumbDragEnd()}
+                // onMouseLeave={() => handleThumbDragEnd()}
               >
                 .
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="col-5">
@@ -214,9 +253,19 @@ const LatestInsights = () => {
                   onMouseEnter={() => setHover1(true)}
                   onMouseLeave={() => setHover1(false)}
                 >
-                 
-
-                 {small?big ? hover1 ? <Hover2 /> : <Arrowb /> : <SmallArrowb />:<VerySmallArrowb/>}
+                  {small ? (
+                    big ? (
+                      hover1 ? (
+                        <Hover2 />
+                      ) : (
+                        <Arrowb />
+                      )
+                    ) : (
+                      <SmallArrowb />
+                    )
+                  ) : (
+                    <VerySmallArrowb />
+                  )}
                 </div>
                 <div
                   onClick={() => handleClick("right")}
@@ -225,18 +274,46 @@ const LatestInsights = () => {
                   onMouseEnter={() => setHover2(true)}
                   onMouseLeave={() => setHover2(false)}
                 >
-                {small?big ? hover2 ? <Hover1 /> : <Arrowa /> : <SmallArrowa />:<VerySmallArrowa/>}
+                  {small ? (
+                    big ? (
+                      hover2 ? (
+                        <Hover1 />
+                      ) : (
+                        <Arrowa />
+                      )
+                    ) : (
+                      <SmallArrowa />
+                    )
+                  ) : (
+                    <VerySmallArrowa />
+                  )}
                 </div>
               </div>
-              <div
+              <Link
+                href="/blog"
                 className={`${styles["custom-button"]}  col-7`}
                 onMouseEnter={() => setHover3(true)}
                 onMouseLeave={() => setHover3(false)}
               >
-                 View more 
-                  {small?big ? hover3 ? <HoverArrow />: <ViewArrow />: hover3 ? <HoverArrowSmall />: <ViewArrowSmall/>:hover3 ? <HoverArrowVerySmall />: <ViewArrowVerySmall/>}
-                  
-              </div>
+                View more
+                {small ? (
+                  big ? (
+                    hover3 ? (
+                      <HoverArrow />
+                    ) : (
+                      <ViewArrow />
+                    )
+                  ) : hover3 ? (
+                    <HoverArrowSmall />
+                  ) : (
+                    <ViewArrowSmall />
+                  )
+                ) : hover3 ? (
+                  <HoverArrowVerySmall />
+                ) : (
+                  <ViewArrowVerySmall />
+                )}
+              </Link>
             </div>
           </div>
         </div>

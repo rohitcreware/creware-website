@@ -1,0 +1,42 @@
+.main {
+  width: 81%;
+  margin: auto;
+
+  @media (max-width: 1400px) {
+    width: 85%;
+  }
+
+  .card {
+    margin-bottom: 4rem;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      color: #fff;
+      text-align: center;
+      font-size: 1.207rem;
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 1.313rem;
+
+      @media (max-width: 576px) {
+        font-size: 1rem;
+      }
+    }
+    h6 {
+      color: #d0021b;
+      text-align: center;
+      font-size: 0.941rem;
+      font-style: normal;
+      font-weight: 500;
+      @media (max-width: 576px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

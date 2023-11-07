@@ -3,26 +3,28 @@ import React, { useRef, useState } from "react";
 import styles from "./DigitalNumber.module.scss";
 import { motion, useInView } from "framer-motion";
 
-const DigitalNumber = () => {
+const DigitalNumber = ({ main_align_class, titleDisable }) => {
   const digitalRef = useRef(null);
   const digitalInView = useInView(digitalRef, { once: true });
 
-  const [firstNumber] = useState([1, 9, 8, 7, 6, 5, 4, 9, 4]);
-  const [secondNumber] = useState([9, 0, 8, 7, 6, 2, 4, 3, 6]);
-  const [thirdNumber] = useState([4, 9, 8, 4, 5, 2, 4, 3, 7]);
+  const [firstNumber] = useState([5, 9, 8, 7, 6, 5, 4, 9, 5]);
+  const [secondNumber] = useState([6, 0, 8, 7, 6, 2, 4, 3, 6]);
+  const [thirdNumber] = useState([3, 9, 8, 4, 5, 2, 4, 3, 3]);
 
   return (
     <>
       <div className={styles["main"]}>
         <div className="container">
-          <div className={`${styles["digital-container"]}`}>
-            <h2 className={`${styles["digitalnumber-h2"]}`}>
-              OUR <span>DIGITAL NUMBERS...</span>
-            </h2>
+          <div className={`${styles["digital-container"]} ${main_align_class}`}>
+            {titleDisable ? (
+              ""
+            ) : (
+              <h2 className={`${styles["sec-3-h2"]}`}>
+                OUR <span>DIGITAL NUMBERS...</span>
+              </h2>
+            )}
             <div className={`${styles["digital-row"]} row`} ref={digitalRef}>
-              <div
-                className={`${styles["digital-col3"]} col-12 col-md-6 col-lg-6 col-xl-3`}
-              >
+              <div className="col-12 col-md-6 col-lg-6 col-xl-3">
                 <div
                   style={{
                     display: "flex",
@@ -70,9 +72,7 @@ const DigitalNumber = () => {
                 <h1 className={styles["digits_heading"]}>Coffee Cups</h1>
               </div>
 
-              <div
-                className={`${styles["digital-col3"]} col-12 col-md-6 col-lg-6 col-xl-3`}
-              >
+              <div className="col-12 col-md-6 col-lg-6 col-xl-3">
                 <div
                   style={{
                     display: "flex",
@@ -120,9 +120,7 @@ const DigitalNumber = () => {
                 <h1 className={styles["digits_heading"]}>Projects</h1>
               </div>
 
-              <div
-                className={`${styles["digital-col3"]} col-12 col-md-6 col-lg-6 col-xl-3`}
-              >
+              <div className="col-12 col-md-6 col-lg-6 col-xl-3">
                 <div
                   style={{
                     display: "flex",
@@ -170,9 +168,7 @@ const DigitalNumber = () => {
                 <h1 className={styles["digits_heading"]}>Working Days</h1>
               </div>
 
-              <div
-                className={`${styles["digital-col3"]} col-12 col-md-6 col-lg-6 col-xl-3`}
-              >
+              <div className="col-12 col-md-6 col-lg-6 col-xl-3">
                 <div
                   style={{
                     display: "flex",

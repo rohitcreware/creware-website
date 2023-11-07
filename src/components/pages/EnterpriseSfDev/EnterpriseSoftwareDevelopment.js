@@ -11,6 +11,7 @@ import ContactUs from "../ContactUs/Contact";
 import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
 import DevelopCardAnime2 from "./DevlopCardsAnime/DevelopCardAnime2";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 
 const EnterpriseSoftwareDevelopment = () => {
   return (
@@ -63,7 +64,7 @@ const EnterpriseSoftwareDevelopment = () => {
       <ContactusBtnSec />
 
       {/* contact sec */}
-      <LatestInsights />
+      <NewLastestInsighr/>
 
       <QueryForm />
     </div>

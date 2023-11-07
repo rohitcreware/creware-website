@@ -65,8 +65,9 @@
   // overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 10px;
-    height: 9px;
+    width: 0px;
+    height: 0px;
+    display: none;
   }
 }
 
@@ -84,20 +85,28 @@
 }
 
 .track {
-  border: 1px solid grey;
+  // border: 1px solid grey;
+  margin-top: -2rem;
   position: relative;
-  height: 0;
+  height: 4rem;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 48%,
+    rgba(179, 179, 179, 1) 49%,
+    rgba(0, 0, 0, 0) 51%
+  );
 }
 .thumb {
   border-radius: 1rem;
   background-color: #d0021b;
-  bottom: -5px;
+  bottom: 1.7rem;
   position: absolute;
   z-index: 10;
 }
 
 .arrow-row {
   margin-top: -50px;
+  justify-content: center;
 }
 
 .arrow-div {
@@ -151,7 +160,7 @@
     --bs-gutter-x: 0; /* Set it to your desired value (e.g., 0) or unset it */
   }
   @media (max-width: 460px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
     --bs-gutter-x: 0; /* Set it to your desired value (e.g., 0) or unset it */
   }
   @media (max-width: 331px) {

@@ -13,6 +13,7 @@ const Animation = () => {
               width={0}
               sizes="100vw"
               src={gif}
+              alt="image"
               className={`${styles["image"]}`}
             />
         

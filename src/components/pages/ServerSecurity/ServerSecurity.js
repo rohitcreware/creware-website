@@ -5,12 +5,11 @@ import Image from "next/image";
 import styles from "./ServerSecurity.module.scss";
 import ServerSecurityCardAnimation from "@/components/Animations/ServerSecurityCardAnimation/ServerSecurityCardAnimation";
 import DigitalDeviceCard from "./DigitalDeviceCard/DigitalDeviceCard";
-import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
-
 import four_boxes from "../../../../public/images/security-server/four_boxes.gif";
 import lightning_bg from "../../../../public/images/security-server/lightning_bg.gif";
 import security_lock from "../../../../public/images/security-server/security_lock.png";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 
 const ServerSecurity = () => {
   return (
@@ -48,7 +47,6 @@ const ServerSecurity = () => {
           />
         </div>
       </div>
-
       <div className="container">
         {/* digital device */}
 
@@ -99,11 +97,11 @@ const ServerSecurity = () => {
           <div className={`${styles["cards"]} row gy-5 `}>
             <ServerSecurityCardAnimation />
           </div>
-
-          <LatestInsights  viewMoreClass={styles["view_more"]}/>
-          <QueryForm mainContainerWidth="95%" />
         </div>
       </div>
+
+      <NewLastestInsighr />
+      <QueryForm />
     </div>
   );
 };

@@ -1,0 +1,66 @@
+.main {
+  width: 81%;
+  margin: auto;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1400px) {
+    width: 85%;
+  }
+
+  .card {
+    .title {
+      text-align: center;
+      margin-top: 4.5rem;
+      color: #fff;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 4.188rem;
+
+      @media (max-width: 1400px) {
+        margin-top: 3rem;
+        font-size: 2.7rem;
+      }
+      @media (max-width: 1200px) {
+        margin-top: 2.5rem;
+        font-size: 2.5rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      @media (max-width: 576px) {
+      }
+
+      span {
+        color: #d0021b;
+      }
+    }
+
+    .description {
+      p {
+        color: var(--Bg, #fff);
+        font-size: 21.009px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width: 1400px) {
+          font-size: 1.2rem;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

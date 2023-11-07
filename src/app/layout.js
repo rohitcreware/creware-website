@@ -1,7 +1,7 @@
 import "./globals.scss";
+import Head from "next/head";
 import { Outfit } from "next/font/google";
 import Script from "next/script";
-import Head from "next/head";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import BackOnTop from "@/components/Hero/BackOnTop";
@@ -26,12 +26,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           rel="stylesheet"
         />
+       
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
           rel="stylesheet"
@@ -57,12 +58,15 @@ export default function RootLayout({ children }) {
         type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
       ></Script>
+
+   
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"
       ></Script>
-   
+
+      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></Script>
 
       <Script src="https://github.hubspot.com/odometer/odometer.js" />
     </html>

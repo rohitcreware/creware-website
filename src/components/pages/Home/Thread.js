@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from "react";
 import styles from "./Thread.module.scss";
 import { thread } from "../../../../Json/Thread";

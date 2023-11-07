@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React from "react";
 import styles from "./Carrers.module.scss";
 import CultureCards from "./CultureCards";
@@ -58,7 +60,9 @@ const Carrers = () => {
 
         {/* our clients */}
         <div className={`${styles["our_clients"]}`}>
-        <h1>Our <span> Clients.</span></h1>
+          <h1>
+            Our <span> Clients.</span>
+          </h1>
           <OurClientAnime />
         </div>
 

@@ -1,4 +1,344 @@
 .main {
   margin: auto;
-  height: 28rem;
+  height: 25.625rem;
+
+  @media (max-width: 767px) {
+    height: 38rem;
+  }
+  @media (max-width: 576px) {
+    height: 32rem;
+  }
+
+  .first_screen_row {
+    --bs-gutter-y: 3rem;
+
+    @media (max-width: 576px) {
+      // --bs-gutter-y: 2.144rem;
+      --bs-gutter-y: 2.616rem;
+    }
+  }
+  .second_screen_row {
+    --bs-gutter-y: 1.644rem;
+
+    @media (max-width: 1200px) {
+      --bs-gutter-y: 1.981rem;
+    }
+    @media (max-width: 576px) {
+      // --bs-gutter-y: 1.288rem;
+      --bs-gutter-y: 0.7rem;
+    }
+  }
+
+  .innosol {
+    text-align: center;
+    svg {
+      height: 2.188rem;
+      width: 100%;
+    }
+  }
+
+  .Niit {
+    text-align: center;
+    padding-top: 0.188rem;
+
+    svg {
+      width: 100%;
+      height: 1.875rem;
+    }
+  }
+
+  .hess {
+    text-align: center;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  .lime {
+    text-align: center;
+    svg {
+      width: 100%;
+      height: 2.875rem;
+    }
+  }
+
+  .hfk {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 3rem;
+    }
+  }
+
+  .doramae {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 3rem;
+    }
+  }
+
+  .ion {
+    svg {
+      width: 80%;
+    }
+  }
+  .hundo {
+    svg {
+      width: 100%;
+      height: 2.313rem;
+    }
+  }
+  .eyeface {
+    svg {
+      width: 100%;
+      height: 2.313rem;
+    }
+  }
+  .voluntulo {
+    svg {
+      width: 100%;
+      height: 2.313rem;
+    }
+  }
+
+  .optra {
+    text-align: center;
+
+    svg {
+      width: 90%;
+    }
+  }
+
+  .crai {
+    text-align: left;
+
+    svg {
+      width: 80%;
+    }
+  }
+  .fourBlocks {
+    text-align: left;
+
+    svg {
+      width: 80%;
+    }
+  }
+  .uproar {
+    text-align: center;
+
+    svg {
+      width: 80%;
+    }
+  }
+  .theYognis {
+    text-align: left;
+
+    svg {
+      width: 80%;
+    }
+  }
+  .jamPlay {
+    text-align: left;
+
+    @media (max-width: 576px) {
+      margin-top: 1.5rem;
+    }
+
+    svg {
+      width: 85%;
+    }
+  }
+  .town {
+    text-align: left;
+    margin-left: -3rem;
+    margin-top: 1.8rem;
+
+    @media (max-width: 1400px) {
+      margin-left: -1.8rem;
+    }
+    @media (max-width: 768px) {
+      margin-left: -0.3rem;
+    }
+
+    @media (max-width: 576px) {
+      margin-left: unset;
+    }
+
+    svg {
+      height: 2.938rem;
+      width: 100%;
+    }
+  }
+  .teamGiest {
+    text-align: left;
+    margin-top: 1rem;
+
+    svg {
+      height: 3.938rem;
+      width: 100%;
+    }
+  }
+
+  // second screen
+
+  .isleworth {
+    text-align: left;
+
+    svg {
+      width: 100%;
+    }
+  }
+  .brightListed {
+    text-align: center;
+
+    svg {
+      width: 100%;
+    }
+  }
+  .oceania {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.813rem;
+    }
+  }
+  .skilled {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 3.063rem;
+    }
+  }
+  .missUniverse {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.8rem;
+    }
+  }
+  .fortress {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.8rem;
+    }
+  }
+  .guitar {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.8rem;
+    }
+  }
+  .furlong {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.8rem;
+    }
+  }
+  .homeLoans {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.8rem;
+    }
+  }
+  .curaStream {
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 2.3rem;
+    }
+  }
+  .fundraiser {
+    text-align: right;
+
+    svg {
+      width: 100%;
+      height: 2.813rem;
+    }
+  }
+  .flourish {
+    text-align: right;
+
+    svg {
+      width: 100%;
+    }
+  }
+  .nnnex {
+    text-align: center;
+
+    svg {
+      height: 4.063rem;
+      width: 100%;
+    }
+  }
+  .albany {
+    text-align: center;
+
+    svg {
+      height: 4.313rem;
+      width: 100%;
+    }
+  }
+  .result {
+    text-align: center;
+
+    svg {
+      width: 100%;
+    }
+  }
+  .sport {
+    text-align: center;
+
+    svg {
+      height: 4.375rem;
+      width: 100%;
+    }
+  }
+  .mass {
+    text-align: center;
+
+    svg {
+      height: 3.75rem;
+      width: 100%;
+    }
+  }
+  .sphere {
+    text-align: center;
+
+    svg {
+      height: 3.75rem;
+      width: 100%;
+    }
+  }
+  .skilled {
+    text-align: center;
+
+    svg {
+      height: 3.75rem;
+      width: 100%;
+    }
+  }
+  .delhiSchool {
+    text-align: center;
+
+    svg {
+      height: 3.75rem;
+      width: 100%;
+    }
+  }
 }

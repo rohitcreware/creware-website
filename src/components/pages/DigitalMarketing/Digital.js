@@ -19,16 +19,23 @@ import Card from "./Cards";
 import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
 import ContactusBtnSec from "../EnterpriseSfDev/ContactusBtnSec/ContactusBtnSec";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 
 const Digital = () => {
   const cardRef = useRef(null);
-  const cardRef3 = useRef(null);
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
+  const cardRef3 = useRef(null);
+  const cardRef4 = useRef(null);
+  const cardRef5 = useRef(null);
+  const cardRef6 = useRef(null);
   const cardIsInView = useInView(cardRef, { once: true });
   const cardIsInView1 = useInView(cardRef1, { once: true });
   const cardIsInView2 = useInView(cardRef2, { once: true });
   const cardIsInView3 = useInView(cardRef3, { once: true });
+  const cardIsInView4 = useInView(cardRef4, { once: true });
+  const cardIsInView5 = useInView(cardRef5, { once: true });
+  const cardIsInView6 = useInView(cardRef6, { once: true });
   const [screenWidth, setScreenWidth] = useState(0);
 
   const variant = {
@@ -40,7 +47,7 @@ const Digital = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
         duration: 0.8,
       },
@@ -49,15 +56,15 @@ const Digital = () => {
   const variant1 = {
     offscreen1: {
       opacity: 0,
-      x: -200,
+      x: -400,
     },
     onscreen1: {
       opacity: 1,
       x: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
-        duration: 1.2,
+        duration: 1,
       },
     },
   };
@@ -70,9 +77,9 @@ const Digital = () => {
       opacity: 1,
       x: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
-        duration: 1.2,
+        duration: 1,
       },
     },
   };
@@ -85,9 +92,54 @@ const Digital = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        // type: "spring",
         bounce: 0.4,
-        duration: 1.2,
+        duration: 0.5,
+      },
+    },
+  };
+  const variant4 = {
+    offscreen4: {
+      opacity: 0,
+      y: 40,
+    },
+    onscreen4: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: "spring",
+        bounce: 0.4,
+        duration: 0.5,
+      },
+    },
+  };
+  const variant5 = {
+    offscreen5: {
+      opacity: 0,
+      y: 60,
+    },
+    onscreen5: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: "spring",
+        bounce: 0.4,
+        duration: 0.5,
+      },
+    },
+  };
+  const variant6 = {
+    offscreen6: {
+      opacity: 0,
+      y: 80,
+    },
+    onscreen6: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        // type: "spring",
+        bounce: 0.4,
+        duration: 0.5,
       },
     },
   };
@@ -141,7 +193,6 @@ const Digital = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "dump",
         duration: 2,
       },
     },
@@ -161,18 +212,35 @@ const Digital = () => {
           <div className="container">
             <div className={`${styles["top"]}`}>
               <div className={`${styles["top_left"]}`}>
-                <motion.h1
-                  variants={cardIsInView3 ? "" : variant3}
-                  initial="offscreen3"
-                  whileInView="onscreen3"
-                  ref={cardRef3}
-                  className={styles["slideUp"]}
+                <motion.p
+                  className={`${styles["upper-head"]}`}
+                  variants={cardIsInView6 ? "" : variant6}
+                  initial="offscreen6"
+                  whileInView="onscreen6"
+                  ref={cardRef6}
+                  style={{ overflow: "hidden" }}
                 >
-                  Choose <span>Creware</span> As Your{" "}
-                  <span>Digital Marketing</span> for businesses of all types and
-                  sizes
-                </motion.h1>
-                <p className={styles["desc-p"]}>
+                  We specialize in creating custom
+                </motion.p>
+                <motion.p
+                  className={`${styles["upper-head"]}`}
+                  variants={cardIsInView5 ? "" : variant5}
+                  initial="offscreen5"
+                  whileInView="onscreen5"
+                  ref={cardRef5}
+                >
+                  <span>mobile apps</span> for businesses of all
+                </motion.p>
+                <motion.p
+                  className={`${styles["upper-head"]} mb-4`}
+                  variants={cardIsInView4 ? "" : variant4}
+                  initial="offscreen4"
+                  whileInView="onscreen4"
+                  ref={cardRef4}
+                >
+                  types and sizes
+                </motion.p>
+                <p className={`${styles["upper-text"]}`}>
                   Lorem ipsum dolor sit amet consectetur. Ipsum molestie
                   pulvinar tempus sed tempus. Et pharetra gravida sed sit
                   gravida. Id at morbi dignissim mauris. Vulputate
@@ -189,22 +257,30 @@ const Digital = () => {
           <div className={` ${styles["maincard"]} row`}>
             <div className="col-3">
               <div className={` ${styles["image1-div"]}`}>
-                <Image className={` ${styles["img1"]}`} src={one} />
+                <Image className={` ${styles["img1"]}`} src={one} alt="image" />
               </div>
             </div>
             <div className="col-3">
               <div>
-                <Image className={` ${styles["img2"]}`} src={two} />
+                <Image className={` ${styles["img2"]}`} src={two} alt="image" />
               </div>
             </div>
             <div className="col-3">
               <div>
-                <Image className={` ${styles["img3"]}`} src={three} />
+                <Image
+                  className={` ${styles["img3"]}`}
+                  src={three}
+                  alt="image"
+                />
               </div>
             </div>
             <div className="col-3">
               <div className={` ${styles["image4-div"]}`}>
-                <Image className={` ${styles["img4"]}`} src={four} />
+                <Image
+                  className={` ${styles["img4"]}`}
+                  src={four}
+                  alt="image"
+                />
               </div>
             </div>
           </div>
@@ -254,7 +330,11 @@ const Digital = () => {
                 whileInView="onscreen1"
                 className={`${styles["mainimage"]} col-md-5`}
               >
-                <Image src={image} className={`${styles["image"]}`} />
+                <Image
+                  src={image}
+                  className={`${styles["image"]}`}
+                  alt="image"
+                />
               </motion.div>
               <motion.div
                 variants={cardIsInView2 ? "" : variant2}
@@ -267,16 +347,15 @@ const Digital = () => {
                   How Creware Creates Growth Business
                 </p>
                 <div className="row">
-                  {data.map((item) => (
-                    <>
-                      {" "}
+                  {data.map((item, index) => (
+                    <div key={index} className="d-flex">
                       <div className={`${styles["tick"]} col-2 col-md-1`}>
                         <Tick />
                       </div>
                       <div className={`${styles["desc"]} col-10 col-md-11`}>
                         {item.desc}
                       </div>
-                    </>
+                    </div>
                   ))}
                 </div>
                 <div>
@@ -302,7 +381,7 @@ const Digital = () => {
               style={{}}
             >
               <div className="col-md-6">
-                <Image src={Limage} />
+                <Image src={Limage} alt="image" />
                 <p className={`${styles["lower-p"]}`}>Proven Performance</p>
                 <p className={`${styles["down-p"]}`}>
                   Lorem ipsum dolor sit amet consectetur. Ipsum molestie
@@ -311,7 +390,7 @@ const Digital = () => {
                 </p>
               </div>
               <div className="col-md-6">
-                <Image src={Rimage} />
+                <Image src={Rimage} alt="image" />
                 <p className={`${styles["lower-p"]}`}>Our Track Record</p>
                 <p className={`${styles["down-p"]}`}>
                   Lorem ipsum dolor sit amet consectetur. Ipsum molestie
@@ -326,35 +405,11 @@ const Digital = () => {
 
       {/* contact us */}
       <section>
-        {/* <div className={`${styles["fifth-sec"]} `}>
-          <Lottie
-            animationData={background}
-            className={`${styles["lottie"]}`}
-          />
-          <div className="container">
-            <div className={`${styles["text-main-5"]} row gx-5`}>
-              <div className={`${styles["text-5"]} col-md-6`}>
-                Ready to grow with a digital marketing agency you can trust ?
-                Get your proposal now !
-              </div>
-              <div className={`${styles["p-5"]} col-md-6`}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Ipsum molestie
-                  pulvinar tempus sed tempus. Et pharetra gravida sed sit
-                  gravida. Id at morbi dignissim mauris. Vulputate{" "}
-                </p>
-                <button type="button" className={`${styles["button-5"]}`}>
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <ContactusBtnSec />
       </section>
       {/* latest insight */}
       <section>
-        <LatestInsights />
+        <NewLastestInsighr />
       </section>
 
       {/* query form */}

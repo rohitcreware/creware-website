@@ -139,3 +139,28 @@
     transform: translateY(0); /* Move to its normal position */
   }
 }
+
+
+.sec-3-h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  color: #ffffffd9;
+  margin: 2rem 0;
+
+  @media (max-width: 350px) {
+    /* 400px / 16px = 25rem */
+    font-size: 2; /* 25px / 16px = 1.5625rem */
+    font-weight: 550;
+  }
+  @media (max-width: 25rem) {
+    /* 400px / 16px = 25rem */
+    font-size: 1.5625rem; /* 25px / 16px = 1.5625rem */
+    font-weight: 550;
+  }
+  @media (max-width: 769px) {
+    /* 400px / 16px = 25rem */
+    font-size: 2rem;
+  }
+}

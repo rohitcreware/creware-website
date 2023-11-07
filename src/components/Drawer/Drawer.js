@@ -4,6 +4,7 @@ import classes from "./Drawer.module.scss";
 import styles from "../Header/Header.module.scss";
 import { changeAnchor } from "../Helpers/change-anchor";
 import Link from "next/link";
+import { Logo } from "../Svgs/serverSecurity";
 
 export const Drawer = (props) => {
   const { open, anchor, onClose, pathName } = props;
@@ -17,6 +18,7 @@ export const Drawer = (props) => {
     overlayHidden,
     header,
     cross_icon,
+    logo,
   } = classes;
 
   return (
@@ -35,14 +37,8 @@ export const Drawer = (props) => {
         } ${changeAnchor(anchor, classes)}`}
       >
         <div className={header}>
-          <a className="navbar-brand me-2" href="/">
-            <img
-              src="https://i.postimg.cc/D03wsZpV/Shape-Light-Gray-1.png"
-              height={30}
-              alt="MDB Logo"
-              loading="lazy"
-              style={{ marginTop: "-1px" }}
-            />
+          <a className={logo} href="/">
+            <Logo />
           </a>
 
           <div className={cross_icon} onClick={() => onClose()}>

@@ -1,0 +1,44 @@
+.img-div {
+  img {
+    width: 355.491px;
+    height: 202px;
+
+    @media (max-width: 1200px) {
+      width: 300px;
+      height: 150px;
+    }
+    @media (max-width: 768px) {
+      width: 250px;
+      height: 12.5rem;
+    }
+  }
+}
+
+.main {
+  .main_slider {
+    :global {
+      .slick-list {
+        height: 44.313rem !important;
+
+        @media (max-width: 768px) {
+          height: 42.313rem !important;
+        }
+      }
+    }
+  }
+}
+
+.center-image {
+  width: 27.75rem !important;
+  height: 13.875rem !important;
+  transition: all ease 0.5s !important;
+
+  @media (max-width: 1200px) {
+    width: 22.75rem !important;
+    height: 11.875rem !important;
+  }
+  @media (max-width: 768px) {
+    width: 18.5rem !important;
+    height: 11.875rem !important;
+  }
+}

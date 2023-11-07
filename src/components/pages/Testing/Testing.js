@@ -14,6 +14,7 @@ import sixth from "../../../../public/images/testing/sixth.png";
 import testback from "../../../../public/images/testing/background.gif";
 import Image from "next/image";
 import OverlapCards from "../EnterpriseSfDev/OverlapCards/OverlapCards";
+import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
 
 const Testing = () => {
   const cardRef = useRef(null);
@@ -39,7 +40,7 @@ const Testing = () => {
       <section>
         <div className={styles["main"]}>
           <div className={`${styles["back_animation"]} d-none d-lg-block`}>
-            <Image src={testback} className={`${styles["backani"]}`} />
+            <Image src={testback} className={`${styles["backani"]}`} alt="image" />
           </div>
           <div className="container">
             <div className={`${styles["top"]}`}>
@@ -97,7 +98,7 @@ const Testing = () => {
               </div>
               <div className={`${styles["innerrow2"]} row`}>
                 <div className={`${styles["single1"]} col-md-6 col-lg-4`}>
-                  <Image src={first} className={`${styles["cardimage"]}`} />
+                  <Image src={first} className={`${styles["cardimage"]}`}  alt="image"/>
                   <p className={`${styles["cardtitle"]}`}>
                     Improved Software Quality
                   </p>
@@ -108,7 +109,7 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single2"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={second} className={`${styles["cardimage"]}`} />
+                  <Image src={second} className={`${styles["cardimage"]}`} alt="image" />
                   <p className={`${styles["cardtitle"]}`}>Reduced Cost</p>
                   <p className={`${styles["carddesc"]}`}>
                     Lorem ipsum dolor sit amet consectetur. Ipsum molestie
@@ -117,7 +118,7 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single3"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={third} className={`${styles["cardimage2"]}`} />
+                  <Image src={third} className={`${styles["cardimage2"]}`} alt="image" />
                   <p className={`${styles["cardtitle"]}`}>
                     Increase Customer Satification
                   </p>
@@ -127,7 +128,7 @@ const Testing = () => {
                   </p>
                 </div>
                 <div className={`${styles["single4"]} col-md-6 col-lg-4`}>
-                  <Image src={fourth} className={`${styles["cardimage"]}`} />
+                  <Image src={fourth} className={`${styles["cardimage"]}`} alt="image" />
                   <p className={`${styles["cardtitle"]}`}>
                     Faster time-to-time Market
                   </p>
@@ -138,7 +139,7 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single5"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={fifth} className={`${styles["cardimage"]}`} />
+                  <Image src={fifth} className={`${styles["cardimage"]}`} alt="image" />
                   <p className={`${styles["cardtitle"]}`}>
                     Better Risk Management
                   </p>
@@ -149,7 +150,7 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single6"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={sixth} className={`${styles["cardimage"]}`} />
+                  <Image src={sixth} className={`${styles["cardimage"]}`} alt="image" />
                   <p className={`${styles["cardtitle"]}`}>
                     Continuous Improvement
                   </p>
@@ -171,7 +172,7 @@ const Testing = () => {
       </section>
       {/* latest insight */}
       <section>
-        <LatestInsights />
+      <NewLastestInsighr/>
       </section>
       <section>
         <QueryForm />

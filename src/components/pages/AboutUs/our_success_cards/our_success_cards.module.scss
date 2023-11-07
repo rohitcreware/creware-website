@@ -1,0 +1,140 @@
+.main {
+  width: 71%;
+  margin: auto;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 89%;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    margin-top: 2.313rem;
+    margin-bottom: 2.125rem;
+
+    .left {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 5rem;
+
+      .years {
+        color: #fff;
+        font-size: 1.813rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-right: 1.813rem;
+
+        @media (max-width: 1200px) {
+          font-size: 1.7rem;
+        }
+        @media (max-width: 1400px) {
+          font-size: 1.6rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 1rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    .info {
+      display: flex;
+
+      .middle {
+        display: flex;
+        align-items: center;
+        margin-top: 0.25rem;
+
+        .horizontal_line {
+          background: #fff;
+          width: 6.125rem;
+          height: 0.123rem;
+          margin-right: 0.3rem;
+
+          @media (max-width: 576px) {
+            width: 2rem;
+          }
+        }
+
+        svg {
+          @media (max-width: 1400px) {
+            height: 80px;
+            width: 80px;
+          }
+
+          @media (max-width: 576px) {
+            height: 50px;
+            width: 50px;
+          }
+        }
+      }
+      .right {
+        margin-left: 2.438rem;
+
+        @media (max-width: 576px) {
+          margin-left: 0.8rem;
+        }
+        .title {
+          color: #fff;
+          font-size: 1.75rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          text-transform: capitalize;
+
+          @media (max-width: 1400px) {
+            font-size: 1.5rem;
+          }
+          @media (max-width: 1200px) {
+            font-size: 1.4rem;
+          }
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+          @media (max-width: 576px) {
+            font-size: 0.8rem;
+            width: 100%;
+          }
+        }
+
+        p {
+          margin-top: 1.938rem;
+          color: #fff;
+          font-size: 1.75rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          width: 75%;
+
+          @media (max-width: 1400px) {
+            font-size: 1.5rem;
+            width: 79%;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 1.4rem;
+            width: 97%;
+          }
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+            width: 97%;
+          }
+          @media (max-width: 576px) {
+            font-size: 0.8rem;
+            width: 100%;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  } 
+}

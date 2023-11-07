@@ -1,5 +1,11 @@
-import { First, Fourth, Second, Sixth, Third } from "@/components/Svgs/Digital";
-import { Fifth } from "@/components/Svgs/mobileapp";
+import {
+  First,
+  Fourth,
+  Second,
+  Sixth,
+  Third,
+  Fifth,
+} from "@/components/Svgs/Digital";
 
 export const data = [
   {
@@ -18,35 +24,33 @@ export const data = [
 
 export const card = [
   {
-    img:<First/>,
+    img: <First />,
     head: "Earning Traffic",
     desc: "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate ",
   },
   {
-    img:<Second/>,
+    img: <Second />,
     head: "Design That Dazzles",
     desc: "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate ",
   },
   {
-    img:<Third/>,
+    img: <Third />,
     head: "Expand Your Social Reach",
     desc: "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate ",
   },
   {
-    img:<Fourth/>,
+    img: <Fourth />,
     head: "Usability Testing & Evalution",
     desc: "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate ",
   },
   {
-    img:<Fifth/>,
+    img: <Fifth />,
     head: "Mobile & Responsive Design",
     desc: "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate ",
   },
   {
-    img:<Sixth/>,
+    img: <Sixth />,
     head: "Content Writing",
     desc: "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate ",
   },
 ];
-
-

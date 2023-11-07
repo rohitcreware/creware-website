@@ -79,7 +79,7 @@
         color: #fff;
         font-size: 24px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 30px;
         width: 75%;
 
@@ -178,12 +178,21 @@
         }
       }
 
+      .svg {
+        svg {
+          width: 100% !important;
+        }
+      }
+
+      .right_icons {
+      }
+
       .services_para {
         width: 90%;
         color: #fff;
         font-size: 1.313rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 28.145px; /* 134.024% */
         text-transform: capitalize;
 

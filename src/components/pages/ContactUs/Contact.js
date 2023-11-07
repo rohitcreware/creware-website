@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Contact.module.scss";
 import QueryForm from "../Hero/QueryForm";
-import LatestInsights from "./LatestInsights";
+import NewLastestInsighr from "./NewLastestInsighr";
 
 const ContactUs = () => {
   return (
@@ -36,7 +36,7 @@ const ContactUs = () => {
                 <h5 className={`${styles["address-h5"]}`}>Lewes. US</h5>
                 <div className={`${styles["redline"]}`}></div>
                 <p className={`${styles["address-p"]}`}>
-                  16192,<br/> Coastal Highway,cnfxgndffdfdfbr <br/>Lewes, DE, USA - 19958,dfbfdsbsssfb
+                  16192,<br/> Coastal Highway, <br/>Lewes, DE, USA - 19958
                 </p>
                 <p className={`${styles["direction-p"]}`}>
                   <u>Get Directions</u>
@@ -52,9 +52,8 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Latest Insights */}
       <section>
-        <LatestInsights />
+        <NewLastestInsighr/>
       </section>
     </div>
   );

@@ -1,5 +1,15 @@
 .main {
   width: 95%;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    margin-top: -1rem;
+    margin-bottom:unset
+  }
+  @media (max-width: 480px) {
+    margin-top: -3rem;
+  }
 }
 
 .details {
@@ -20,9 +30,8 @@
   width: 32.87rem;
 
   @media (max-width: 48rem) {
-    width: 65%; /* Percentage value, no conversion to rem */
-    margin-top: 3.125rem; /* 50px / 16px = 3.125rem */
-    // margin-left: 7rem; /* 112px / 16px = 7rem */
+    width: 65%; 
+    margin-top: 3.125rem;
   }
 
   @media (max-width: 26.625rem) {

@@ -1,32 +1,32 @@
-export const TabLists =  [
-    {
-      tab: "Front-End",
-      icon: ["html", "css", "js", "node", "angular", "vue"],
-      heading: "Expertise of our Front-End Developers",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    {
-      tab: "Back-End",
-      icon: ["html", "css", "js", "node", "angular", "vue"],
-      heading: "Expertise of our Back-End Developers",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    {
-      tab: "Quality Assurance",
-      icon: ["html", "css", "js", "node", "angular", "vue"],
-      heading: "Expertise of our Quality Assurance",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    {
-      tab: "UI/UX Designer",
-      icon: ["html", "css", "js", "node", "angular", "vue"],
-      heading: "Expertise of our UI/UX Designers",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    {
-      tab: "DevOps",
-      icon: ["html", "css", "js", "node", "angular", "vue"],
-      heading: "Expertise of our DevOps Developers",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    }
-  ]
+export const TabLists = [
+  {
+    tab: "Front-End",
+    icon: ["html", "css", "react", "nextjs", "js", "angular", "vue"],
+    heading: "Front-End Developers",
+    desc: "With Lorem ipsum dolor sit amet “Consectetur. Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros enim enim luctus sit semper euismod.Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur.",
+  },{
+    tab: "Back-End",
+    icon: ["node", "python", "js", "sql", "php"],
+    heading: "Back-End Developers",
+    desc: "With Lorem ipsum dolor sit amet “Consectetur. Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros enim enim luctus sit semper euismod.Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur.",
+  },
+  {
+    tab: "Quality Assurance",
+    icon: ["appium", "selenium", "jmeter", "katalon", "ansible"],
+    heading: "Quality Assurance",
+    desc: "With Lorem ipsum dolor sit amet “Consectetur. Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros enim enim luctus sit semper euismod.Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur.",
+  },
+  
+  {
+    tab: "UI/UX Designer",
+    icon: ["aftereffects", "canva", "figma", "photoshop"],
+    heading: "UI/UX Designers",
+    desc: "With Lorem ipsum dolor sit amet “Consectetur. Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros enim enim luctus sit semper euismod.Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur.",
+  },
+  {
+    tab: "DevOps",
+    icon: ["docker", "git", "terraform"],
+    heading: "DevOps Developers",
+    desc: "With Lorem ipsum dolor sit amet “Consectetur. Lorem et donec leo lectus vel ullamcorper facilisis. Dictum eros enim enim luctus sit semper euismod.Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur.",
+  },
+];

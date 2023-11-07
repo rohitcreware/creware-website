@@ -1,5 +1,61 @@
 @import "../../app/page.module.scss";
 
-.crewareRed{
-    color: $creware-red !important;
+.crewareRed {
+  color: $creware-red !important;
+}
+
+.accord_main {
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 576px) {
+    margin-bottom: 1rem;
+  }
+}
+.item_main {
+  display: flex;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.accordian_tab_title {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.726px;
+
+  @media (max-width: 1400px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 0.9rem;
+  }
+}
+
+.accrodian_desc {
+  color: #fff;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.726px;
+  text-align: left;
+  margin-left: 1.4rem;
+  margin-top: 0.5rem;
+
+  @media (max-width: 576px) {
+    margin-left: 0.84rem;
+  }
+}
+
+.accordion-button {
+  padding: 1rem 0.2rem;
 }

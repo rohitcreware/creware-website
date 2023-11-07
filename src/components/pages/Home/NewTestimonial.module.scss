@@ -1,0 +1,190 @@
+.header1 {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  background: #060b27;
+  //   width: 90%;
+}
+.content {
+  margin-bottom: 5rem;
+}
+.header {
+  font-size: 42px;
+}
+
+.container1 {
+  margin-bottom: 3rem;
+  text-align: center;
+  :global {
+    .slick-slider .slick-slide.slick-current,
+    .slick-slider .slick-slide.slick-center {
+      margin: unset;
+    }
+
+    .slick-slider .slick-slide.slick-current,
+    .slick-slider .slick-slide.slick-center {
+      transform: unset;
+    }
+
+    .slick-track {
+      padding-top: 3rem;
+    }
+  }
+
+  .slick-arrow .slick-prev {
+    color: black;
+    left: 20px;
+    z-index: 10;
+  }
+  .slick-next {
+    color: black;
+    right: 20px;
+    z-index: 10;
+  }
+}
+
+.card-main {
+  position: relative;
+  width: 88% !important;
+}
+
+.main-test-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 99%;
+}
+
+.box-test {
+  padding: 0 1.125rem 1.125rem 1.125rem; /* 18px / 16px = 1.125rem */
+  background: linear-gradient(
+    180deg,
+    rgba(126, 87, 201, 0.6) 0%,
+    rgba(255, 116, 116, 0.3) 75%
+  );
+  -webkit-clippath: polygon(100% 0, 100% 39%, 52% 83%, 0 44%, 0 0);
+  clip-path: polygon(100% 0, 100% 80%, 52% 100%, 0 80%, 0 0);
+  border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+}
+
+.box-test-p {
+  position: relative;
+  text-align: center;
+  font: 600 1.125rem "Outfit", sans-serif; /* 18px / 16px = 1.125rem */
+  display: flex;
+  padding: 3.125rem 1.25rem 2.25rem 1.25rem; /* 50px / 16px = 3.125rem, 20px / 16px = 1.25rem, 36px / 16px = 2.25rem */
+  justify-content: center;
+  line-height: 1.625rem; /* 26px / 16px = 1.625rem */
+}
+
+.test-img {
+  overflow-clip-margin: unset;
+  width: 5rem; /* 80px / 16px = 5rem */
+  height: 5rem;
+  top: -2.5rem;
+  position: absolute;
+  z-index: 3;
+}
+
+.arrow-div1 {
+  position: absolute;
+  font-size: 1.5rem;
+  overflow: hidden;
+  right: 12rem;
+  bottom: -6.3rem;
+
+  @media (max-width: 1200px) {
+    right: 10rem;
+  }
+  @media (max-width: 992px) {
+    right: 9rem;
+  }
+  @media (max-width: 900px) {
+    right: 8rem;
+  }
+  @media (max-width: 780px) {
+    bottom: -6.3rem;
+    right: 6.5rem;
+  }
+  @media (max-width: 624px) {
+    bottom: -6.3rem;
+    right: 6.5rem;
+  }
+  @media (max-width: 550px) {
+    right: 4.5rem;
+  }
+  @media (max-width: 460px) {
+    bottom: -6.3rem;
+    right: 4.5rem;
+  }
+  @media (max-width: 390px) {
+    bottom: -6.3rem;
+    right: 3.5rem;
+  }
+}
+.arrow-div2 {
+  position: absolute;
+  font-size: 1.5rem;
+  overflow: hidden;
+  right: 6rem;
+
+  @media (max-width: 1200px) {
+    font-size: 1.2rem;
+    right: 4rem;
+  }
+  @media (max-width: 992px) {
+    right: 3rem;
+  }
+  @media (max-width: 900px) {
+    right: 2rem;
+  }
+  @media (max-width: 780px) {
+    bottom: -6.3rem;
+    right: 3rem;
+  }
+  @media (max-width: 624px) {
+    bottom: -6.3rem;
+    right: 3rem;
+  }
+  @media (max-width: 550px) {
+    bottom: -6.3rem;
+    right: 1rem;
+  }
+  @media (max-width: 460px) {
+    bottom: -6.3rem;
+    right: 1rem;
+  }
+  @media (max-width: 390px) {
+    bottom: -6.3rem;
+    right: 1rem;
+  }
+}
+
+.progress {
+  height: 0.4625rem !important; /* 9px / 16px = 0.5625rem */
+  background-color: #bfbfbf;
+  border-radius: 0.3125rem; /* 5px / 16px = 0.3125rem */
+}
+
+.progress-bar1 {
+  height: 0.4625rem;
+  border-radius: 0.3125rem;
+  transition: 0.2s linear;
+  transition-property: width, background-color;
+  // @media (max-width: 427px) {
+  //   height: 0.42rem;
+  // }
+  // @media (max-width: 427px) {
+  //   height: 0.42rem;
+  // }
+  // @media (max-width: 325px) {
+  //   height: 0.4rem;
+  // }
+}
+
+.progress-striped1 .progress-bar1 {
+  background-color: #d0021b;
+
+  animation: progressAnimationStrike1 2s;
+}

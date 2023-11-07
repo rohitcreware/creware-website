@@ -26,6 +26,14 @@
   right: 0px;
   top: 20px;
   font-size: 25px !important;
+
+  @media (max-width: 576px) {
+    color: #d0021b !important;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    font-size: 20px !important;
+  }
 }
 
 .btnn {
@@ -108,5 +116,10 @@
   svg {
     height: 2.813rem;
     width: 9.313rem;
+
+    @media (max-width: 576px) {
+      height: 2rem;
+      width: 7.313rem;
+    }
   }
 }

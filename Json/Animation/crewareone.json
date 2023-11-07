@@ -1,0 +1,193 @@
+[{
+  "version": "1.0",
+  "image": {
+    "name": "GIF:",
+    "baseName": null,
+    "permissions": 600,
+    "format": "JSON",
+    "formatDescription": "The image format and characteristics",
+    "mimeType": "application/json",
+    "class": "PseudoClass",
+    "geometry": {
+      "width": 122,
+      "height": 118,
+      "x": 0,
+      "y": 0
+    },
+    "units": "Undefined",
+    "type": "PaletteAlpha",
+    "baseType": "Undefined",
+    "endianness": "Undefined",
+    "colorspace": "sRGB",
+    "depth": 8,
+    "baseDepth": 8,
+    "channelDepth": {
+      "alpha": 1,
+      "red": 8,
+      "green": 8,
+      "blue": 1
+    },
+    "pixels": 57584,
+    "imageStatistics": {
+      "Overall": {
+        "min": 0,
+        "max": 255,
+        "mean": 75.4592,
+        "median": 63.75,
+        "standardDeviation": 38.9252,
+        "kurtosis": -1.12603,
+        "skewness": 0.910948,
+        "entropy": 0.201632
+      }
+    },
+    "channelStatistics": {
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "mean": 255,
+        "median": 255,
+        "standardDeviation": 2.687e-06,
+        "kurtosis": -3,
+        "skewness": 3.03668e+09,
+        "entropy": 4.82164e-05
+      },
+      "red": {
+        "min": 0,
+        "max": 255,
+        "mean": 21.4603,
+        "median": 0,
+        "standardDeviation": 60.3777,
+        "kurtosis": 6.98045,
+        "skewness": 2.88211,
+        "entropy": 0.310248
+      },
+      "green": {
+        "min": 0,
+        "max": 255,
+        "mean": 12.678,
+        "median": 0,
+        "standardDeviation": 47.7077,
+        "kurtosis": 18.5957,
+        "skewness": 4.40365,
+        "entropy": 0.227602
+      },
+      "blue": {
+        "min": 0,
+        "max": 255,
+        "mean": 12.6987,
+        "median": 0,
+        "standardDeviation": 47.6156,
+        "kurtosis": 18.7638,
+        "skewness": 4.42781,
+        "entropy": 0.268631
+      }
+    },
+    "colormapEntries": 256,
+    "colormap": [
+      "#000000FF","#000001FF","#000002FF","#000003FF","#000005FF",
+      "#000100FF","#000101FF","#000304FF","#00FF0000","#010000FF",
+      "#010101FF","#020000FF","#020004FF","#020202FF","#030002FF",
+      "#030006FF","#040000FF","#040301FF","#050000FF","#050406FF",
+      "#070A0AFF","#080000FF","#0A0004FF","#0B0000FF","#0B0001FF",
+      "#0B0302FF","#0D0F0FFF","#0F0000FF","#0F060AFF","#130B09FF",
+      "#150000FF","#150404FF","#17100DFF","#180409FF","#1A0000FF",
+      "#1A1814FF","#1B0000FF","#1D090AFF","#1E0000FF","#1F0A0CFF",
+      "#1F1D1FFF","#220E0DFF","#250000FF","#251312FF","#252424FF",
+      "#261A16FF","#2B0000FF","#2C1310FF","#2C2B2BFF","#2D1416FF",
+      "#2E2E2EFF","#300000FF","#311B12FF","#330507FF","#333333FF",
+      "#341B1CFF","#351C22FF","#353535FF","#370000FF","#381814FF",
+      "#393939FF","#393A39FF","#3B1415FF","#3C0000FF","#3C3C3CFF",
+      "#3D1C1EFF","#3E0000FF","#401A1AFF","#430000FF","#442527FF",
+      "#444646FF","#4A0000FF","#4F4B4AFF","#4F5556FF","#530609FF",
+      "#532E34FF","#550000FF","#570000FF","#5B0000FF","#5B110DFF",
+      "#5B5B5AFF","#5C2D29FF","#5D0000FF","#5D2722FF","#5E3B40FF",
+      "#5F2419FF","#602521FF","#602625FF","#62241EFF","#632522FF",
+      "#643637FF","#693A2EFF","#696867FF","#6A3C35FF","#6C313CFF",
+      "#6C5253FF","#6D0001FF","#710402FF","#710F08FF","#723D48FF",
+      "#731715FF","#737373FF","#752E29FF","#754748FF","#763D40FF",
+      "#783834FF","#7A0405FF","#7A7A7CFF","#7F0001FF","#7F3635FF",
+      "#7F3B40FF","#813936FF","#83362FFF","#833830FF","#843733FF",
+      "#850001FF","#850D08FF","#851115FF","#853833FF","#863736FF",
+      "#863830FF","#86393CFF","#864E57FF","#871E20FF","#873937FF",
+      "#880607FF","#883436FF","#883836FF","#890D06FF","#898281FF",
+      "#8A3635FF","#8A3936FF","#8B4140FF","#8B8886FF","#8D6469FF",
+      "#8E0F0DFF","#8E363AFF","#8F3B3FFF","#8F8D8DFF","#913737FF",
+      "#921622FF","#94342DFF","#953634FF","#962623FF","#963A3AFF",
+      "#969896FF","#97130DFF","#971916FF","#981411FF","#981615FF",
+      "#983435FF","#9A393BFF","#9D1815FF","#A11811FF","#A19B9BFF",
+      "#A28D85FF","#A31A1BFF","#A55D6DFF","#A61A15FF","#A62825FF",
+      "#A72F28FF","#A7696BFF","#A7A7A7FF","#A8626AFF","#A9332FFF",
+      "#AA2226FF","#AA3743FF","#AB3433FF","#AC3237FF","#AD2C2EFF",
+      "#ADACACFF","#ADACAEFF","#AE201EFF","#AE2C33FF","#AF9995FF",
+      "#AFA5A9FF","#B02D29FF","#B04A59FF","#B2B2B2FF","#B32C27FF",
+      "#B32E2EFF","#B36E6EFF","#B42C33FF","#B43033FF","#B4B3B3FF",
+      "#B52D27FF","#B6B6B6FF","#B92E2FFF","#B9B9B9FF","#BABABAFF",
+      "#BC272BFF","#BD2E29FF","#BD495AFF","#BE2520FF","#BF2625FF",
+      "#BF6566FF","#C03137FF","#C23442FF","#C2A7AFFF","#C32A29FF",
+      "#C42626FF","#C52823FF","#C5292EFF","#C52A25FF","#C52A36FF",
+      "#C52B21FF","#C62D2CFF","#C72C22FF","#C7384DFF","#C75D61FF",
+      "#C82925FF","#C82A29FF","#C82F38FF","#C92628FF","#C92722FF",
+      "#CAC9C9FF","#CB2522FF","#CB2A23FF","#CB3A55FF","#CC282AFF",
+      "#CC2B36FF","#CD2724FF","#CD2920FF","#CE2C2DFF","#D0262AFF",
+      "#D02A2EFF","#D02C29FF","#D09EA9FF","#D64E62FF","#D65C60FF",
+      "#DADBDAFF","#DF585BFF","#E05C64FF","#E3ADB9FF","#E7B7C1FF",
+      "#E9DBD8FF","#E9E4E3FF","#E9E6E4FF","#EDEBEAFF","#F5F5F5FF",
+      "#F6F0EAFF","#F9F2F3FF","#F9F9F9FF","#FAFAF9FF","#FAFAFBFF",
+      "#FBF7F9FF","#FCECE8FF","#FCFAF7FF","#FCFCFCFF","#FDFBEFFF",
+      "#FEF1E9FF","#FEF6EEFF","#FFFAFFFF","#FFFFFFFF","#FFFFFFFF",
+      "#FFFFFFFF"
+    ],
+    "renderingIntent": "Perceptual",
+    "gamma": 0.454545,
+    "chromaticity": {
+      "redPrimary": {
+        "x": 0.64,
+        "y": 0.33
+      },
+      "greenPrimary": {
+        "x": 0.3,
+        "y": 0.6
+      },
+      "bluePrimary": {
+        "x": 0.15,
+        "y": 0.06
+      },
+      "whitePrimary": {
+        "x": 0.3127,
+        "y": 0.329
+      }
+    },
+    "matteColor": "#BDBDBDBDBDBD",
+    "backgroundColor": "#FFFFFFFFFFFF",
+    "borderColor": "#DFDFDFDFDFDF",
+    "transparentColor": "#000000000000",
+    "interlace": "None",
+    "intensity": "Undefined",
+    "compose": "Over",
+    "pageGeometry": {
+      "width": 122,
+      "height": 118,
+      "x": 0,
+      "y": 0
+    },
+    "dispose": "None",
+    "delay": "10x100",
+    "iterations": 0,
+    "compression": "LZW",
+    "orientation": "Undefined",
+    "properties": {
+      "comment": "Created with ezgif.com video to GIF converter",
+      "date:create": "2023-10-16T09:58:24+00:00",
+      "date:modify": "2023-10-16T09:58:24+00:00",
+      "date:timestamp": "2023-10-16T09:58:24+00:00",
+      "signature": "d2fe6905dc33bfa380727a2f4a05d3e52465cc0f7144c676980489415b2a1816"
+    },
+    "tainted": false,
+    "filesize": "34671B",
+    "numberPixels": "14396",
+    "pixelsPerSecond": "9.16417MB",
+    "userTime": "0.000u",
+    "elapsedTime": "0:01.001",
+    "version": "ImageMagick 7.1.1-5 Q16 x86_64 2d24be538:20230326 https://imagemagick.org"
+  }
+}]

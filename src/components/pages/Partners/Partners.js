@@ -75,13 +75,13 @@ const Partners = () => {
                 </p>
               </div>
               <div className={`${styles["right_icons"]} row`}>
-                <div className="col-4 d-flex">
+                <div className={`${styles["svg"]} col-4`}>
                   <TeamGiest />
                 </div>
-                <div className="col-4 d-flex justify-content-center">
+                <div className={`${styles["svg"]} col-4 text-center`}>
                   <Uproar />
                 </div>
-                <div className="col-4 d-flex">
+                <div className={`${styles["svg"]} col-4`}>
                   <JamPlay />
                 </div>
               </div>
@@ -183,7 +183,7 @@ const Partners = () => {
         </div>
 
         {/* form */}
-        <QueryForm /> 
+        <QueryForm />
       </div>
     </>
   );

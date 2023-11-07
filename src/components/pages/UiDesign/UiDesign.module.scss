@@ -72,8 +72,6 @@
         line-height: 30px;
         width: 55%;
 
-        @media (max-width: 1200px) {
-        }
         @media (max-width: 768px) {
           font-size: 0.8rem;
         }
@@ -310,6 +308,7 @@
         width: 90%;
         font-size: 1.9rem;
       }
+
       @media (max-width: 576px) {
         width: 100%;
         font-size: 0.999rem;
@@ -401,14 +400,20 @@
 }
 
 .second_contact_main {
-  background: transparent;
+  background: #111428;
   margin: 3rem 0;
   position: relative;
   z-index: 10;
 
   .contact_backround {
-    width: 100%;
-    height: 100%;
+    z-index: auto;
+    width: 100% !important;
+    height: 100% !important;
+
+    svg {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
   .contact_p {
