@@ -18,21 +18,21 @@
     opacity: 0.5;
   }
 
-  // .main {
-  //   width: 85%;
-  //   margin: auto;
-  //   padding-bottom: 7rem;
-  // }
-
   .top_left {
     width: 90%;
     margin: auto;
-    padding-bottom: 7rem;
+    padding-bottom: 3rem;
+
     @media (max-width: 992px) {
       width: 93% !important;
+      padding-bottom: 0.5rem;
     }
+
     @media (max-width: 768px) {
       width: 100% !important;
+    }
+    @media (max-width: 576px) {
+      padding-bottom: unset;
     }
   }
 
@@ -88,26 +88,15 @@
     @media (max-width: 992px) {
       font-size: 0.8rem;
     }
-    @media (max-width: 800px) {
-      font-size: 0.6rem;
-    }
-    @media (max-width: 622px) {
-      font-size: 0.5rem;
-    }
-    @media (max-width: 545px) {
-      font-size: 0.5rem;
-    }
-    @media (max-width: 445px) {
-      font-size: 0.4rem;
-    }
-    @media (max-width: 374px) {
-      font-size: 0.3rem;
+    @media (max-width: 576px) {
+      font-size: 0.8rem;
+      width: 90%;
+      line-height: 1rem;
     }
   }
 
   .top {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 2rem 0;
 
     @media (max-width: 768px) {
       padding-top: 2rem;
@@ -215,10 +204,11 @@
       font-size: 2.2rem;
     }
     @media (max-width: 992px) {
-      font-size: 2rem;
+      font-size: 1rem;
     }
-    @media (max-width: 600px) {
-      font-size: 1.7rem;
+
+    @media (max-width: 576px) {
+      font-size: 1rem;
     }
   }
 
@@ -227,13 +217,26 @@
     font-weight: 500;
     line-height: normal;
     margin-top: 2rem;
+
+    @media (max-width: 576px) {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
   }
   .down-p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 400;
     line-height: normal;
     margin-top: 0.5rem;
     text-transform: capitalize;
+    width: 90%;
+
+    @media (max-width: 576px) {
+      margin-bottom: 2.5rem;
+      font-size: 0.7rem;
+      margin-top: unset;
+    }
   }
 
   .desc {
@@ -243,12 +246,22 @@
     margin: 0.5rem 0;
 
     @media (max-width: 1200px) {
-      font-size: 1.1rem;
+      font-size: 0.8rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.9rem;
     }
   }
 
   .tick {
     margin: 0.5rem 0;
+
+    svg {
+      @media (max-width: 768px) {
+        height: 20px;
+        width: 20px;
+      }
+    }
   }
 
   .button {
@@ -274,19 +287,36 @@
   padding: 4rem 2rem;
 
   @media (max-width: 992px) {
-    padding: 4rem 0 !important;
+    padding: 4rem 0;
+  }
+  @media (max-width: 576px) {
+    padding: 1rem 0;
   }
 }
 
 .mainimage {
-  @media (max-width: 767px) {
-    padding: 0 3rem;
+  @media (max-width: 576px) {
+    padding: 0 0.5rem;
   }
+
+  @media (max-width: 576px) {
+    .parent_image {
+      text-align: center;
+    }
+
+    img {
+      width: 70% !important;
+    }
+  }
+}
+
+.mainImageAnim {
+  animation: leftSlideIn 1.5s ease;
 }
 
 .maincard {
   height: 25rem;
-  padding: 3rem;
+  padding: 1rem 0.6rem;
 
   @media (max-width: 1200px) {
     height: 20rem;
@@ -426,6 +456,7 @@
 
 .animatedrow {
   gap: 4.5rem;
+  overflow: hidden;
 
   @media (max-width: 992px) {
     gap: 3rem;
@@ -497,9 +528,16 @@
 }
 
 .lowerrow {
-  margin-top: 5rem;
-  width: 93%;
+  width: 100%;
   margin: 5rem auto auto auto;
+
+  @media (max-width: 576px) {
+    margin: 3rem auto auto auto;
+  }
+
+  div {
+    padding: unset;
+  }
 }
 
 .inital {
@@ -534,14 +572,12 @@
   }
 }
 
-// @keyframes slideUp {
-//   0% {
-//     transform: translateY(-40px);
-//     opacity: 0;
-//   }
+@keyframes leftSlideIn {
+  0% {
+    transform: translateX(-400px);
+  }
 
-//   100% {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -11,6 +11,7 @@ import QueryForm from "../Hero/QueryHome";
 import Animation from "./Animation";
 import Lottie from "lottie-react";
 import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
+import Image from "next/image";
 const WebApp = () => {
   const paraRef = useRef(null);
   const paraInView = useInView(paraRef, { once: true });
@@ -54,7 +55,7 @@ const WebApp = () => {
               <div
                 className={`${styles["slide-effect"]} d-flex flex-column align-items-start justify-content-start`}
               >
-                <div className={`${styles["slideUp"]}  fw-bold text-white `}>
+                <div className={`${styles["slideUp"]} ${styles["titlemain"]}  fw-bold text-white `}>
                   WE CREATE CUSTOM
                 </div>
                 <div className={`${styles["slideUp"]}  fw-bold text-white `}>
@@ -76,7 +77,9 @@ const WebApp = () => {
               </div>
             </div>
             <div className="col d-flex align-items-center  align-items-lg-end justify-content-center mt-5 pe-0 flex-column">
-              <img
+              <Image
+                height={0}
+                width={0}
                 src="/images/hireTeam/handshake.gif"
                 alt="img"
                 className={`${styles["move"]}`}
@@ -91,7 +94,7 @@ const WebApp = () => {
       <section>
         <div className="">
           <p className={`${styles["sec-head"]}`}>
-            Expand Your Business With <span>Web APPLICATION</span>
+            Expand Your Business With <span>Web Application</span>
           </p>
           <div>
             <FirstCard />
@@ -133,7 +136,7 @@ const WebApp = () => {
       {/* fourth section */}
       <section>
         <div>
-          <p className={`${styles["sec-head"]}`}>
+          <p className={`${styles["sec-head-1"]}`}>
             How We can <span>Help You</span>
           </p>
           <div className="container">
@@ -145,7 +148,7 @@ const WebApp = () => {
       {/*scroll card */}
       <section>
         <div>
-          <p className={`${styles["sec-head"]}`}>
+          <p className={`${styles["sec-head-1"]}`}>
             We build lasting Client Partnerships through Effective{" "}
             <span>Communication and Trust</span>
           </p>

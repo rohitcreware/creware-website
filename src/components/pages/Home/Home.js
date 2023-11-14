@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { homeCard2 } from "../../../../Json/HomeCard2";
 import styles from "./Home.module.scss";
 import Lottie from "lottie-react";
-import imagecircle from "../../../../Json/Animation/5.json";
+import imagecircle from "../../../../Json/Animation/mainAni.json";
 import DigitalNumber from "./DigitalNumber";
 import FounderSection from "./FounderSection";
 import AnimatedCard from "../Hero/AnimatedCard";
@@ -71,7 +71,7 @@ const Home = () => {
       setStart(true);
     }, 3000);
   }, []);
-
+  console.log(rotate);
   return (
     <div className={`${styles["home"]}`}>
       {/* video tran */}
@@ -82,17 +82,19 @@ const Home = () => {
             <div className={`${styles["upper-row"]} row`}>
               <div className={`${styles["upper"]} col-lg-7`}>
                 <div className={`${styles["imagelottie1-parent"]}`}>
-                  <div className={`${styles["imagelottie1"]}`}>
-                    <Lottie
-                      animationData={start ? imagecircle : ""}
-                      loop={false}
-                    />
+                  <motion.div
+                    // initial={{ rotate: 0 }}
+                    // animate={{ rotate: -360 }}
+                    // transition={{ duration: 30, repeat: Infinity,ease: "linear" }}
+                    className={`${styles["imagelottie1"]}`}
+                  >
+                    <Lottie animationData={imagecircle} loop={false} />
+                  </motion.div>
+                  <div className={`${styles["middlelogo"]}`}>
+                    {big ? <MiddleLogo /> : <SmallMiddleLogo />}
                   </div>
                 </div>
-                <div className={`${styles["lottie"]}`}>
-                  {/* <div className={`${styles["newlottie"]}`}>
-                    <Lottie animationData={bigercircle} loop={false} />
-                  </div> */}
+                {/* <div className={`${styles["lottie"]}`}>
                   <div
                     className={
                       rotate ? `${styles["middlelogo"]}` : `${styles["new"]}`
@@ -116,7 +118,7 @@ const Home = () => {
                       className={
                         rotate
                           ? `${styles["rotating-svg-main1"]}`
-                          : `${styles["new"]}`
+                          : `${styles[""]}`
                       }
                       loop={false}
                     />
@@ -136,7 +138,7 @@ const Home = () => {
                       className={
                         rotate
                           ? `${styles["rotating-svg-main2"]}`
-                          : `${styles["new"]}`
+                          : `${styles[""]}`
                       }
                       loop={false}
                     />
@@ -155,7 +157,7 @@ const Home = () => {
                       className={
                         rotate
                           ? `${styles["rotating-svg-main3"]}`
-                          : `${styles["new"]}`
+                          : `${styles[""]}`
                       }
                       width="305"
                       height="352"
@@ -174,7 +176,7 @@ const Home = () => {
                       />
                     </motion.svg>
                   </motion.div>
-                </div>
+                </div> */}
               </div>
               <div className={`${styles["home-sec-1-div-1"]} col-lg-3`}>
                 <div className="">
@@ -198,8 +200,8 @@ const Home = () => {
       {/*our service card*/}
       <section className={`${styles["home-sec-2"]}`}>
         <div className="container">
-          <h2 className={`${styles["sec-3-h2"]}`}>
-            OUR <span>SERVICES</span>
+          <h2 className={`${styles["sec-3-h2-1"]}`}>
+            Our <span>Services</span>
           </h2>
           <div className="row">
             <div className="col-12 col-md-8">
@@ -249,11 +251,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* creware cards */}
+      {/* creware cards  third  section*/}
       <section>
         <div className="container">
-          <h2 className={`${styles["sec-3-h2"]}`}>
-            Why should you choose <span>Creware Technology?</span>
+          <h2 className={`${styles["creware-h2"]}`}>
+            Why should you choose <span>Creware Technologies?</span>
           </h2>
           <div className="row">
             {!showHide &&
@@ -290,21 +292,20 @@ const Home = () => {
 
       {/* animation section */}
       <section>
-        <h2 className={`${styles["sec-3-h2"]}`}>
-          OUR<span> OFFERINGS</span>
+        <h2 className={`${styles["sec-3-h2-4"]}`}>
+          Our<span> Offerings</span>
         </h2>
         <AnimatedCard />
       </section>
       {/* coursoul */}
       <div className="container">
         <div className={`${styles["our_clients"]}`}>
-          <h1 className={`${styles["sec-3-h2"]}`}>
-            OUR <span> CLIENTS.</span>
+          <h1 className={`${styles["sec-3-h2-3"]}`}>
+            Our <span> Clients</span>
           </h1>
           <OurClientAnime />
         </div>
       </div>
-      {/* Digital Number Section */}
       <section>
         <DigitalNumber />
       </section>
@@ -316,8 +317,8 @@ const Home = () => {
       </section>
       {/* our portfolio */}
       <section>
-        <h2 className={`${styles["sec-3-h2"]} ${styles["up"]}`}>
-          OUR <span>PORTFOLIO</span>
+        <h2 className={`${styles["sec-3-h2-2"]} ${styles["up"]}`}>
+          Our <span>Portfolio</span>
         </h2>
         {/* <PortfolioBar /> */}
         <NewPortfolioi />
@@ -331,7 +332,7 @@ const Home = () => {
       {/* Testimonials */}
       <section>
         {/* <Testimonial /> */}
-        <h2 className={`${styles["sec-3-h2"]}`}>TESTIMONIALS</h2>
+        <h2 className={`${styles["sec-3-h2-4"]}`}>Testimonials</h2>
         <NewTestimonial />
       </section>
       {/*Form section*/}

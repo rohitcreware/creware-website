@@ -31,7 +31,7 @@ const ProjectOverview = () => {
     <div className={`${styles["main"]} row`}>
       <div className={`${styles["left"]} col-12 col-lg-7`}>
         <h1>
-          Project <span>Overview.</span>
+          Project <span>Overview</span>
         </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur. Lorem et donec leo lectus vel
@@ -92,7 +92,7 @@ const ProjectOverview = () => {
         className={`${styles["left"]} ${styles["proejct_challenges"]} col-12 col-lg-9`}
       >
         <h1>
-          Project <span>Goals.</span>
+          Project <span>Goals</span>
         </h1>
         <p className={styles["project_goals_p"]}>
           Lorem ipsum dolor sit amet consectetur. Lorem et donec leo lectus vel
@@ -114,7 +114,7 @@ const ProjectOverview = () => {
         className={`${styles["left"]} ${styles["proejct_challenges"]} col-12`}
       >
         <h1>
-          Project <span>Challenges.</span>
+          Project <span>Challenges</span>
         </h1>
 
         <div className={`${styles["goals_card"]} row`}>

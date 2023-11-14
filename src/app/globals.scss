@@ -251,8 +251,9 @@ body {
     transform: translateY(0%);
   }
 }
+
 .slideHeadDown {
-  animation: slideHeadDown 0.5s forwards;
+  animation: slideHeadDown 0.5s forwards !important;
 }
 
 @keyframes slideHeadDown {

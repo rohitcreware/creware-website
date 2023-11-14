@@ -39,23 +39,29 @@ const Testing = () => {
       {/* desc section */}
       <section>
         <div className={styles["main"]}>
-          <div className={`${styles["back_animation"]} d-none d-lg-block`}>
-            <Image src={testback} className={`${styles["backani"]}`} alt="image" />
+          <div className={`${styles["back_animation"]} `}>
+            <Image
+              src={testback}
+              className={`${styles["backani"]}`}
+              alt="image"
+            />
           </div>
           <div className="container">
             <div className={`${styles["top"]}`}>
-              <div className={`${styles["top_left"]}`}>
-                <motion.h1
-                  variants={cardIsInView ? "" : variant}
-                  initial="offscreen"
-                  whileInView="onscreen"
-                  ref={cardRef}
-                  className={styles["slideUp"]}
-                >
-                  Unleashing The Full Potential Of Your Software: Our
-                  Comprehensive
+              <div className={`${styles["top_left"]} full_dimension`}>
+                <div className={`${styles["hello1"]} slideHeadUp`}>
+                  Unleashing The Full Potential Of{" "}
+                </div>
+              </div>
+              <div className={`${styles["top_left"]} full_dimension`}>
+                <div className={`${styles["hello1"]} slideHeadUp`}>
+                  Your Software: Our Comprehensive
+                </div>
+              </div>
+              <div className={`${styles["top_left"]} full_dimension`}>
+                <div className={`${styles["hello1"]} slideHeadUp`}>
                   <span> Testing Services</span>
-                </motion.h1>
+                </div>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Ipsum molestie
                   pulvinar tempus sed tempus. Et pharetra gravida sed sit
@@ -98,7 +104,11 @@ const Testing = () => {
               </div>
               <div className={`${styles["innerrow2"]} row`}>
                 <div className={`${styles["single1"]} col-md-6 col-lg-4`}>
-                  <Image src={first} className={`${styles["cardimage"]}`}  alt="image"/>
+                  <Image
+                    src={first}
+                    className={`${styles["cardimage"]}`}
+                    alt="image"
+                  />
                   <p className={`${styles["cardtitle"]}`}>
                     Improved Software Quality
                   </p>
@@ -109,7 +119,11 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single2"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={second} className={`${styles["cardimage"]}`} alt="image" />
+                  <Image
+                    src={second}
+                    className={`${styles["cardimage"]}`}
+                    alt="image"
+                  />
                   <p className={`${styles["cardtitle"]}`}>Reduced Cost</p>
                   <p className={`${styles["carddesc"]}`}>
                     Lorem ipsum dolor sit amet consectetur. Ipsum molestie
@@ -118,7 +132,11 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single3"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={third} className={`${styles["cardimage2"]}`} alt="image" />
+                  <Image
+                    src={third}
+                    className={`${styles["cardimage2"]}`}
+                    alt="image"
+                  />
                   <p className={`${styles["cardtitle"]}`}>
                     Increase Customer Satification
                   </p>
@@ -128,7 +146,11 @@ const Testing = () => {
                   </p>
                 </div>
                 <div className={`${styles["single4"]} col-md-6 col-lg-4`}>
-                  <Image src={fourth} className={`${styles["cardimage"]}`} alt="image" />
+                  <Image
+                    src={fourth}
+                    className={`${styles["cardimage"]}`}
+                    alt="image"
+                  />
                   <p className={`${styles["cardtitle"]}`}>
                     Faster time-to-time Market
                   </p>
@@ -139,7 +161,11 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single5"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={fifth} className={`${styles["cardimage"]}`} alt="image" />
+                  <Image
+                    src={fifth}
+                    className={`${styles["cardimage"]}`}
+                    alt="image"
+                  />
                   <p className={`${styles["cardtitle"]}`}>
                     Better Risk Management
                   </p>
@@ -150,7 +176,11 @@ const Testing = () => {
                 </div>
                 <div className={`${styles["single6"]} col-md-6 col-lg-4`}>
                   {" "}
-                  <Image src={sixth} className={`${styles["cardimage"]}`} alt="image" />
+                  <Image
+                    src={sixth}
+                    className={`${styles["cardimage"]}`}
+                    alt="image"
+                  />
                   <p className={`${styles["cardtitle"]}`}>
                     Continuous Improvement
                   </p>
@@ -166,13 +196,13 @@ const Testing = () => {
       </section>
       {/* thread section */}
       <section
-        className={`d-flex position-relative align-items-center ${styles.threadContainer} flex-column`}
+        className={`d-flex position-relative align-items-center ${styles.threadContainer} flex-column `}
       >
         <Thread />
       </section>
       {/* latest insight */}
-      <section>
-      <NewLastestInsighr/>
+      <section className={`${styles["margin"]}`}>
+        <NewLastestInsighr />
       </section>
       <section>
         <QueryForm />

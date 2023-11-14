@@ -34,27 +34,38 @@
     &_left {
       width: 92%;
       margin: auto;
-      h1 {
+      .hello1 {
         color: #fff;
         font-size: 3.75rem;
         font-style: normal;
         line-height: initial;
         font-weight: 700;
         text-transform: uppercase;
-        margin-bottom: 1.4rem;
+        margin-bottom: 0.4rem;
 
         @media (max-width: 1400px) {
           font-size: 3.4rem;
         }
 
         @media (max-width: 1200px) {
-          font-size: 2.8rem;
+          font-size: 2.6rem;
+        }
+        @media (max-width: 992px) {
+          font-size: 2.1rem;
         }
         @media (max-width: 768px) {
-          font-size: 2.1rem;
+          font-size: 1.6rem;
         }
         @media (max-width: 576px) {
           font-size: 1.2rem;
+          width: 100%;
+        }
+        @media (max-width: 410px) {
+          font-size: 1rem;
+          width: 100%;
+        }
+        @media (max-width: 350px) {
+          font-size: 0.9rem;
           width: 100%;
         }
 
@@ -65,23 +76,27 @@
       }
 
       p {
-        color: #fff;
+        color: #b0b0b0;
         font-size: 1.313rem;
         font-style: normal;
         font-weight: 500;
-        line-height: 30px;
-        width: 55%;
-
+        line-height: normal;
+        width: 51%;
+        margin-top: 2rem;
+        @media (max-width: 1200px) {
+          font-size: 1.2rem;
+        }
+        @media (max-width: 992px) {
+          font-size: 1rem;
+        }
         @media (max-width: 768px) {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
+          margin-top: 1rem;
         }
         @media (max-width: 576px) {
-          width: 100%;
+          font-size: 0.6rem;
+          width: 80%;
         }
-      }
-
-      @media (max-width: 768px) {
-        margin-bottom: 1.5rem;
       }
     }
 
@@ -93,13 +108,13 @@
   }
 
   .ui_design {
-    margin-top: 3.75rem;
+    margin-top: 2rem;
 
     @media (max-width: 768px) {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
     @media (max-width: 576px) {
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       width: 100%;
     }
 
@@ -254,28 +269,31 @@
 
   .help_you {
     h1 {
-      margin-top: 3.5rem;
-      margin-bottom: 2.8rem;
       color: #fff;
-      text-align: center;
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 700;
       line-height: normal;
       text-transform: capitalize;
-
-      @media (max-width: 768px) {
-        margin-top: 1.5rem;
-        margin-bottom: 0.8rem;
-      }
-      @media (max-width: 576px) {
-        margin-top: 1.5rem;
-        font-size: 1.5rem;
-        margin-bottom: 0.8rem;
-      }
-
+      text-align: center;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
       span {
         color: #d0021b;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 2.2rem;
+      }
+      @media (max-width: 992px) {
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 2.1rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 1.2rem;
+        width: 100%;
       }
     }
   }
@@ -319,11 +337,11 @@
 }
 
 .services_provide {
-  margin-top: 3.625rem;
+  margin-top: 3.2rem;
   margin-bottom: 3rem;
 
   @media (max-width: 576px) {
-    margin-top: 2.625rem;
+    margin-top: 2.2rem;
     margin-bottom: 1rem;
   }
 

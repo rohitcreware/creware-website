@@ -129,9 +129,13 @@
 .exp_tab_title {
   color: #fff;
   width: fit-content;
-  font-size: 0.781rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 
   @media (max-width: 576px) {
     font-size: 0.7rem;
@@ -157,7 +161,7 @@
 }
 
 .hire_dev_anim {
-  width: 100%;
+  width: 70%;
   height: 100%;
 
   @media (max-width: 768px) {
@@ -208,7 +212,8 @@
   color: #bc031c;
   font-size: 2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
+  text-transform: capitalize;
 
   @media (max-width: 1400px) {
     font-size: 1.8rem;
@@ -919,7 +924,6 @@
 
 .slideUp {
   position: relative;
-  font-family: tahoma;
   opacity: 0;
 }
 
@@ -943,7 +947,6 @@
 
 .slideUp2 {
   position: relative;
-  font-family: tahoma;
   opacity: 0;
   font-size: 1rem;
   color: $creware-red;
@@ -1374,6 +1377,7 @@
 
 .dedicated_title {
   font-size: 2rem;
+  text-transform: capitalize;
 
   @media (max-width: 1400px) {
     font-size: 1.8rem;
@@ -1485,9 +1489,9 @@
   flex-wrap: wrap;
 
   .dev_button {
-    font-size: 0.563rem;
+    font-size: 0.8rem;
     padding: 4px 0.516rem;
-    width: 12.4%;
+    width: 18.2%;
     text-align: left;
     border-radius: 3px;
     background-color: #fff;
@@ -1500,10 +1504,14 @@
     // outline: 2px solid transparent;
 
     @media (max-width: 1200px) {
-      width: 16%;
+      width: 18%;
+    }
+    @media (max-width: 1100px) {
+      width: 19%;
     }
     @media (max-width: 768px) {
-      width: 21%;
+      width: 25%;
+      font-size: 0.7rem;
     }
     @media (max-width: 576px) {
       width: 30.8%;
@@ -1557,7 +1565,6 @@
       width: 46.6%;
     }
 
-    &:focus,
     &:hover {
       background: #bc031c;
       color: #fff;

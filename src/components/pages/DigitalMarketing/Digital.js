@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Digital.module.scss";
 import Lottie from "lottie-react";
 import Image from "next/image";
-import sectionback from "../MobileAppDev/json/homebackanimation.json";
 import { motion, useAnimation, useInView, useMediaQuery } from "framer-motion";
 import background from "../../../../public/images/homebackanimation.json";
 import image from "../../../../public/images/digitalmarketing/image.png";
@@ -16,7 +15,6 @@ import four from "../../../../public/images/digitalmarketing/fourthcard.png";
 import { data } from "../../../../Json/DigitalMarketing";
 import { Tick } from "@/components/Svgs/Digital";
 import Card from "./Cards";
-import LatestInsights from "../ContactUs/LatestInsights";
 import QueryForm from "../Hero/QueryHome";
 import ContactusBtnSec from "../EnterpriseSfDev/ContactusBtnSec/ContactusBtnSec";
 import NewLastestInsighr from "../ContactUs/NewLastestInsighr";
@@ -25,18 +23,10 @@ const Digital = () => {
   const cardRef = useRef(null);
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
-  const cardRef3 = useRef(null);
-  const cardRef4 = useRef(null);
-  const cardRef5 = useRef(null);
-  const cardRef6 = useRef(null);
+
   const cardIsInView = useInView(cardRef, { once: true });
   const cardIsInView1 = useInView(cardRef1, { once: true });
   const cardIsInView2 = useInView(cardRef2, { once: true });
-  const cardIsInView3 = useInView(cardRef3, { once: true });
-  const cardIsInView4 = useInView(cardRef4, { once: true });
-  const cardIsInView5 = useInView(cardRef5, { once: true });
-  const cardIsInView6 = useInView(cardRef6, { once: true });
-  const [screenWidth, setScreenWidth] = useState(0);
 
   const variant = {
     offscreen: {
@@ -80,66 +70,6 @@ const Digital = () => {
         // type: "spring",
         bounce: 0.4,
         duration: 1,
-      },
-    },
-  };
-  const variant3 = {
-    offscreen3: {
-      opacity: 0,
-      y: 200,
-    },
-    onscreen3: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        // type: "spring",
-        bounce: 0.4,
-        duration: 0.5,
-      },
-    },
-  };
-  const variant4 = {
-    offscreen4: {
-      opacity: 0,
-      y: 40,
-    },
-    onscreen4: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        // type: "spring",
-        bounce: 0.4,
-        duration: 0.5,
-      },
-    },
-  };
-  const variant5 = {
-    offscreen5: {
-      opacity: 0,
-      y: 60,
-    },
-    onscreen5: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        // type: "spring",
-        bounce: 0.4,
-        duration: 0.5,
-      },
-    },
-  };
-  const variant6 = {
-    offscreen6: {
-      opacity: 0,
-      y: 80,
-    },
-    onscreen6: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        // type: "spring",
-        bounce: 0.4,
-        duration: 0.5,
       },
     },
   };
@@ -212,34 +142,26 @@ const Digital = () => {
           <div className="container">
             <div className={`${styles["top"]}`}>
               <div className={`${styles["top_left"]}`}>
-                <motion.p
-                  className={`${styles["upper-head"]}`}
-                  variants={cardIsInView6 ? "" : variant6}
-                  initial="offscreen6"
-                  whileInView="onscreen6"
-                  ref={cardRef6}
-                  style={{ overflow: "hidden" }}
-                >
-                  We specialize in creating custom
-                </motion.p>
-                <motion.p
-                  className={`${styles["upper-head"]}`}
-                  variants={cardIsInView5 ? "" : variant5}
-                  initial="offscreen5"
-                  whileInView="onscreen5"
-                  ref={cardRef5}
-                >
-                  <span>mobile apps</span> for businesses of all
-                </motion.p>
-                <motion.p
-                  className={`${styles["upper-head"]} mb-4`}
-                  variants={cardIsInView4 ? "" : variant4}
-                  initial="offscreen4"
-                  whileInView="onscreen4"
-                  ref={cardRef4}
-                >
-                  types and sizes
-                </motion.p>
+                <div className="full_dimension">
+                  <motion.p className={`${styles["upper-head"]} slideHeadUp`}>
+                    We specialize in creating custom
+                  </motion.p>
+                </div>
+
+                <div className="full_dimension">
+                  <motion.p className={`${styles["upper-head"]} slideHeadUp`}>
+                    <span>mobile apps</span> for businesses of all
+                  </motion.p>
+                </div>
+
+                <div className="full_dimension">
+                  <motion.p
+                    className={`${styles["upper-head"]} slideHeadUp mb-1 mb-sm-4`}
+                  >
+                    types and sizes
+                  </motion.p>
+                </div>
+
                 <p className={`${styles["upper-text"]}`}>
                   Lorem ipsum dolor sit amet consectetur. Ipsum molestie
                   pulvinar tempus sed tempus. Et pharetra gravida sed sit
@@ -253,7 +175,7 @@ const Digital = () => {
 
       {/* second section */}
       <section>
-        <div className={` ${styles["second"]} container`}>
+        <div className={` ${styles["second"]} container d-none d-lg-block`}>
           <div className={` ${styles["maincard"]} row`}>
             <div className="col-3">
               <div className={` ${styles["image1-div"]}`}>
@@ -319,23 +241,24 @@ const Digital = () => {
       </section>
 
       {/* animated div */}
-      <section>
+      <section className="container-fluid" style={{ background: "#111428" }}>
         <div className={`${styles["fourthmain"]}`}>
-          <div className={`${styles["fourthdiv"]} container`} style={{}}>
+          <div className={`${styles["fourthdiv"]} container`}>
             <div className={`${styles["animatedrow"]} row`}>
-              <motion.div
-                variants={cardIsInView1 ? "" : variant1}
-                initial="offscreen1"
+              <div
                 ref={cardRef1}
-                whileInView="onscreen1"
-                className={`${styles["mainimage"]} col-md-5`}
+                className={`${styles["mainimage"]} ${
+                  cardIsInView1 ? styles["mainImageAnim"] : ""
+                } col-md-5`}
               >
-                <Image
-                  src={image}
-                  className={`${styles["image"]}`}
-                  alt="image"
-                />
-              </motion.div>
+                <div className={styles["parent_image"]}>
+                  <Image
+                    src={image}
+                    className={`${styles["image"]}`}
+                    alt="image"
+                  />
+                </div>
+              </div>
               <motion.div
                 variants={cardIsInView2 ? "" : variant2}
                 initial="offscreen2"
@@ -349,7 +272,7 @@ const Digital = () => {
                 <div className="row">
                   {data.map((item, index) => (
                     <div key={index} className="d-flex">
-                      <div className={`${styles["tick"]} col-2 col-md-1`}>
+                      <div className={`${styles["tick"]} col-1 col-md-1`}>
                         <Tick />
                       </div>
                       <div className={`${styles["desc"]} col-10 col-md-11`}>

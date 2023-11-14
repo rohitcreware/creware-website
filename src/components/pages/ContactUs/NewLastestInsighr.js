@@ -88,7 +88,7 @@ const NewLastestInsighr = () => {
   };
   return (
     <>
-      <h2 className={`${styles["insight-head"]}`}>Latest Insights :</h2>
+      <h2 className={`${styles["insight-head"]}`}>Latest <span>Insights</span></h2>
       <div className={`${styles["header1"]} container`}>
         <div className={`${styles["content"]}`}>
           <div className={`${styles["container1"]}`}>

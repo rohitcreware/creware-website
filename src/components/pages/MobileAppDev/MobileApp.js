@@ -106,34 +106,25 @@ const MobileApp = () => {
         />
         <div className={`${styles["background-img"]}`}> </div>
         <div className={`${styles["main"]} container`}>
-          <motion.p
-            className={`${styles["upper-head"]}`}
-            variants={cardIsInView3 ? "" : variant3}
-            initial="offscreen3"
-            whileInView="onscreen3"
-            ref={cardRef3}
-            style={{ overflow: "hidden" }}
-          >
-            We specialize in creating custom
-          </motion.p>
-          <motion.p
-            className={`${styles["upper-head"]}`}
-            variants={cardIsInView2 ? "" : variant2}
-            initial="offscreen2"
-            whileInView="onscreen2"
-            ref={cardRef2}
-          >
-            <span>mobile apps</span> for businesses of all
-          </motion.p>
-          <motion.p
-            className={`${styles["upper-head"]} mb-4`}
-            variants={cardIsInView1 ? "" : variant1}
-            initial="offscreen1"
-            whileInView="onscreen1"
-            ref={cardRef1}
-          >
-            types and sizes
-          </motion.p>
+          <div className="full_dimension">
+            <motion.p
+              className={`${styles["upper-head"]} slideHeadUp`}
+
+              // style={{ overflow: "hidden" }}
+            >
+              We specialize in creating custom
+            </motion.p>
+          </div>
+          <div className="full_dimension">
+            <motion.p className={`${styles["upper-head"]} slideHeadUp`}>
+              <span>mobile apps</span> for businesses of all
+            </motion.p>
+          </div>
+          <div className="full_dimension">
+            <motion.p className={`${styles["upper-head"]} slideHeadUp mb-4`}>
+              types and sizes
+            </motion.p>
+          </div>
           <p className={`${styles["upper-text"]}`}>
             Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar
             tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi
@@ -188,7 +179,7 @@ const MobileApp = () => {
       {/* fourth section */}
       <section>
         <div>
-          <p className={`${styles["sec-head"]}`}>
+          <p className={`${styles["sec-head-1"]}`}>
             How We can <span>Help You</span>
           </p>
           <div className="container">
@@ -200,7 +191,7 @@ const MobileApp = () => {
       {/*scroll card */}
       <section>
         <div>
-          <p className={`${styles["sec-head"]}`}>
+          <p className={`${styles["sec-head-1"]}`}>
             We build lasting Client Partnerships through Effective{" "}
             <span>Communication and Trust</span>
           </p>
@@ -239,7 +230,7 @@ const MobileApp = () => {
 
       {/* latest insight */}
       <section>
-       <NewLastestInsighr/>
+        <NewLastestInsighr />
       </section>
 
       <section>

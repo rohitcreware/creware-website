@@ -1,5 +1,8 @@
 .main {
   .lottie {
+    @media (max-width: 992px) {
+      display: none;
+    }
     position: absolute;
     // height: 100%;
     width: 100%;
@@ -7,14 +10,19 @@
   }
 
   .text-main-5 {
-    padding: 7rem 0 2rem 0;
+    padding: 5rem 0 2rem 0;
     width: 86%;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
 
     @media (max-width: 768px) {
+      width: 100%;
       padding: 3rem 0 2rem 0;
+    }
+    @media (max-width: 576px) {
+      padding: unset;
+      width: 100%;
     }
   }
 
@@ -23,6 +31,10 @@
     font-weight: 400;
     font-size: 1.5rem;
     line-height: normal;
+
+    @media (max-width: 576px) {
+      padding: unset;
+    }
 
     p {
       width: 86%;
@@ -34,8 +46,10 @@
       @media (max-width: 1200px) {
         font-size: 1.2rem;
       }
+
       @media (max-width: 576px) {
         font-size: 0.9rem;
+        width: 100%;
       }
     }
   }
@@ -57,12 +71,14 @@
     }
 
     @media (max-width: 769px) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       line-height: normal;
     }
     @media (max-width: 576px) {
       margin-bottom: 2rem;
       font-size: 1rem;
+      padding: 2rem 0 !important;
+      margin-bottom: unset;
     }
   }
 

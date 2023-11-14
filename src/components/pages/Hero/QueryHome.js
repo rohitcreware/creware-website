@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "../Hero/QueryHome.module.scss";
-import RightArrowTowardsButton from "@/components/Animations/RightArrowTowardsButton"
+import RightArrowTowardsButton from "@/components/Animations/RightArrowTowardsButton";
 import axios from "axios";
 
 const QueryForm = ({ mainContainerWidth }) => {
@@ -73,7 +73,6 @@ const QueryForm = ({ mainContainerWidth }) => {
                         onChange={onInputChangeHandler}
                         name="name"
                       ></input>
-                      
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
@@ -86,7 +85,6 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="reachMeAt"
                         onChange={onInputChangeHandler}
                       ></input>
-                      
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
@@ -99,7 +97,6 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="country"
                         onChange={onInputChangeHandler}
                       ></input>
-                      
                     </div>
                     <div>
                       <label className={`${styles["form-lable"]}`}>
@@ -112,7 +109,6 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="mobile_number"
                         onChange={onInputChangeHandler}
                       ></input>
-                      
                     </div>
                     <div>
                       {" "}
@@ -126,22 +122,17 @@ const QueryForm = ({ mainContainerWidth }) => {
                         name="company_name"
                         onChange={onInputChangeHandler}
                       ></input>
-                      
                     </div>
-                    <div
-                      className={`${styles["message-div"]} `}
-                    >
+                    <div className={`${styles["message-div"]} `}>
                       <label className={`${styles["form-lable"]}`}>
                         Message{" "}
                       </label>
-                      <textarea
-                        type="text-area"
+                      <input
+                        autoComplete="off"
+                        type="text"
                         placeholder="eg : ......."
-                        className={`${styles["text-area"]}`}
-                        name="message"
-                        onChange={onInputChangeHandler}
-                      ></textarea>
-                      
+                        className={`${styles["input-box"]}`}
+                      ></input>
                     </div>
 
                     <div className="form-check d-flex justify-content-center">

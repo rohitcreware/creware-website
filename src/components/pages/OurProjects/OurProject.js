@@ -39,7 +39,6 @@ const OurProject = () => {
                 width={0}
                 sizes="100vw"
                 className={`${styles["main-img"]}`}
-                // style={{ width: "105%", height: "100%" }}
               />
 
               <div className={`${styles["uppersec-card"]} card`}>

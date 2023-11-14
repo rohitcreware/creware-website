@@ -3,12 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { portfolio } from "../../../../Json/ProjectCard";
 import styles from "./Cards.module.scss";
-import {
-  ProjectHoverViewArrow,
-  ProjectViewArrow,
-  SmallProjectHoverViewArrow,
-  SmallProjectViewArrow,
-} from "@/components/Svgs/projects";
+
 const OurProjectsCards = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [hover, setHover] = useState(false);
@@ -32,7 +27,7 @@ const OurProjectsCards = () => {
               className={`${styles["project-card"]} col-12 col-md-6 col-lg-4`}
               key={index}
             >
-              <Link href={"./project-details"}>
+              <Link href={"/our-projects/project-details"}>
                 <div className={`${styles["card-1"]} card`}>
                   <div className={`${styles["card-img-overlay"]}`}>
                     <img
@@ -58,28 +53,6 @@ const OurProjectsCards = () => {
             </div>
           ))}
         </div>
-        <div className={`${styles["view_div"]} row`}>
-        <Link
-          href=""
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          className={`${styles["view-p"]} col-11`}
-        >
-          {big ? (
-            hover ? (
-              <ProjectHoverViewArrow />
-            ) : (
-              <ProjectViewArrow />
-            )
-          ) : hover ? (
-            <SmallProjectHoverViewArrow />
-          ) : (
-            <SmallProjectViewArrow />
-          )}
-          View more
-        </Link>
-        </div>
-        
       </div>
     </>
   );

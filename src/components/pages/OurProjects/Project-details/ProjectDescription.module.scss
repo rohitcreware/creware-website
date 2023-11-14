@@ -4,6 +4,10 @@
   margin: 3.75rem auto;
   width: 83%;
 
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
   .left_quote {
     @media (max-width: 576px) {
       height: 35px;

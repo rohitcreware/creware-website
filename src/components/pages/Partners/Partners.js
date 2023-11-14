@@ -52,7 +52,7 @@ const Partners = () => {
         {/* Service Partnership */}
         <div className={`${styles["service_partner"]} container`}>
           <h1 className={styles["title"]}>
-            Service <span>Partnership.</span>
+            Service <span>Partnership</span>
           </h1>
 
           <div className="row gy-3 gy-sm-5  gy-lg-0">

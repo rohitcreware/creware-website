@@ -21,6 +21,7 @@ import { useInView } from "framer-motion";
 const HireTeam = () => {
   const hireSecRef = useRef(null);
   const ThumbsupSecRef = useRef(null);
+  const hireDevSec = useRef(null);
   const ishireSecInView = useInView(hireSecRef, { once: true });
   const isThumbsUpIsInView = useInView(ThumbsupSecRef, { once: true });
 
@@ -28,7 +29,8 @@ const HireTeam = () => {
   const [buttonAnimRoute, setButtonAnimeRoute] = useState("next");
   const [buttonAnim, setButtonAnim] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
-  const [selectedDevButton, setSelectedDevButton] = useState(false);
+
+  const [multipleRoles, setMultipleRoles] = useState([]);
 
   useEffect(() => {
     let ex1 = buttonAnimRoute;
@@ -37,6 +39,12 @@ const HireTeam = () => {
       setButtonAnimeRoute(ex1);
     });
   }, [buttonAnim]);
+
+  useEffect(() => {
+    Roles.map((data, index) => {
+      setMultipleRoles((prev) => [...prev, false]);
+    });
+  }, [Roles]);
 
   const pagination = (move) => {
     move;
@@ -60,8 +68,16 @@ const HireTeam = () => {
   };
 
   const handleDevButton = (index) => {
-    setSelectedDevButton(index);
+    let defaultMulitpleRoles = [...multipleRoles];
+    defaultMulitpleRoles[index] = !defaultMulitpleRoles[index];
+    setMultipleRoles(defaultMulitpleRoles);
   };
+
+  const hireDevClickHandler = () => {
+    hireDevSec.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  console.log(multipleRoles);
 
   return (
     <div className={`${styles["hireTeam"]}`}>
@@ -79,14 +95,7 @@ const HireTeam = () => {
                     <h1
                       className={`${styles["fadeInUp"]} ${styles["top_title"]} `}
                     >
-                      HIRE
-                    </h1>
-                  </div>
-                  <div className={styles["scroll_to_full"]}>
-                    <h1
-                      className={`${styles["fadeInUp"]} ${styles["top_title_span"]}`}
-                    >
-                      DEVELOPER
+                      HIRE <span style={{ color: "#D0021b" }}>Team</span>
                     </h1>
                   </div>
                 </div>
@@ -99,6 +108,7 @@ const HireTeam = () => {
                 <div className="my-4">
                   <button
                     className={`${styles.background} ${styles.hire_button}`}
+                    onClick={hireDevClickHandler}
                   >
                     HIRE-DEVELOPER
                   </button>
@@ -118,7 +128,7 @@ const HireTeam = () => {
         </section>
 
         <section>
-          <div className={`col-12 col-md-9  container mt-4 p-4`} id="hire">
+          <div className={`col-12 col-md-10  container mt-4 py-4`} id="hire">
             <div className="row">
               <div className="col" ref={hireSecRef}>
                 {ishireSecInView ? (
@@ -188,7 +198,7 @@ const HireTeam = () => {
         </section>
 
         <section>
-          <div className="container mt-3 mt-md-5 col-11 col-md-9">
+          <div className="container mt-3 mt-md-5 col-12 col-md-10">
             <h2
               className={`${styles.crewareRed} ${styles["dedicated_title"]} fw-bold`}
             >
@@ -278,7 +288,7 @@ const HireTeam = () => {
         </section>
 
         <section>
-          <div className="container mt-2 mt-md-5 col-12 col-md-10 px-md-4">
+          <div className="container mt-2 mt-md-5 col-12 col-md-10">
             <h2
               className={`${styles.crewareRed} ${styles["dedicated_title"]} fw-bold`}
             >
@@ -297,7 +307,7 @@ const HireTeam = () => {
         </section>
 
         <section>
-          <div className="container  mt-3 mt-md-5 col-12 col-md-9 px-3 px-md-0">
+          <div className="container mt-2 mt-md-5 col-12 col-md-10">
             <h2
               className={`${styles.crewareRed} ${styles["dedicated_title"]} fw-bold`}
             >
@@ -333,10 +343,13 @@ const HireTeam = () => {
         </section>
 
         <section>
-          <div className="container col-12 col-md-9  mt-0 mt-md-5">
+          <div className="container col-12 col-md-10  mt-0 mt-md-5">
             <div className="row d-flex flex-column flex-md-column flex-lg-row">
               <div className="col-12 col-md-12 col-lg-8 mt-5">
-                <h6 className={`${styles.crewareRed} fw-normal`}>
+                <h6
+                  className={`${styles.crewareRed} fw-normal`}
+                  style={{ textTransform: "capitalize" }}
+                >
                   Testimonials
                 </h6>
                 <h2 className="text-white fw-semibold">What our clients say</h2>
@@ -449,8 +462,8 @@ const HireTeam = () => {
           </div>
         </section>
 
-        <section>
-          <div className="container mt-4 col-12 col-sm-9">
+        <section ref={hireDevSec}>
+          <div className="container mt-4 col-12 col-sm-10">
             <h2 className="text-white fw-bold">Get in Touch</h2>
             <h2 className={`${styles.crewareRed} fw-semibold`}>
               Let's find your developers
@@ -463,7 +476,7 @@ const HireTeam = () => {
                 return (
                   <button
                     className={`${styles.dev_button} ${
-                      selectedDevButton === index
+                      multipleRoles[index] === true
                         ? styles["selected_dev_button"]
                         : "false"
                     }`}
@@ -490,7 +503,7 @@ const HireTeam = () => {
 
         <section>
           <div
-            className="container mt-4 col-12 col-sm-9"
+            className="container mt-4 col-12 col-sm-10"
             style={{ overflow: "hidden" }}
           >
             <div className="row">

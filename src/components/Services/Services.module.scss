@@ -25,12 +25,16 @@
 }
 
 .process_cycle_main {
-  margin-bottom: 4rem;
-  margin-top: 10rem;
+  margin-bottom: 7rem;
+  margin-top: 8rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 4.5rem;
+  }
 
   @media (max-width: 576px) {
     margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 }
 .process_cycle_title {
@@ -39,9 +43,9 @@
   font-style: normal;
   line-height: initial;
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1.4rem;
+  margin-bottom: 2.4rem;
   text-align: center;
+  text-transform:capitalize ;
 
   @media (max-width: 1400px) {
     font-size: 2.8rem;
@@ -59,13 +63,21 @@
   }
 }
 
+.industries_right {
+  padding-right: 1rem;
+
+  @media (max-width: 576px) {
+    padding: 0 1rem;
+  }
+}
+
 .testimonial_title {
   color: rgba(255, 255, 255, 0.85);
   font-size: 3rem;
   font-style: normal;
   line-height: initial;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   margin-bottom: 3rem;
 
@@ -125,7 +137,7 @@
   }
 
   @media (max-width: 1200px) {
-    font-size: 1rem;
+    font-size: 0rem;
   }
 
   @media (max-width: 768px) {
@@ -202,6 +214,19 @@
   }
 }
 
+.top_main {
+  max-width: 85rem;
+  position: relative;
+  padding: 3rem 0 2rem 0;
+
+  @media (max-width: 1440px) {
+    max-width: unset;
+  }
+  @media (max-width: 576px) {
+    padding: 1rem 0;
+  }
+}
+
 .top_title {
   color: #fff;
   font-size: 6.563rem;
@@ -209,6 +234,7 @@
   font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
+  text-align: end;
 
   @media (max-width: 1400px) {
     font-size: 6rem;
@@ -221,6 +247,8 @@
   }
   @media (max-width: 576px) {
     font-size: 2rem;
+    text-align: start;
+    align-items: flex-start !important;
   }
 }
 
@@ -232,14 +260,15 @@
   line-height: 28.5px; /* 118.75% */
 
   @media (max-width: 1400px) {
-    font-size: 1.3rem;
+    // font-size: 1.3rem;
   }
   @media (max-width: 1200px) {
     font-size: 1.1rem;
+    line-height: 1.3rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 0.87rem;
+    font-size: 0.99rem;
     line-height: normal;
   }
   @media (max-width: 576px) {
@@ -249,24 +278,26 @@
 
 .top_desc {
   color: #fff;
-  font-size: 1.513rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 27px;
   text-transform: capitalize;
 
   @media (max-width: 1400px) {
-    font-size: 1.313rem;
+    line-height: 1.5rem;
   }
+
   @media (max-width: 1200px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
   }
   @media (max-width: 768px) {
-    font-size: 0.81rem;
+    font-size: 0.8rem;
     line-height: normal;
   }
   @media (max-width: 576px) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -1006,7 +1037,6 @@
 
 .slideUp2 {
   position: relative;
-  font-family: tahoma;
   opacity: 0;
   font-size: 1rem;
   color: $creware-red;
@@ -1109,7 +1139,7 @@
 }
 
 .our_services_main {
-  margin: 5rem 0 5rem 2rem;
+  margin: 6.5rem 0 6rem 2rem;
   position: relative;
 
   @media (max-width: 768px) {
@@ -1911,7 +1941,7 @@
   width: 100%;
   position: relative;
   padding: 5.813rem 0;
-  margin: 3.75rem 0;
+  margin-bottom: 5rem;
   background: linear-gradient(#040404, #141414);
 
   @media (max-width: 1400px) {
@@ -1919,6 +1949,7 @@
   }
   @media (max-width: 768px) {
     padding: 2.813rem 0;
+    margin-bottom: 3.5rem;
   }
 
   .trusted_img {
@@ -2026,5 +2057,30 @@
 @media (max-width: 576px) {
   .responsiveFont {
     font-size: 14vw !important;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.industries {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 576px) {
+    margin-top: 3rem;
   }
 }

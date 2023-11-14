@@ -20,18 +20,21 @@
 
     &_left {
       position: absolute;
-      width: 51%;
+      width: 53%;
       top: 30%;
       z-index: 10;
 
       @media (max-width: 1400px) {
-        width: 55%;
+        width: 53%;
       }
       @media (max-width: 1300px) {
         width: 57%;
       }
       @media (max-width: 1200px) {
-        width: 65%;
+        width: 64%;
+      }
+      @media (max-width: 992px) {
+        width: 58%;
       }
       @media (max-width: 768px) {
         top: 35%;
@@ -45,7 +48,7 @@
 
       h1 {
         color: #fff;
-        font-size: 3rem;
+        font-size: 2.8rem;
         font-style: normal;
         line-height: initial;
         font-weight: 700;
@@ -53,10 +56,15 @@
         margin-bottom: 1.4rem;
 
         @media (max-width: 1200px) {
-          font-size: 2.8rem;
+          font-size: 2.5rem;
+        }
+        @media (max-width: 992px) {
+          font-size: 1.5rem;
+          width: 80%;
         }
         @media (max-width: 768px) {
           font-size: 1.5rem;
+          width: 90%;
         }
         @media (max-width: 576px) {
           font-size: 1.2rem;
@@ -85,7 +93,7 @@
 
         @media (max-width: 1200px) {
         }
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
           font-size: 0.8rem;
           line-height: 1.25rem;
         }
@@ -140,12 +148,12 @@
     .title {
       color: #fff;
       text-align: center;
-      font-size: 2.9rem;
+      font-size: 3rem;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
       text-transform: capitalize;
-      width: 45%;
+      width: 50%;
       margin: auto;
       margin-bottom: 1.5rem;
 
@@ -154,16 +162,19 @@
       }
 
       @media (max-width: 1400px) {
-        font-size: 2rem;
-        width: 38%;
+        font-size: 2.7rem;
+        width: 50%;
       }
       @media (max-width: 1200px) {
         font-size: 2.5rem;
         width: 55%;
       }
+      @media (max-width: 992px) {
+        width: 72%;
+      }
       @media (max-width: 768px) {
         font-size: 1.5rem;
-        width: 46%;
+        width: 60%;
       }
       @media (max-width: 576px) {
         font-size: 1.1rem;
@@ -223,14 +234,13 @@
     .title {
       color: #fff;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
       text-transform: capitalize;
-
       margin: auto;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
 
       span {
         color: #ab051e;

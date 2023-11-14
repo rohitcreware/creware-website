@@ -145,6 +145,7 @@
     &:hover {
        path {
         stroke: #d0021b;
+        fill: #d0021b;
       }
     }
   }
@@ -290,6 +291,11 @@
 
   @media (max-width: 576px) {
     align-items: start;
+  }
+
+  a{
+    text-decoration: none;
+    color: #fff;
   }
 
   p {

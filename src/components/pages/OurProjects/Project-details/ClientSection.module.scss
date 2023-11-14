@@ -3,6 +3,14 @@
   width: 87%;
   margin: auto;
 
+  @media (max-width: 768px) {
+    margin-bottom: 3.625rem;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
   .top {
     padding-top: 70px;
     width: 95%;
@@ -18,7 +26,6 @@
       @media (max-width: 768px) {
         margin-bottom: 30px;
       }
-      
 
       .client {
         color: #fff;

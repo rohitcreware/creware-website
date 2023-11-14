@@ -20,7 +20,7 @@ const DigitalNumber = ({ main_align_class, titleDisable }) => {
               ""
             ) : (
               <h2 className={`${styles["sec-3-h2"]}`}>
-                OUR <span>DIGITAL NUMBERS...</span>
+                Our <span>Digital Numbers...</span>
               </h2>
             )}
             <div className={`${styles["digital-row"]} row`} ref={digitalRef}>

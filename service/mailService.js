@@ -17,7 +17,7 @@ export async function sendMail(desc) {
 
   const mailOptions = {
     from: process.env.NODEMAILER_EMAIL,
-    to: "rohit.sharma@creware.asia",
+    to: "kartikey.creware@gmail.com",
     subject: "Contacted from creware website",
     text: `Name: ${desc.name}
   Reach me at: ${desc.reachMeAt}

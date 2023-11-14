@@ -23,24 +23,18 @@ const Footer = () => {
                 <a className={styles["logo"]} href="/">
                   <Logo />
                 </a>
-                <p className={styles["footer-sub"]}>Warehouse of Creativity</p>
+                <p className={styles["footer-sub"]}>
+                  A Warehouse of Creativity
+                </p>
                 <span className={`${styles["footer-spam"]} d-none d-sm-inline`}>
                   Lorem ipsum dolor sit amet consectetur. Lorem et donec leo
                   lectus vel ullamcorper facilisis. Lorem ipsum dolor sit amet
                   consectetur. Lorem et donec leo lectus vel ullamcorper
-                  facilisis.  donec leo lectus vel ullamcorper facilisis.{" "}
+                  facilisis. donec leo lectus vel ullamcorper facilisis.{" "}
                 </span>
               </div>
 
               <div className={`${styles["footer-img-div"]} col-6`}>
-                {/* <Image
-                  src="https://i.postimg.cc/sgmSF4tX/Application-programming-interface-amico-1.png"
-                  width={0}
-                  height={0}
-                  alt="image"
-                  style={{ width: "100%", height: "100%" }}
-                  className={styles[""]}
-                /> */}
                 <div className={`${styles["animation"]}`}>
                   <Lottie animationData={animation} />
                 </div>
@@ -134,22 +128,51 @@ const Footer = () => {
               <div className={`${styles["social-icon"]} col-6 col-md-3`}>
                 <div className={styles["top"]}>
                   <h6 className={styles["footer-contact-us"]}>Contact Us</h6>
-                  <p>info@creware.asia</p>
+                  <a href="mailto:info@creware.asia?subject=Subject&body=Body%20goes%20here">
+                    <p>info@creware.asia</p>
+                  </a>
                 </div>
                 <div
                   className={`${styles["social-media-p"]} ${styles["social-media-p-1"]}`}
                 >
-                  <Fb />
-                  <Twitter />
-                  <Ig />
+                  <a
+                    href="https://m.facebook.com/profile.php/?id=100063909857752"
+                    target="blank"
+                  >
+                    <Fb />
+                  </a>
+                  <a href="https://twitter.com/CrewareTech" target="blank">
+                    <Twitter />
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/crewarecoworks/"
+                    target="blank"
+                  >
+                    <Ig />
+                  </a>
                   {/* Add more social media icons here */}
                 </div>
                 <div
                   className={`${styles["social-media-p"]}  ${styles["social-media-p-2"]}`}
                 >
-                  <Linkedin />
-                  <Email />
-                  <Whatsapp />
+                  <a
+                    href="https://in.linkedin.com/company/creware-technologies-pvt-ltd"
+                    target="blank"
+                  >
+                    <Linkedin />
+                  </a>
+                  <a
+                    href="mailto:info@creware.asia?subject=Subject&body=Body%20goes%20here"
+                    target="blank"
+                  >
+                    {" "}
+                    <Email />
+                  </a>
+                  <a href="https://wa.me/7829413575" target="blank">
+                    {" "}
+                    <Whatsapp />{" "}
+                  </a>
                 </div>
               </div>
             </div>

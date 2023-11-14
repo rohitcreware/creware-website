@@ -125,7 +125,7 @@ const secondScreenVariantD = {
 };
 
 const OurClientAnime = ({ noMargin, setOurClientSecondScreen }) => {
-  const [secondScreen, setSecondScreen] = useState(false);
+  const [secondScreen, setSecondScreen] = useState(true);
   const [secondScreeAppearFirstTime, setSecondScreeAppearFirstTime] =
     useState(false);
   const [
@@ -181,6 +181,7 @@ const OurClientAnime = ({ noMargin, setOurClientSecondScreen }) => {
             exit="exit"
             variants={firstScreenVariants}
             className={`${styles["first_screen_row"]} row`}
+            // style={{ marginTop: "0.5rem" }}
           >
             <div className={`${styles["innosol"]} col-4 col-md-2  `}>
               <Innosol />
@@ -253,6 +254,7 @@ const OurClientAnime = ({ noMargin, setOurClientSecondScreen }) => {
           exit="exit"
           variants={secondScreenVariantsForFirstTime}
           className={`${styles["second_screen_row"]} row`}
+          // style={{ marginTop: "1.5rem" }}
         >
           <OurClientSecondScreen
             setSecondScreeAppearFirstTime={setSecondScreeAppearFirstTime}

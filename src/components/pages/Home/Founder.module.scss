@@ -1,7 +1,7 @@
 .main {
   width: 95%;
   margin-top: 7rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 
   @media (max-width: 768px) {
     margin-top: -1rem;
@@ -58,20 +58,24 @@
   // width: 16.82rem;
 
   @media (max-width: 1024px) {
-    font: 700 2.6rem Arial;
+    font-size: 2.6rem;
+    font-weight: 700;
   }
   @media (max-width: 1000px) {
     text-align: center;
   }
   @media (max-width: 48rem) {
-    font: 700 2.5rem Arial;
+    font-size: 2.3rem;
+    font-weight: 700;
     margin-top: unset;
   }
-  @media (max-width: 600px) {
-    font: 700 2rem Arial;
+  @media (max-width: 576px) {
+    font-size: 1.5625rem;
+    font-weight: 700;
   }
   @media (max-width: 376px) {
-    font: 700 1.6rem Arial;
+    
+    font-weight: 700;
   }
 }
 
@@ -83,7 +87,7 @@
   }
   @media (max-width: 48rem) {
     text-align: center;
-    margin-bottom: 3.125rem; /* 50px / 16px = 3.125rem */
+    // margin-bottom: 3.125rem; /* 50px / 16px = 3.125rem */
   }
 }
 

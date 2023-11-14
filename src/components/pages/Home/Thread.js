@@ -8,19 +8,13 @@ const Thread = () => {
   const digitalRef = useRef(null);
   const digitalInView = useInView(digitalRef, { once: true });
   const [showHide, setShowHide] = React.useState(false);
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setShowHide(!showHide);
-  //   },2900)
-  // })
   return (
     <>
       <div className="container">
         <div className={`${styles["card"]} ${styles["text-center"]} `}>
           <div className={`${styles["main-card"]} card-body`}>
             <h3 className={`${styles["thread-card-title"]} card-title`}>
-              WE ARE PROFESSIONAL AT{" "}
+              We Are Professional At{" "}
             </h3>
             <p className={`${styles["card-text-1"]}`}>
               Lorem ipsum dolor sit amet consectetur. Lorem et donec leo lectus

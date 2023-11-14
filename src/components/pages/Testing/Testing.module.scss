@@ -3,11 +3,12 @@
 .threadContainer {
   height: 32rem;
   @media (max-width: 992px) {
-      height: 40rem !important;
-    }
-    @media (max-width: 770px) {
-        height: 35rem !important;
-    }
+    height: 40rem !important;
+  }
+  @media (max-width: 768px) {
+    height: 35rem !important;
+    display: none !important;
+  }
   @media (max-width: 769px) {
     height: unset !important;
   }
@@ -15,14 +16,28 @@
 
 .backani {
   width: 100%;
-  height: 100%;
+  height: 720px;
   opacity: 0.05;
+  @media (max-width: 991px) {
+    height: 450px !important;
+  }
+  @media (max-width: 768px) {
+    height: 350px !important;
+  }
+  @media (max-width: 576px) {
+    height: 300px !important;
+  }
 }
 
-
-.overdiv{
-  @media (max-width:992px) {
+.overdiv {
+  @media (max-width: 992px) {
     margin-top: 7rem;
+  }
+  @media (max-width: 768px) {
+    margin-top: 10rem;
+  }
+  @media (max-width: 576px) {
+    margin-top: 3rem;
   }
 }
 
@@ -33,6 +48,7 @@
 
   .back_animation {
     position: relative;
+    margin-top: -7rem;
   }
 
   .crewareRed {
@@ -42,7 +58,7 @@
   .backround {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -20rem;
     opacity: 0.5;
   }
 
@@ -51,55 +67,52 @@
     position: absolute;
     top: 5rem;
 
-
-
     @media (max-width: 991px) {
-     position: unset;
-     top: 0rem;
+      top: 3rem;
     }
     @media (max-width: 768px) {
-      padding-top: 2rem;
+      padding-top: 4rem;
       padding-bottom: unset;
     }
     @media (max-width: 576px) {
-      padding-top: unset;
+      padding-top: 4rem;
       padding-bottom: unset;
     }
 
     &_left {
       width: 92%;
       margin: auto;
-      h1 {
+      .hello1 {
         color: #fff;
         font-size: 3.75rem;
         font-style: normal;
         line-height: initial;
-        font-weight: 700;
+        font-weight: 800;
         text-transform: uppercase;
-        margin-bottom: 1.4rem;
+        margin-bottom: 0.4rem;
 
         @media (max-width: 1400px) {
           font-size: 3.2rem;
         }
 
         @media (max-width: 1200px) {
-          font-size: 2.7rem;
+          font-size: 2.5rem;
         }
         @media (max-width: 992px) {
           font-size: 2rem;
         }
         @media (max-width: 768px) {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
         }
         @media (max-width: 576px) {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
           width: 100%;
         }
-        @media (max-width: 403px) {
-          font-size: 0.99rem;
+        @media (max-width: 440px) {
+          font-size: 1rem;
           width: 100%;
         }
-        @media (max-width: 350px) {
+        @media (max-width: 375px) {
           font-size: 0.8rem;
           width: 100%;
         }
@@ -116,8 +129,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        width: 55%;
-
+        width: 49%;
+        margin-top: 2rem;
         @media (max-width: 1200px) {
           font-size: 1.2rem;
         }
@@ -134,7 +147,7 @@
       }
 
       @media (max-width: 768px) {
-        margin-bottom: 1.5rem;
+        // margin-bottom: 1.5rem;
       }
     }
 
@@ -146,92 +159,92 @@
   }
 }
 
+
+
 .maincard {
   background-color: #111428;
   border-radius: 2rem;
-  margin: 3rem 0;
+  margin: 4rem 0;
 
-  .innerrow{
-   width: 89%;
-   margin: auto;
-   padding: 4rem 0 2rem 0;
+  .innerrow {
+    width: 89%;
+    margin: auto;
+    padding: 4rem 0 2rem 0;
   }
-  .innerrow2{
-   width: 89%;
-   margin: auto;
-   padding-bottom:5rem ;
+  .innerrow2 {
+    width: 89%;
+    margin: auto;
+    padding-bottom: 5rem;
   }
 
-
-.single1{
-  background-color: #060b27;
-  border-right: 1.5px solid white;
-  border-bottom: 1.5px solid white;
-  padding: 3rem 2.4rem;
-  @media (max-width:767px) {
-    border: unset;
-    border-bottom: 1.5px solid white;
-  }
- 
-}
-.single2{
-  background-color: #060b27;
-  border-bottom: 1.5px solid white;
-  padding: 3rem 2.4rem;
-  @media (max-width:767px) {
-    border: unset;
-    border-bottom: 1.5px solid white;
-  }
-}
-.single3{
-  background-color: #060b27;
-  border-left: 1.5px solid white;
-  border-bottom: 1.5px solid white;
-  padding: 3rem 2.4rem;
-  @media (max-width:992px) {
+  .single1 {
+    background-color: #060b27;
     border-right: 1.5px solid white;
-    border-left: unset;
-  }
-  @media (max-width:767px) {
-    border: unset;
     border-bottom: 1.5px solid white;
+    padding: 3rem 2.4rem;
+    @media (max-width: 767px) {
+      border: unset;
+      border-bottom: 1.5px solid white;
+    }
   }
-}
-.single4{
-  background-color: #060b27;
-  border-right: 1.5px solid white;
-  padding: 3rem 2.4rem;
-  @media (max-width:992px) {
+  .single2 {
+    background-color: #060b27;
     border-bottom: 1.5px solid white;
-    border-right: unset;
+    padding: 3rem 2.4rem;
+    @media (max-width: 767px) {
+      border: unset;
+      border-bottom: 1.5px solid white;
+    }
   }
-  @media (max-width:767px) {
-    border: unset;
+  .single3 {
+    background-color: #060b27;
+    border-left: 1.5px solid white;
     border-bottom: 1.5px solid white;
+    padding: 3rem 2.4rem;
+    @media (max-width: 992px) {
+      border-right: 1.5px solid white;
+      border-left: unset;
+    }
+    @media (max-width: 767px) {
+      border: unset;
+      border-bottom: 1.5px solid white;
+    }
   }
-}
-.single5{
-  background-color: #060b27;
-  padding: 3rem 2.4rem;
-  @media (max-width:767px) {
-    border: unset;
-    border-bottom: 1.5px solid white;
+  .single4 {
+    background-color: #060b27;
+    border-right: 1.5px solid white;
+    padding: 3rem 2.4rem;
+    @media (max-width: 992px) {
+      border-bottom: 1.5px solid white;
+      border-right: unset;
+    }
+    @media (max-width: 767px) {
+      border: unset;
+      border-bottom: 1.5px solid white;
+    }
   }
-}
-.single6{
-  background-color: #060b27;
-  border-left: 1.5px solid white;
-  padding: 3rem 2.4rem;
-  @media (max-width:767px) {
-    border: unset;
-    border-bottom: 1.5px solid white;
+  .single5 {
+    background-color: #060b27;
+    padding: 3rem 2.4rem;
+    @media (max-width: 767px) {
+      border: unset;
+      border-bottom: 1.5px solid white;
+    }
   }
-}
+  .single6 {
+    background-color: #060b27;
+    border-left: 1.5px solid white;
+    padding: 3rem 2.4rem;
+    @media (max-width: 767px) {
+      border: unset;
+      border-bottom: 1.5px solid white;
+    }
+  }
 
   p {
     color: #fff;
   }
-  span{
+  span {
     color: #d0021b;
   }
 
@@ -240,7 +253,7 @@
     font-weight: 700;
     line-height: normal;
 
-    @media (max-width:1400px) {
+    @media (max-width: 1400px) {
       font-size: 2.8rem;
     }
 
@@ -275,7 +288,7 @@
     line-height: normal;
     text-transform: capitalize;
 
-    @media (max-width:1400px) {
+    @media (max-width: 1400px) {
       font-size: 1.02rem;
     }
     @media (max-width: 1200px) {
@@ -297,39 +310,51 @@
     }
   }
 
-  .cardimage{
-    margin-bottom:3rem ;
+  .cardimage {
+    margin-bottom: 3rem;
     width: 5rem;
     height: 5rem;
   }
-  .cardimage2{
-    margin-bottom:2rem ;
+  .cardimage2 {
+    margin-bottom: 2rem;
     width: 5rem;
     height: 5rem;
   }
 
-  .cardtitle{
+  .cardtitle {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: normal;
 
-    @media (max-width:1400px) {
+    @media (max-width: 1400px) {
       font-size: 1.2rem;
     }
-    @media (max-width:1200px) {
+    @media (max-width: 1200px) {
       font-size: 0.9rem;
     }
   }
 
-  .carddesc{
+  .carddesc {
     font-size: 1rem;
     font-weight: 400;
 
-    @media (max-width:1400px) {
+    @media (max-width: 1400px) {
       font-size: 0.88rem;
     }
-    @media (max-width:1200px) {
+    @media (max-width: 1200px) {
       font-size: 0.7rem;
     }
+  }
+}
+
+
+.margin{
+  margin-top: -5rem;
+
+  @media (max-width:992px) {
+    margin-top: -14rem;
+  }
+  @media (max-width:768px) {
+    margin-top: -1rem;
   }
 }

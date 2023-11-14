@@ -61,7 +61,7 @@ const ContactusBtnSec = () => {
           </motion.div>
 
           <motion.div
-            className={`${styles["p-5"]} col-md-6`}
+            className={`${styles["p-5"]} col-12 col-md-6`}
             variants={paraRightInView ? "" : paraRightVariant}
             initial="offscreen"
             whileInView="onscreen"

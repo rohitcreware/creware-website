@@ -128,6 +128,7 @@
       font-weight: 500;
       line-height: normal;
       margin-bottom: 3rem;
+      text-transform: capitalize;
 
       @media (max-width: 768px) {
         margin-bottom: 2rem;
@@ -441,6 +442,7 @@
         font-weight: 500;
         line-height: normal;
         margin-bottom: 1.5rem;
+        text-transform: capitalize;
 
         span {
           color: #d0021b;
@@ -521,6 +523,10 @@
 
 .the_world {
   background-color: #fff;
+  margin-bottom: 4rem;
+  @media (max-width: 576px) {
+    margin-bottom: 0.5rem;
+  }
 
   h1 {
     padding-top: 3rem;

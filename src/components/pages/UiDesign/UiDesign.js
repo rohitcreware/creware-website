@@ -80,11 +80,20 @@ const UiDesign = () => {
         {/* Head */}
         <div className="container">
           <div className={`${styles["top"]}`}>
-            <div className={`${styles["top_left"]}`}>
-              <h1 className={styles["slideUp"]}>
-                We specialize in creating custom <span>UI UX DESIGN</span> for
-                businesses of all types and sizes
-              </h1>
+            <div className={`${styles["top_left"]} full_dimension`}>
+              <div className={`${styles["hello1"]} slideHeadUp`}>
+              We specialize in creating custom 
+              </div>
+            </div>
+            <div className={`${styles["top_left"]} full_dimension`}>
+              <div className={`${styles["hello1"]} slideHeadUp`}>
+              <span>UI UX DESIGN</span> for businesses of all 
+              </div>
+            </div>
+            <div className={`${styles["top_left"]} full_dimension`}>
+              <div className={`${styles["hello1"]} slideHeadUp`}>
+              types and sizes
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar
                 tempus sed tempus. Et pharetra gravida sed sit gravida. Id at
@@ -97,7 +106,7 @@ const UiDesign = () => {
         <div className="container">
           <div className={styles["ui_design"]}>
             <h1>
-              Expand Your Business With <span>UI UX DESIGN</span>
+              Expand Your Business With <span>UI UX Design</span>
             </h1>
 
             <motion.div

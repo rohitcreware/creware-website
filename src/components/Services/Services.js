@@ -109,18 +109,22 @@ const Services = () => {
           className={`${styles["backround"]}`}
         />
         <div className={`d-flex align-items-center justify-content-center`}>
-          <div className="row poisition-relative mx-1 mx-lg-5 py-lg-5">
+          <div className={`${styles["top_main"]} row mx-1 mx-lg-5`}>
             <div className="col-12  pe-md-4 col-md-6  mb-3">
-              <div className={`${styles["slide-effect"]} d-flex flex-column`}>
-                <h1 className={`${styles["slideUp"]} ${styles["top_title"]}`}>
-                  OUR
-                </h1>
-              </div>
-              <div className={`${styles["slide-effect"]} d-flex flex-column`}>
-                <div
-                  className={`${styles["slideUp"]} ${styles["crewareRed"]} ${styles["top_title"]}`}
-                >
-                  SERVICES
+              <div
+                className={`${styles["slide-effect"]} d-flex flex-column align-items-sm-end justify-content-start`}
+              >
+                <div className={styles["scroll_to_full"]}>
+                  <h1
+                    className={`${styles["fadeInUp"]} ${styles["top_title"]} `}
+                  >
+                    OUR
+                  </h1>
+                  <div
+                    className={`${styles["fadeInUp"]} ${styles["crewareRed"]} ${styles["top_title"]}`}
+                  >
+                    SERVICES
+                  </div>
                 </div>
               </div>
             </div>
@@ -148,7 +152,7 @@ const Services = () => {
         </div>
 
         <section>
-          <div className="container mt-4 mt-sm-5 pt-4">
+          <div className="container my-sm-4  pt-4">
             <div className="row">
               <div className="col-12 col-lg-6 d-flex justify-content-center">
                 <div
@@ -585,8 +589,8 @@ const Services = () => {
 
         <section className={`${styles["process_cycle_main"]}`}>
           <h2 className={`${styles["process_cycle_title"]}`}>
-            PROCESS
-            <span> CYCLE OF SERVICE</span>
+            Process
+            <span> cycle of service</span>
           </h2>
 
           <div className={`container`}>
@@ -655,18 +659,15 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="container">
-          <h2
-            className={`${styles["process_cycle_title"]} my-5`}
-            style={{ textTransform: "capitalize" }}
-          >
+        <section className={`${styles["industries"]} container}`}>
+          <h2 className={`${styles["process_cycle_title"]} my-5`}>
             Industries We<span className={`${styles.crewareRed}`}> Served</span>
           </h2>
 
           <div className="text-center pb-3 pb-md-5">
             <div className="row d-flex flex-column flex-sm-column flex-md-row">
-              <div className="col-12 col-md-7">
-                <div className="row gy-3">
+              <div className="col-12 col-md-6">
+                <div className="row gy-3 ms-sm-1">
                   {Industries.map((image, index) => {
                     return (
                       <div
@@ -700,11 +701,14 @@ const Services = () => {
                   })}
                 </div>
               </div>
-              <div className="col-md-5 col-12">
+              <div className=" col-12 col-md-6 ">
                 {Industries.map((image, index) => {
                   if (imageName == image.name) {
                     return (
-                      <div className="col" key={index}>
+                      <div
+                        className={`${styles["industries_right"]} col`}
+                        key={index}
+                      >
                         <div className="col">
                           <p className={`${styles["industries_tabs_title"]}`}>
                             {image.name}
@@ -831,7 +835,7 @@ const Services = () => {
 
         <section>
           <div className={`${styles["testimonial_container"]} container my-5`}>
-            <h2 className={styles["testimonial_title"]}>TESTIMONIALS</h2>
+            <h2 className={styles["testimonial_title"]}>Testimonials</h2>
             <NewTestimonial />
           </div>
         </section>

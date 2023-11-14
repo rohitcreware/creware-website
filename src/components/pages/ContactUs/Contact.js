@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Contact.module.scss";
 import QueryForm from "../Hero/QueryForm";
 import NewLastestInsighr from "./NewLastestInsighr";
+import { locationList } from "../../../../Json/Contactus";
 
 const ContactUs = () => {
   return (
@@ -16,44 +17,36 @@ const ContactUs = () => {
         <div className={`${styles["container-top"]} container`}>
           <div className={`${styles["main-div"]}`}>
             <div className="row gx-5">
-              <div className="col-12 col-md-6 col-lg-6 mt-3">
-                <h5 className={`${styles["address-h5"]}`}>Bangalore,IND</h5>
-                <div className={`${styles["redline"]}`}></div>
-                <p className={`${styles["address-p"]}`}>
-                  No. 4, 2nd Floor,<br/> Himagiri Silicon City, Thogur Cross,<br/> Phase
-                  1, Electronic City, Bangalore
-                </p>
-                <p className={`${styles["direction-p"]}`}>
-                  <u>Get Directions</u>
-                </p>
-                <img
-                  src="/images/contact/address1.png"
-                  alt="image"
-                  className={`${styles["address-img1"]}`}
-                />
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 mt-3">
-                <h5 className={`${styles["address-h5"]}`}>Lewes. US</h5>
-                <div className={`${styles["redline"]}`}></div>
-                <p className={`${styles["address-p"]}`}>
-                  16192,<br/> Coastal Highway, <br/>Lewes, DE, USA - 19958
-                </p>
-                <p className={`${styles["direction-p"]}`}>
-                  <u>Get Directions</u>
-                </p>
-                <img
-                  src="/images/contact/address2.png"
-                  alt="image"
-                  className={`${styles["address-img2"]}`}
-                />
-              </div>
+              {locationList.map((item, index) => {
+                return (
+                  <div className="col-12 col-md-6 col-lg-6 my-3" key={index}>
+                    <h5 className={`${styles["address-h5"]}`}>{item.title}</h5>
+                    <div className={`${styles["redline"]}`}></div>
+                    <p className={`${styles["address-p"]}`}>
+                      {item.address1}
+                      <br /> {item.address2}
+                      <br /> {item.address3}
+                    </p>
+                    <p className={`${styles["direction-p"]}`}>
+                      <a href={item.link} target="blank">
+                        <u>Get Directions</u>
+                      </a>
+                    </p>
+                    <iframe
+                      src={item.map}
+                      alt="location"
+                      className={`${styles["address-img1"]}`}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <NewLastestInsighr/>
+        <NewLastestInsighr />
       </section>
     </div>
   );

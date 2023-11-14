@@ -7,7 +7,7 @@ const OurExecution = () => {
       <div className={`${styles["main"]} row`}>
         <div className={`${styles["left"]} col-12 col-lg-9`}>
           <h1>
-            Our <span>Execution.</span>
+            Our <span>Execution</span>
           </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur. Lorem et donec leo lectus

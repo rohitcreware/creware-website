@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-
+"use client";
 import React from "react";
 import styles from "./Carrers.module.scss";
 import CultureCards from "./CultureCards";
@@ -8,6 +8,11 @@ import CircleAnimation from "./Animation/CircleAnimation";
 import OurClientAnime from "@/components/Animations/OurClientAnime/OurClientFirstScreen";
 
 const Carrers = () => {
+  const openPositionsRef = React.useRef(null);
+  const allOpeningsClickHandler = () => {
+    openPositionsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={styles["main"]}>
       <section className="container">
@@ -37,7 +42,7 @@ const Carrers = () => {
 
         <div className={`${styles["we_constantly"]}`}>
           <div className={styles["title"]}>
-            <h1>We Constantly try to make you proud of your workspace. </h1>
+            <h1>We Constantly try to make you proud of your workspace</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar
               tempus sed tempus. Et pharetra gravida sed sit gravida. Id at
@@ -54,14 +59,14 @@ const Carrers = () => {
             </p>
           </div>
           <div className={`${styles["constant_button"]} `}>
-            <button>see all openings</button>
+            <button onClick={allOpeningsClickHandler}>see all openings</button>
           </div>
         </div>
 
         {/* our clients */}
         <div className={`${styles["our_clients"]}`}>
           <h1>
-            Our <span> Clients.</span>
+            Our <span> Clients</span>
           </h1>
           <OurClientAnime />
         </div>
@@ -69,7 +74,7 @@ const Carrers = () => {
         <div className={styles["culture_values"]}>
           <div className={styles["title"]}>
             <h1>
-              Culture &<span> Values.</span>
+              Culture &<span> Values</span>
             </h1>
 
             <p>
@@ -93,7 +98,7 @@ const Carrers = () => {
         <div className={styles["perks_benefits"]}>
           <div className={styles["title"]}>
             <h1>
-              Perks &<span> Benefits.</span>
+              Perks &<span> Benefits</span>
             </h1>
 
             <p>
@@ -138,7 +143,7 @@ const Carrers = () => {
           </div>
         </div>
 
-        <div className={`${styles["open_positions"]}`}>
+        <div className={`${styles["open_positions"]}`} ref={openPositionsRef}>
           <div className={styles["title"]}>
             <h1>
               Open<span> Positions</span>

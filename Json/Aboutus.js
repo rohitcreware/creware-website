@@ -21,7 +21,7 @@ import eight from "../public/images/Aboutus/8.png";
 import nine from "../public/images/Aboutus/9.png";
 import dream from "../public/images/Aboutus/dream.png";
 import do1 from "../public/images/Aboutus/do1.png";
-import office from "../public/images/Aboutus/office.png";
+import office from "../public/images/Aboutus/office.jpeg";
 
 export const our_success_cards = [
   {
@@ -130,19 +130,19 @@ export const explore_cards = [
 
 export const ourMissionCardsData = [
   {
-    title: "Mission.",
+    title: "Mission",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate et pulvinar fermentum sed semper placerat. Sit et massa cursus sed purus dictum ornare. Sed arcu mi est enim mauris risus tincidunt sodales. Nibh tincidunt fusce tincidunt bibendum pulvinar.",
     image: office,
   },
   {
-    title: "Vision.",
+    title: "Vision",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate et pulvinar fermentum sed semper placerat. Sit et massa cursus sed purus dictum ornare. Sed arcu mi est enim mauris risus tincidunt sodales. Nibh tincidunt fusce tincidunt bibendum pulvinar.",
     image: dream,
   },
   {
-    title: "Goal.",
+    title: "Goal",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar tempus sed tempus. Et pharetra gravida sed sit gravida. Id at morbi dignissim mauris. Vulputate et pulvinar fermentum sed semper placerat. Sit et massa cursus sed purus dictum ornare. Sed arcu mi est enim mauris risus tincidunt sodales. Nibh tincidunt fusce tincidunt bibendum pulvinar.",
     image: do1,

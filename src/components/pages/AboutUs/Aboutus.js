@@ -54,7 +54,7 @@ const Aboutus = () => {
           {" "}
           <div className="row">
             <div className={`${styles["left"]} col-12 col-md-6`}>
-              <h2>Our Story</h2>
+              <h2>Our <span>Story</span></h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur. Ipsum molestie pulvinar
                 tempus sed tempus. Et pharetra gravida sed sit gravida. Id at
@@ -116,7 +116,6 @@ const Aboutus = () => {
               Our <span>Success Timeline</span>
             </h1>
           </div>
-          <div className={styles["yellow_border"]}></div>
           <OurSuccessCards />
         </div>
 
@@ -124,7 +123,7 @@ const Aboutus = () => {
         <div className={styles["our_achievements"]}>
           <div className={styles["our_achievements_title"]}>
             <h1>
-              Our <span>Achievements</span>.
+              Our <span>Achievements</span>
             </h1>
           </div>
           <div className={styles["achievement_icons"]}>
@@ -145,9 +144,9 @@ const Aboutus = () => {
 
         {/* our team */}
         <div className={styles["our_team"]}>
-          <div className={styles["our_achievements_title"]}>
+          <div className={styles["our_achievements_title1"]}>
             <h1>
-              Explore <span>Our Team.</span>
+              Explore <span>Our Team</span>
             </h1>
             <h6>
               We are the defenders of usability, champions of product
@@ -158,7 +157,8 @@ const Aboutus = () => {
         </div>
 
         <ExploreCards />
-        <OurMissionCards />
+        <div className={styles["margin"]}><OurMissionCards /></div>
+        
       </div>
       <QueryForm />
     </div>
